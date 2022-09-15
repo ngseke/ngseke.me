@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit && vite-ssg build",
     "preview": "vite preview",
     "lint:fix": "npx eslint --fix src --ext .ts,.js,.vue"
   },
@@ -23,6 +23,7 @@
     "@vitejs/plugin-vue": "^3.1.0",
     "@vue/eslint-config-standard": "^8.0.1",
     "@vue/eslint-config-typescript": "^11.0.1",
+    "@vueuse/head": "^0.7.11",
     "autoprefixer": "^10.4.11",
     "eslint": "^8.23.1",
     "eslint-plugin-tailwindcss": "^3.6.1",
@@ -34,6 +35,7 @@
     "vite": "^3.1.0",
     "vite-plugin-checker": "^0.5.1",
     "vite-plugin-eslint": "^1.8.1",
+    "vite-ssg": "^0.20.2",
     "vue-tsc": "^0.40.4"
   }
 }
