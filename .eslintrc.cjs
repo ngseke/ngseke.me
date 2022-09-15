@@ -63,7 +63,7 @@ module.exports = {
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': ['error'],
     'vue/max-attributes-per-line': ['error', {
-      singleline: { max: 2 },
+      singleline: { max: 3 },
       multiline: { max: 1 },
     }],
     'vue/component-tags-order': ['error', {
