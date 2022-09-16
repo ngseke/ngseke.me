@@ -10,6 +10,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      fontFamily: {
+        pacifico: ['Pacifico', 'cursive'],
+      },
     },
   },
   plugins: [],
