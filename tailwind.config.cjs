@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         pacifico: ['Pacifico', 'cursive'],
       },
+      colors: {
+        ngsek: '#ffd019',
+      },
     },
   },
   plugins: [],
