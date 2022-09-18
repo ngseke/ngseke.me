@@ -8,6 +8,7 @@ export default function useIsCoverVisible () {
   const $cover = ref<HTMLElement | null>(null)
 
   watch(isMounted, async () => {
+    if (typeof document === 'undefined') return
     await nextTick()
     $cover.value = document.querySelector('#cover')
   }, { immediate: true })
