@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 import ButtonDarkMode from './ButtonDarkMode.vue'
+import NavbarLink from './NavbarLink.vue'
 
 const { isCoverVisible } = useIsCoverVisible()
 const isShow = computed(() => isCoverVisible.value === false)
@@ -13,17 +14,8 @@ const isShow = computed(() => isCoverVisible.value === false)
   >
     <div class="flex px-4">
       <div class="relative z-10 flex items-center py-2 text-white/80 sm:px-5">
-        <div
-          class="transition-all duration-200"
-          :class="{
-            'w-0 opacity-0': !isShow,
-            'w-20': isShow,
-          }"
-        >
-          <RouterLink class="neon font-pacifico inline-block rotate-[-4deg] text-lg" to="/">
-            ngseke
-          </RouterLink>
-        </div>
+        <NavbarLogo :show="isShow" />
+
         <ul class="mr-6 flex space-x-6 font-medium">
           <li
             v-for="i in ['About', 'Projects', 'Note']"
