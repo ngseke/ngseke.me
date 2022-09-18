@@ -23,6 +23,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@vueuse/core": "^9.2.0",
     "scroll-to-element": "^2.0.3",
+    "vite-plugin-pages": "^0.26.0",
     "vue": "^3.2.37",
     "vue-router": "4"
   },
