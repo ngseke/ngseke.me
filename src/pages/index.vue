@@ -6,7 +6,6 @@ name: "index"
 import { useRoute } from 'vue-router'
 import { nextTick, onMounted } from 'vue'
 import { useHead } from '@vueuse/head'
-import Navbar from '../components/Navbar.vue'
 import Cover from '../components/Cover.vue'
 import AboutMe from '../components/AboutMe.vue'
 import { scrollToAboutMe } from '../modules/scroll-to'
@@ -27,9 +26,6 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <Navbar />
-    <Cover />
-    <AboutMe :id="aboutId" />
-  </div>
+  <Cover />
+  <AboutMe :id="aboutId" />
 </template>
