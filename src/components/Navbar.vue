@@ -10,6 +10,7 @@ import type { AnchorHTMLAttributes } from 'vue'
 import type { RouterLinkProps } from 'vue-router'
 import NavbarLogo from './NavbarLogo.vue'
 import { scrollToAboutMe } from '../modules/scroll-to'
+import { useWindowScroll } from '@vueuse/core'
 
 const route = useRoute()
 
@@ -49,11 +50,18 @@ const links: Link[] = [
     href: 'https://hackmd.io/@xq',
   },
 ]
+
+const { y } = useWindowScroll()
+const isScrolled = computed(() => y.value > 1)
 </script>
 
 <template>
   <nav
-    class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center bg-black"
+    class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center bg-black shadow-lg transition-all duration-300"
+    :class="{
+      'shadow-stone-900/0': !isScrolled,
+      'shadow-stone-900/30': isScrolled,
+    }"
   >
     <div class="container flex px-4">
       <div class="relative z-10 flex items-center py-2 text-white/80">
