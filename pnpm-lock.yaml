@@ -6,6 +6,7 @@ specifiers:
   '@fortawesome/free-regular-svg-icons': ^6.2.0
   '@fortawesome/free-solid-svg-icons': ^6.2.0
   '@fortawesome/vue-fontawesome': ^3.0.1
+  '@types/scroll-to-element': ^2.0.2
   '@vitejs/plugin-vue': ^3.1.0
   '@vue/eslint-config-standard': ^8.0.1
   '@vue/eslint-config-typescript': ^11.0.1
@@ -17,6 +18,7 @@ specifiers:
   eslint-plugin-vue: ^9.4.0
   postcss: ^8.1.0
   sass: ^1.54.9
+  scroll-to-element: ^2.0.3
   tailwindcss: ^3.1.8
   typescript: ^4.6.4
   vite: ^3.1.0
@@ -34,10 +36,12 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@fortawesome/vue-fontawesome': 3.0.1_4h6vf4pkzarhnju6fzmo7mfhke
   '@vueuse/core': 9.2.0_vue@3.2.39
+  scroll-to-element: 2.0.3
   vue: 3.2.39
   vue-router: 4.1.5_vue@3.2.39
 
 devDependencies:
+  '@types/scroll-to-element': 2.0.2
   '@vitejs/plugin-vue': 3.1.0_vite@3.1.1+vue@3.2.39
   '@vue/eslint-config-standard': 8.0.1_zu3okhomo6yxuyiczyvvg4lmgq
   '@vue/eslint-config-typescript': 11.0.1_lt74cxsrofekofa4xcjvnzkbqy
@@ -246,6 +250,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/scroll-to-element/2.0.2:
+    resolution: {integrity: sha512-0YqjFrXxppCHLpVGWL1BBnOrtF+IcUJ9cZrK4USLbIG/H7VSPSCn2T/I8WdWHKeiO1cLbMq7BmCADEP30Z7+1Q==}
     dev: true
 
   /@types/web-bluetooth/0.0.15:
@@ -2487,6 +2495,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /performance-now/2.1.0:
+    resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
+    dev: false
+
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -2607,6 +2619,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /raf/3.4.1:
+    resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
+    dependencies:
+      performance-now: 2.1.0
+    dev: false
+
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
     dependencies:
@@ -2708,6 +2726,12 @@ packages:
     dependencies:
       xmlchars: 2.2.0
     dev: true
+
+  /scroll-to-element/2.0.3:
+    resolution: {integrity: sha512-5herPcm9jMfQgRwu94lH5mei+2YhipR4RQ2nAvnBxJb2tG+P7O0ctOKAaAZBXbBejnn+MImh3wrAUA5EcLnjEQ==}
+    dependencies:
+      raf: 3.4.1
+    dev: false
 
   /semver/7.3.7:
     resolution: {integrity: sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==}

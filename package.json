@@ -22,10 +22,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@vueuse/core": "^9.2.0",
+    "scroll-to-element": "^2.0.3",
     "vue": "^3.2.37",
     "vue-router": "4"
   },
   "devDependencies": {
+    "@types/scroll-to-element": "^2.0.2",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vue/eslint-config-standard": "^8.0.1",
     "@vue/eslint-config-typescript": "^11.0.1",
