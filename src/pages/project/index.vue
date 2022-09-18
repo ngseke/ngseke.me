@@ -1,9 +1,13 @@
+<route lang="yaml">
+name: "projects"
+</route>
+
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
-import Navbar from '../components/Navbar.vue'
-import TitleCategory from '../components/TitleCategory.vue'
-import CardProject from '../components/CardProject.vue'
-import projects from '../modules/projects'
+import Navbar from '../../components/Navbar.vue'
+import TitleCategory from '../../components/TitleCategory.vue'
+import CardProject from '../../components/CardProject.vue'
+import projects from '../../modules/projects'
 
 useHead({
   title: `Projects | ${import.meta.env.VITE_SITE_NAME}`,

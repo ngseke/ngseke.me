@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import eslint from 'vite-plugin-eslint'
 import checker from 'vite-plugin-checker'
+import Pages from 'vite-plugin-pages'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,5 +11,6 @@ export default defineConfig({
     vue(),
     eslint(),
     checker({ typescript: true, vueTsc: true }),
+    Pages(),
   ],
 })

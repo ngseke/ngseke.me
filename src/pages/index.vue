@@ -1,3 +1,7 @@
+<route lang="yaml">
+name: "index"
+</route>
+
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { nextTick, onMounted } from 'vue'

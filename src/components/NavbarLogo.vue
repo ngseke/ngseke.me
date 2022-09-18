@@ -30,7 +30,7 @@ const handleClick = (e: Event) => {
     >
       <RouterLink
         class="neon font-pacifico inline-block rotate-[-4deg] text-lg"
-        to="/"
+        :to="{ name: 'index' }"
         @click="handleClick"
       >
         ngseke
