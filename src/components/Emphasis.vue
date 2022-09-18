@@ -7,10 +7,9 @@
       after:bg-ngsek/50 relative
       not-italic
       after:absolute
-      after:left-0
-      after:bottom-[.1rem]
-      after:h-[.3rem]
-      after:w-full
+      after:inset-x-[-1px]
+      after:bottom-[2px]
+      after:h-[5px]
     "
   >
     <span class="relative z-10">
