@@ -14,7 +14,13 @@ import { scrollToAboutMe } from '../modules/scroll-to'
 const route = useRoute()
 
 const { isCoverVisible } = useIsCoverVisible()
-const isShow = computed(() => isCoverVisible.value !== true)
+const shouldShowLogo = computed(() => {
+  if (isCoverVisible.value == null) {
+    return (route.name !== 'index') ||
+      (route.name === 'index' && route.hash === '#about')
+  }
+  return !isCoverVisible.value
+})
 
 interface Link {
   name: string,
@@ -51,7 +57,7 @@ const links: Link[] = [
   >
     <div class="flex px-4">
       <div class="relative z-10 flex items-center py-2 text-white/80 sm:px-5">
-        <NavbarLogo :show="isShow" />
+        <NavbarLogo :show="shouldShowLogo" />
 
         <ul class="mr-6 flex space-x-6 font-medium">
           <li
