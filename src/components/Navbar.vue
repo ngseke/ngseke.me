@@ -53,10 +53,10 @@ const links: Link[] = [
 
 <template>
   <nav
-    class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center border-b border-black bg-black backdrop-blur-xl"
+    class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center bg-black"
   >
-    <div class="flex px-4">
-      <div class="relative z-10 flex items-center py-2 text-white/80 lg:px-5">
+    <div class="container flex px-4">
+      <div class="relative z-10 flex items-center py-2 text-white/80">
         <NavbarLogo :show="shouldShowLogo" />
 
         <ul class="mr-6 flex space-x-6 font-medium">
