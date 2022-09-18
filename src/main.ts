@@ -8,7 +8,12 @@ import { FontAwesomeIcon } from './font-awesome'
 
 export const createApp = ViteSSG(
   App,
-  { routes },
+  {
+    routes,
+    scrollBehavior (_to, _from, savedPosition) {
+      return savedPosition || { top: 0 }
+    },
+  },
   ({ app }) => {
     app.component('Fa', FontAwesomeIcon)
   }
