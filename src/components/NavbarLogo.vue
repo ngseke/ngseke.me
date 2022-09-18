@@ -1,7 +1,22 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
+import scrollToElement from 'scroll-to-element'
+
 defineProps<{
   show: boolean,
 }>()
+
+const route = useRoute()
+
+const handleClick = (e: Event) => {
+  if (route.name === 'index') {
+    e.preventDefault()
+    scrollToElement('body', {
+      offset: 0,
+      duration: 300,
+    })
+  }
+}
 </script>
 
 <template>
@@ -16,6 +31,7 @@ defineProps<{
       <RouterLink
         class="neon font-pacifico inline-block rotate-[-4deg] text-lg"
         to="/"
+        @click="handleClick"
       >
         ngseke
       </RouterLink>

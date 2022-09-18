@@ -1,11 +1,51 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import scrollToElement from 'scroll-to-element'
+
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 import ButtonDarkMode from './ButtonDarkMode.vue'
 import NavbarLink from './NavbarLink.vue'
 
+import type { AnchorHTMLAttributes } from 'vue'
+import type { RouterLinkProps } from 'vue-router'
+import NavbarLogo from './NavbarLogo.vue'
+
+const route = useRoute()
+
 const { isCoverVisible } = useIsCoverVisible()
 const isShow = computed(() => isCoverVisible.value === false)
+
+interface Link {
+  name: string,
+  href?: AnchorHTMLAttributes['href'],
+  to?: RouterLinkProps['to'],
+  handler? (e: Event): void,
+}
+
+const links: Link[] = [
+  {
+    name: 'About',
+    to: { name: 'index' },
+    handler: (e) => {
+      if (route.name === 'index') {
+        e.preventDefault()
+        scrollToElement('#about', {
+          offset: -100,
+          duration: 300,
+        })
+      }
+    },
+  },
+  {
+    name: 'Projects',
+    to: { name: 'projects' },
+  },
+  {
+    name: 'Notes',
+    href: 'https://hackmd.io/@xq',
+  },
+]
 </script>
 
 <template>
@@ -18,20 +58,17 @@ const isShow = computed(() => isCoverVisible.value === false)
 
         <ul class="mr-6 flex space-x-6 font-medium">
           <li
-            v-for="i in ['About', 'Projects', 'Note']"
-            :key="i"
+            v-for="({ name, to, href, handler }, index) in links"
+            :key="index"
             class=""
           >
-            <a
-              class="
-                link-effect uppercase
-                after:-inset-x-2
-                after:-inset-y-1
-                after:rounded-lg
-                after:bg-white/10
-              "
-              href="#"
-            >{{ i }}</a>
+            <NavbarLink
+              :href="href"
+              :to="to"
+              @click="handler?.($event) ?? (() => {})"
+            >
+              {{ name }}
+            </NavbarLink>
           </li>
         </ul>
         <ButtonDarkMode />
@@ -42,18 +79,4 @@ const isShow = computed(() => isCoverVisible.value === false)
 
 <style lang="scss" scoped>
 @use '../styles/link-effect';
-
-$ngsek: #ffd019;
-$ngsek-light: lighten(#ffd019, 50%);
-
-.neon {
-  color: $ngsek-light;
-  text-shadow:
-    0 0 3px rgba($ngsek-light, 0.70),
-    0 0 15px rgba($ngsek-light, 0.34),
-    0 0 6px rgba($ngsek, 0.52),
-    0 0 10px rgba($ngsek, 0.5),
-    0 0 17px rgba($ngsek, 0.7),
-    0 0 27px rgba($ngsek, 0.5);
-}
 </style>

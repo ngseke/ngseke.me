@@ -1,5 +1,14 @@
 const routes = [
-  { path: '/', component: () => import('./views/Index.vue') },
+  {
+    path: '/',
+    name: 'index',
+    component: () => import('./views/Index.vue'),
+  },
+  {
+    path: '/project',
+    name: 'projects',
+    component: () => import('./views/Index.vue'),
+  },
 ]
 
 export default routes
