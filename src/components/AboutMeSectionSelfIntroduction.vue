@@ -9,7 +9,7 @@ import Emphasis from './Emphasis.vue'
       <h2 class="text-5xl font-semibold md:text-6xl">
         Hi, I'm Sean. 👋
       </h2>
-      <span class="font-mono text-zinc-700 dark:text-zinc-400">
+      <span class="font-mono text-stone-700 dark:text-stone-400">
         @ngseke
       </span>
     </div>
