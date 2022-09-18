@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import scrollToElement from 'scroll-to-element'
 
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 import ButtonDarkMode from './ButtonDarkMode.vue'
@@ -10,6 +9,7 @@ import NavbarLink from './NavbarLink.vue'
 import type { AnchorHTMLAttributes } from 'vue'
 import type { RouterLinkProps } from 'vue-router'
 import NavbarLogo from './NavbarLogo.vue'
+import { scrollToAboutMe } from '../modules/scroll-to'
 
 const route = useRoute()
 
@@ -26,14 +26,11 @@ interface Link {
 const links: Link[] = [
   {
     name: 'About',
-    to: { name: 'index' },
+    to: { name: 'index', hash: '#about' },
     handler: (e) => {
       if (route.name === 'index') {
         e.preventDefault()
-        scrollToElement('#about', {
-          offset: -100,
-          duration: 300,
-        })
+        scrollToAboutMe()
       }
     },
   },
