@@ -71,7 +71,7 @@ module.exports = {
     }],
     'tailwindcss/no-custom-classname': ['warn', {
       config: 'tailwind.config.cjs',
-      whitelist: ['neon', 'blink'],
+      whitelist: ['neon', 'blink', 'link-effect'],
     }],
   },
 }

@@ -31,7 +31,13 @@ const isShow = computed(() => isCoverVisible.value === false)
             class=""
           >
             <a
-              class="uppercase hover:underline"
+              class="
+                link-effect uppercase
+                after:-inset-x-2
+                after:-inset-y-1
+                after:rounded-lg
+                after:bg-white/25
+              "
               href="#"
             >{{ i }}</a>
           </li>
@@ -43,6 +49,8 @@ const isShow = computed(() => isCoverVisible.value === false)
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/link-effect';
+
 $ngsek: #ffd019;
 $ngsek-light: lighten(#ffd019, 50%);
 

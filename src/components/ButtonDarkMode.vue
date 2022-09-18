@@ -8,16 +8,19 @@ const toggleDark = useToggle(isDark)
 <template>
   <button
     class="
-      relative
-      h-6
-      w-6
-      rounded-full after:absolute after:-inset-2 after:z-10 after:scale-75
+      link-effect
+      h-6 w-6
+      rounded-full
+      after:inset-[-.3rem]
       after:rounded-full
-      after:bg-white/20 after:opacity-0 after:transition-all
-      after:duration-200 hover:after:scale-100 hover:after:opacity-100
+      after:bg-white/25
     "
     @click="toggleDark()"
   >
     <Fa :icon="['fas', isDark ? 'sun' :'moon']" />
   </button>
 </template>
+
+<style lang="sass" scoped>
+@use '../styles/link-effect'
+</style>
