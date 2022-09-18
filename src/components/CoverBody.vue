@@ -26,7 +26,7 @@ const transitionBind = {
             class="font-pacifico relative rotate-[-4deg] whitespace-nowrap text-8xl tracking-tight text-white delay-200"
           >
             <span class="neon">ngseke</span>
-            <span class="blink after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
+            <span class="blink animate-blink after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
           </h1>
         </div>
       </transition>
@@ -37,10 +37,6 @@ const transitionBind = {
 <style lang="scss" scoped>
 $ngsek: #ffd019;
 $ngsek-light: lighten(#ffd019, 50%);
-
-@keyframes blink {
-  from { opacity: 0; }
-}
 
 .neon {
   color: $ngsek-light;
@@ -55,6 +51,5 @@ $ngsek-light: lighten(#ffd019, 50%);
 
 .blink {
   text-shadow: 0 0 54px rgba($ngsek, .3);
-  animation: blink .08s ease-in-out infinite alternate;
 }
 </style>
