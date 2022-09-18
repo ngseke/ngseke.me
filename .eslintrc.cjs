@@ -73,5 +73,6 @@ module.exports = {
       config: 'tailwind.config.cjs',
       whitelist: ['neon', 'blink', 'link-effect'],
     }],
+    'vue/no-template-shadow': 'off',
   },
 }
