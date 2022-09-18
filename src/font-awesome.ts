@@ -20,6 +20,7 @@ import {
   faArrowCircleRight,
   faMoon,
   faSun,
+  faUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -57,6 +58,7 @@ library.add(
   faArrowCircleRight,
   faMoon,
   faSun,
+  faUpRightFromSquare,
 )
 
 export { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
