@@ -14,7 +14,7 @@ import NavbarLogo from './NavbarLogo.vue'
 const route = useRoute()
 
 const { isCoverVisible } = useIsCoverVisible()
-const isShow = computed(() => isCoverVisible.value === false)
+const isShow = computed(() => isCoverVisible.value !== true)
 
 interface Link {
   name: string,
