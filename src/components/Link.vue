@@ -9,6 +9,7 @@
       after:inset-x-[-6px] after:inset-y-[-3px]
       after:rounded-lg
       after:bg-black/10
+      dark:after:bg-white/10
     "
     target="_blank"
     rel="noreferrer noopener"

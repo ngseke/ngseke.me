@@ -36,7 +36,7 @@ const isShow = computed(() => isCoverVisible.value === false)
                 after:-inset-x-2
                 after:-inset-y-1
                 after:rounded-lg
-                after:bg-white/25
+                after:bg-white/10
               "
               href="#"
             >{{ i }}</a>

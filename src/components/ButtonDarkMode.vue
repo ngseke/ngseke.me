@@ -13,7 +13,7 @@ const toggleDark = useToggle(isDark)
       rounded-full
       after:inset-[-.3rem]
       after:rounded-full
-      after:bg-white/25
+      after:bg-white/10
     "
     @click="toggleDark()"
   >

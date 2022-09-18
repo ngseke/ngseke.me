@@ -5,8 +5,11 @@
   <em
     class="
       after:bg-ngsek/50 relative
-      not-italic after:absolute after:left-0
-      after:bottom-0 after:h-[.3rem]
+      not-italic
+      after:absolute
+      after:left-0
+      after:bottom-[.1rem]
+      after:h-[.3rem]
       after:w-full
     "
   >
