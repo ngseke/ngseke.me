@@ -86,7 +86,7 @@ const periodText = computed(() => {
   ol
     @apply list-decimal
 
-  > img
+  p > img
     @apply mx-auto w-auto mb-4
     +media
   a
