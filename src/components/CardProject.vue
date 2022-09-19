@@ -3,7 +3,7 @@ import LinkIcon from './LinkIcon.vue'
 import CardProjectLinkOverlay from './CardProjectLinkOverlay.vue'
 
 defineProps<{
-  name?: string,
+  path?: string,
   img?: string,
   title?: string,
   description?: string,
@@ -14,7 +14,7 @@ defineProps<{
 
 <template>
   <div class="relative flex">
-    <CardProjectLinkOverlay v-if="false" to="/" />
+    <CardProjectLinkOverlay v-if="path" :to="path" />
 
     <div class="mr-5 flex-none">
       <img
