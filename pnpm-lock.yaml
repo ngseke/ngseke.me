@@ -14,6 +14,7 @@ specifiers:
   '@vueuse/head': ^0.7.11
   autoprefixer: ^10.4.11
   critters: ^0.0.16
+  dayjs: ^1.11.5
   eslint: ^8.23.1
   eslint-plugin-tailwindcss: ^3.6.1
   eslint-plugin-vue: ^9.4.0
@@ -41,6 +42,7 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@fortawesome/vue-fontawesome': 3.0.1_4h6vf4pkzarhnju6fzmo7mfhke
   '@vueuse/core': 9.2.0_vue@3.2.39
+  dayjs: 1.11.5
   scroll-to-element: 2.0.3
   vite-plugin-md: 0.20.4_igxy6wrgti6mtktaugxifd3erm
   vite-plugin-pages: 0.26.0_vite@3.1.1
@@ -1170,6 +1172,10 @@ packages:
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
     dev: true
+
+  /dayjs/1.11.5:
+    resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==}
+    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}

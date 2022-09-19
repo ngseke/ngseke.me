@@ -22,6 +22,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@vueuse/core": "^9.2.0",
+    "dayjs": "^1.11.5",
     "scroll-to-element": "^2.0.3",
     "vite-plugin-md": "^0.20.4",
     "vite-plugin-pages": "^0.26.0",
