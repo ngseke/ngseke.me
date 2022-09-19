@@ -7,6 +7,7 @@ import { useHead } from '@vueuse/head'
 import { computed } from 'vue'
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
 import dayjs from 'dayjs'
+import LinkIcon from '../components/LinkIcon.vue'
 const { frontmatter } = useProjectFrontmatter()
 
 useHead({
@@ -30,12 +31,15 @@ const periodText = computed(() => {
     return `${getFormatted(period)} - Present`
   }
 })
+
+const github = computed(() => frontmatter.value?.githubLink)
+const link = computed(() => frontmatter.value?.demoLink)
 </script>
 
 <template>
   <div class="container px-4 pt-8 md:pt-16">
     <div class="mx-auto max-w-3xl py-16">
-      <div class="mb-16 space-y-3 border-b border-stone-300 pb-6 dark:border-stone-700">
+      <div class="mb-12 space-y-3 border-b border-stone-300 pb-4 dark:border-stone-700">
         <h1 class="dark:text-ngsek text-4xl font-semibold md:text-5xl">
           {{ frontmatter?.title }}
         </h1>
@@ -45,13 +49,27 @@ const periodText = computed(() => {
         >
           {{ frontmatter?.briefDescription }}
         </p>
-        <ul class="text-sm text-stone-700 dark:text-stone-300">
+        <ul class="space-y-1 text-sm text-stone-700 dark:text-stone-300">
           <li>{{ periodText }}</li>
           <li v-if="frontmatter?.members ">
             Team Member:
             {{ frontmatter?.members.join('、') }}
           </li>
         </ul>
+        <div v-if="github || link" class="space-x-3">
+          <LinkIcon
+            v-if="github"
+            :href="github"
+            :icon="['fab', 'github']"
+            @click.stop=""
+          />
+          <LinkIcon
+            v-if="link"
+            :href="link"
+            :icon="['fas', 'up-right-from-square']"
+            @click.stop=""
+          />
+        </div>
       </div>
 
       <article class="prose">
