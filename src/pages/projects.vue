@@ -28,7 +28,7 @@ const { projects } = useProjects()
           <li
             v-for="({ path, title, briefDescription, githubLink, demoLink }, index) in list"
             :key="index"
-            class="mb-8 w-full px-4 lg:w-1/2"
+            class="mb-8 w-full px-4 md:w-1/2"
           >
             <CardProject
               :title="title"

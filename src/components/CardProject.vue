@@ -23,16 +23,16 @@ defineProps<{
       >
     </div>
 
-    <div class="flex flex-1 flex-col pt-2">
+    <div class="flex flex-1 flex-col justify-center">
       <div>
         <h3 class="mb-1 text-lg font-medium leading-5">
           {{ title }}
         </h3>
-        <p class="mb-3 text-sm leading-4 text-stone-700 dark:text-stone-300">
+        <p class="text-sm leading-4 text-stone-700 dark:text-stone-300">
           {{ description }}
         </p>
       </div>
-      <div v-if="github || link" class="space-x-2">
+      <div v-if="github || link" class="mt-3 space-x-2">
         <LinkIcon
           v-if="github"
           :href="github"
