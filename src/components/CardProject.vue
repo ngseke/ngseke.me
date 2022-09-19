@@ -23,11 +23,11 @@ defineProps<{
       >
     </div>
 
-    <div class="flex flex-1 flex-col pt-2">
-      <h3 class="mb-1 text-lg font-medium leading-5">
+    <div class="flex flex-1 flex-col pt-2 overflow-hidden">
+      <h3 class="mb-1 truncate text-lg font-medium leading-5">
         {{ title }}
       </h3>
-      <p class="mb-3 text-sm leading-4 text-stone-700 dark:text-stone-300">
+      <p class="mb-3 truncate text-sm leading-4 text-stone-700 dark:text-stone-300">
         {{ description }}
       </p>
       <div v-if="github || link" class="space-x-2">
