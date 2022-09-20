@@ -26,7 +26,7 @@ const handleClick = (e: Event) => {
   >
     <div
       v-if="show"
-      class="transition-all duration-200 sm:w-20"
+      class="transition-all duration-200 sm:w-24"
     >
       <RouterLink
         class="neon font-pacifico inline-block rotate-[-4deg] text-lg"

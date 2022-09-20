@@ -62,7 +62,10 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
   >
     <div class="container flex px-4">
       <div class="relative z-10 flex w-full items-center justify-center py-2 text-white/80 sm:justify-start">
-        <NavbarLogo :show="shouldShowLogo || isExpanded" @click="isExpanded = false" />
+        <NavbarLogo
+          :show="shouldShowLogo || isExpanded"
+          @click="isExpanded = false"
+        />
 
         <ul class="mr-6 hidden space-x-6 font-medium sm:flex">
           <li
@@ -88,7 +91,7 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
           />
         </div>
 
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 sm:static sm:right-auto sm:top-auto sm:transform-none">
+        <div class="absolute right-0 top-1/2 ml-auto -translate-y-1/2 sm:static sm:right-auto sm:top-auto sm:transform-none">
           <ButtonDarkMode />
         </div>
       </div>
