@@ -6,6 +6,7 @@ demoLink: https://myweb.ntut.edu.tw/~yschen/
 period:
   - 2018/03
   - 2018/10
+cover: /img/project-cover/emo.png
 ---
 
 

@@ -19,14 +19,14 @@ const { projects } = useProjects()
   <div class="container px-4 pt-16">
     <div class="mx-auto max-w-5xl py-16">
       <section
-        v-for="({ title, list, cover }, index) in projects"
+        v-for="({ title, list }, index) in projects"
         :key="index"
         class="mb-16 space-y-8"
       >
         <TitleCategory>{{ title }}</TitleCategory>
         <ul class="-mx-4 flex flex-wrap">
           <li
-            v-for="({ path, title, briefDescription, githubLink, demoLink }, index) in list"
+            v-for="({ path, title, briefDescription, githubLink, demoLink, cover }, index) in list"
             :key="index"
             class="mb-8 w-full px-4 md:w-1/2"
           >

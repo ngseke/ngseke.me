@@ -6,6 +6,7 @@ demoLink: https://raise-flag.web.app/
 period:
   - 2018/06
   - 2018/06
+cover: /img/project-cover/flag.png
 ---
 
 數位影像處理期末專題。

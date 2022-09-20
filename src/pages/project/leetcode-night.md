@@ -4,6 +4,7 @@ briefDescription: LeetCode 深色模式瀏覽器擴充功能
 githubLink: https://github.com/ngseke/leetcode-night
 demoLink: https://chrome.google.com/webstore/detail/leetcode-night/aaokgipfeeeciodnffigjfiafledhcii
 period: 2022/02
+cover: /img/project-cover/leetcode-night.png
 ---
 
 

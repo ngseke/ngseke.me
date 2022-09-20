@@ -4,6 +4,7 @@ briefDescription: 《樂台計畫》官方網站
 githubLink: https://github.com/ngseke/mcip.ml
 demoLink: https://mcip.ml
 period: 2019/02
+cover: /img/project-cover/mcip.png
 ---
 
 樂台計畫官方網站是基於 Nuxt 建構的 SSR 網站，現已導入 Composition API 與 ESLint，使得維護與開發工作變得更流暢。

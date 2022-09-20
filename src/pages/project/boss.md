@@ -10,6 +10,7 @@ members:
   - 余鎧企
   - 黃省喬
   - 趙振廷
+cover: /img/project-cover/boss.png
 ---
 
 這是一個在線飲料購物系統 (Beverage Online Shop System)，簡稱BOSS，是一個簡單易用，介面時尚清爽的飲料購物平台。本專案後端以PHP語言撰寫，前端以Bootstrap的架構搭配HTML5和CSS3作為基礎進行版型設計。

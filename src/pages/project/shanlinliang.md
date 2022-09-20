@@ -4,6 +4,7 @@ briefDescription: 虛構涼扇品牌廣告《扇林涼》
 period:
   - 2017/10
   - 2017/10
+cover: /img/project-cover/shanlinliang.png
 ---
 
 

@@ -66,6 +66,7 @@ export default function useProjects () {
             briefDescription: 'Emoji 翻牌配對遊戲',
             githubLink: 'https://github.com/ngseke/vue-flip-card',
             demoLink: 'https://ngseke.github.io/vue-flip-card/',
+            cover: '/img/project-cover/flip-card.png',
           },
           map.gomoku,
           map['tic-tac-toe'],

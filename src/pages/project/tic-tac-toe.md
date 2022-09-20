@@ -6,6 +6,7 @@ demoLink: https://ngseke.github.io/tic-tac-toe/
 period:
   - 2018/10
   - 2018/10
+cover: /img/project-cover/tic-tac-toe.png
 ---
 
 

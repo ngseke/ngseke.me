@@ -6,6 +6,7 @@ demoLink: https://ngseke.github.io/sinopac-dual-currency-card-calculator/
 period:
   - 2021/06
   - 2021/06
+cover: /img/project-cover/credit-card-calc.png
 ---
 
 ![](../../assets/img/article/credit-card-calc/cover.png)

@@ -6,6 +6,7 @@ demoLink: https://gomoku.ga/
 period:
   - 2018/10
   - 2018/11
+cover: /img/project-cover/gomoku.png
 ---
 
 ![](../../assets/img/article/gomoku/title.png)
