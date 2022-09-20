@@ -21,6 +21,7 @@ import {
   faMoon,
   faSun,
   faUpRightFromSquare,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -59,6 +60,7 @@ library.add(
   faMoon,
   faSun,
   faUpRightFromSquare,
+  faXmark,
 )
 
 export { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
