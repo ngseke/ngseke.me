@@ -6,9 +6,9 @@ name: "project"
 import { useHead } from '@vueuse/head'
 import { computed } from 'vue'
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
-import dayjs from 'dayjs'
 import LinkIcon from '../components/LinkIcon.vue'
 import { VITE_SITE_NAME } from '../modules/constants'
+import { getFormattedDate } from '../modules/date'
 
 const { frontmatter } = useProjectFrontmatter()
 
@@ -23,14 +23,12 @@ const periodText = computed(() => {
   const period = frontmatter.value?.period
   if (!period) return null
 
-  const getFormatted = (value: string) => dayjs(value).format(format)
-  const format = 'MMM, YYYY'
   if (Array.isArray(period)) {
     const [start, end] = period
-    if (start === end) return getFormatted(start)
-    return `${getFormatted(start)} - ${getFormatted(end)}`
+    if (start === end) return getFormattedDate(start)
+    return `${getFormattedDate(start)} - ${getFormattedDate(end)}`
   } else {
-    return `${getFormatted(period)} - Present`
+    return `${getFormattedDate(period)} - Present`
   }
 })
 
