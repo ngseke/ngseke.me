@@ -7,9 +7,10 @@ import { useHead } from '@vueuse/head'
 import TitleCategory from '../components/TitleCategory.vue'
 import CardProject from '../components/CardProject.vue'
 import useProjects from '../composables/useProjects'
+import { VITE_SITE_NAME } from '../modules/constants'
 
 useHead({
-  title: `Projects | ${import.meta.env.VITE_SITE_NAME}`,
+  title: `Projects | ${VITE_SITE_NAME}`,
 })
 
 const { projects } = useProjects()

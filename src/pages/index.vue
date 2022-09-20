@@ -9,6 +9,7 @@ import { useHead } from '@vueuse/head'
 import Cover from '../components/Cover.vue'
 import AboutMe from '../components/AboutMe.vue'
 import { scrollToAboutMe } from '../modules/scroll-to'
+import { VITE_SITE_NAME } from '../modules/constants'
 
 const aboutId = 'about'
 
@@ -21,7 +22,7 @@ onMounted(async () => {
 })
 
 useHead({
-  title: `${import.meta.env.VITE_SITE_NAME}`,
+  title: `${VITE_SITE_NAME}`,
 })
 </script>
 

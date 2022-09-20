@@ -8,10 +8,12 @@ import { computed } from 'vue'
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
 import dayjs from 'dayjs'
 import LinkIcon from '../components/LinkIcon.vue'
+import { VITE_SITE_NAME } from '../modules/constants'
+
 const { frontmatter } = useProjectFrontmatter()
 
 useHead({
-  title: `${frontmatter.value?.title} | ${import.meta.env.VITE_SITE_NAME}`,
+  title: `${frontmatter.value?.title} | ${VITE_SITE_NAME}`,
   meta: [
     { property: 'description', content: frontmatter.value?.briefDescription },
   ],
