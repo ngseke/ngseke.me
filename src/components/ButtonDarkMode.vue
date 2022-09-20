@@ -10,6 +10,7 @@ const toggleDark = useToggle(isDark)
     class="
       link-effect
       h-8 w-8
+      select-none
       rounded-full
       text-lg
       after:inset-[-.3rem]

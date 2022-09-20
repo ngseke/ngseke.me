@@ -26,6 +26,7 @@ const className = `
     rel="noreferrer noopener"
   >
     <slot />
+    <Fa :icon="['fas', 'up-right-from-square']" class="ml-2" />
   </a>
   <RouterLink
     v-else-if="to"
@@ -35,3 +36,7 @@ const className = `
     <slot />
   </RouterLink>
 </template>
+
+<style lang="scss" scoped>
+@use '../styles/link-effect';
+</style>

@@ -21,12 +21,12 @@ const handleClick = (e: Event) => {
 
 <template>
   <transition
-    enter-from-class="!w-0 opacity-0"
-    leave-to-class="!w-0 opacity-0"
+    enter-from-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
+    leave-to-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
   >
     <div
       v-if="show"
-      class="w-20 transition-all duration-200"
+      class="transition-all duration-200 sm:w-20"
     >
       <RouterLink
         class="neon font-pacifico inline-block rotate-[-4deg] text-lg"
