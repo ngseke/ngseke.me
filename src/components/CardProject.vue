@@ -18,7 +18,7 @@ defineProps<{
 
     <div class="mr-5 flex-none">
       <img
-        class="h-[5.5rem] w-[8rem] overflow-hidden rounded-xl bg-stone-300 object-cover dark:bg-stone-700"
+        class="h-[5.5rem] w-[8rem] overflow-hidden rounded-xl border border-stone-200 bg-stone-200 object-cover transition-colors dark:border-stone-800 dark:bg-stone-800"
         :src="img"
       >
     </div>
