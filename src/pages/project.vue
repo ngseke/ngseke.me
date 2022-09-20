@@ -109,6 +109,8 @@ const link = computed(() => frontmatter.value?.demoLink)
     +media
   a
     @apply underline
+  hr
+    @apply my-6 border-current opacity-30
   .embed-responsive
     @apply mb-12 mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block
     +media
