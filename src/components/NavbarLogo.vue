@@ -17,12 +17,14 @@ const handleClick = (e: Event) => {
     })
   }
 }
+
+const transitionFromClassName = 'scale-95 sm:scale-100 sm:!w-0 opacity-0'
 </script>
 
 <template>
   <transition
-    enter-from-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
-    leave-to-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
+    :enter-from-class="transitionFromClassName"
+    :leave-to-class="transitionFromClassName"
   >
     <div
       v-if="show"

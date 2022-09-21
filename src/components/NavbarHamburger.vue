@@ -10,13 +10,15 @@ defineProps<{
 defineEmits<{
   (e: 'clickLink'): void,
 }>()
+
+const transitionFromClassName = 'opacity-0 -translate-x-4'
 </script>
 
 <template>
   <Teleport to="body">
     <transition
-      enter-from-class="opacity-0 -translate-x-4"
-      leave-to-class="opacity-0 -translate-x-4"
+      :enter-from-class="transitionFromClassName"
+      :leave-to-class="transitionFromClassName"
     >
       <div
         v-if="show"
