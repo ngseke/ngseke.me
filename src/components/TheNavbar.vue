@@ -10,7 +10,7 @@ import NavbarLogo from './NavbarLogo.vue'
 import { aboutMeSectionHash, scrollToAboutMe } from '../modules/about-me-section'
 import { useWindowScroll } from '@vueuse/core'
 import ButtonHamburger from './ButtonHamburger.vue'
-import type NavbarLinkType from '../types/NavbarLink'
+import type Link from '../types/Link'
 import NavbarHamburger from './NavbarHamburger.vue'
 import useHamburger from '../composables/useHamburger'
 
@@ -25,7 +25,7 @@ const shouldShowLogo = computed(() => {
   return !isCoverVisible.value
 })
 
-const links: NavbarLinkType[] = [
+const links: Link[] = [
   {
     name: 'About',
     to: { name: 'index', hash: aboutMeSectionHash },

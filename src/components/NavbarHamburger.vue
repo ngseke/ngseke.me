@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import NavbarLink from './NavbarLink.vue'
-import NavbarLinkType from '../types/NavbarLink'
+import Link from '../types/Link'
 
 defineProps<{
-  links?: NavbarLinkType[],
+  links?: Link[],
   show: boolean,
 }>()
 
