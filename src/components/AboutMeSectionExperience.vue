@@ -2,6 +2,12 @@
 import { getFormattedDate } from '../modules/date'
 import AboutMeSection from './AboutMeSection.vue'
 
+const getListClassName = (index: number) => ({
+  'flex flex-1 before:mr-1 before:min-w-[.5rem] before:text-center': true,
+  'opacity-60 before:content-["•"]': index,
+  'before:content-["▸"]': !index,
+})
+
 const list = [
   {
     title: 'Software Engineer',
@@ -32,11 +38,7 @@ const list = [
       <li
         v-for="({ title, company, period }, index) in list"
         :key="index"
-        class="flex flex-1 before:mr-1 before:min-w-[.5rem] before:text-center"
-        :class="{
-          'opacity-60 before:content-[\'•\']': index,
-          'before:content-[\'▸\']': !index,
-        }"
+        :class="getListClassName(index)"
       >
         <div class="ml-2">
           <span>{{ title }}</span>
