@@ -1,16 +1,24 @@
 <script setup lang="ts">
 import useMounted from '../composables/useMounted'
+import { scrollToAboutMe } from '../modules/about-me-section'
+import ButtonScrollDown from './ButtonScrollDown.vue'
+
 const { isMounted } = useMounted()
 
 const transitionBind = {
   enterActiveClass: 'transition-all origin-top-left duration-500',
   enterFromClass: 'opacity-0',
 } as const
+
+const handleClickScrollDown = () => {
+  scrollToAboutMe({ duration: 500 })
+}
 </script>
 
 <template>
   <div
     class="
+      relative
       flex
       h-screen w-full
       flex-col items-center justify-center
@@ -30,6 +38,9 @@ const transitionBind = {
           </h1>
         </div>
       </transition>
+    </div>
+    <div class="absolute left-1/2 bottom-10 -translate-x-1/2">
+      <ButtonScrollDown @click="handleClickScrollDown" />
     </div>
   </div>
 </template>
