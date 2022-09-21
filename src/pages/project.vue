@@ -9,6 +9,7 @@ import useProjectFrontmatter from '../composables/useProjectFrontmatter'
 import LinkIcon from '../components/LinkIcon.vue'
 import { VITE_SITE_NAME } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
+import useMediumZoom from '../composables/useMediumZoom'
 
 const { frontmatter } = useProjectFrontmatter()
 
@@ -18,6 +19,8 @@ useHead({
     { property: 'description', content: frontmatter.value?.briefDescription },
   ],
 })
+
+useMediumZoom()
 
 const periodText = computed(() => {
   const period = frontmatter.value?.period

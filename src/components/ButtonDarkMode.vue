@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { useDark, useToggle } from '@vueuse/core'
+import { useToggle } from '@vueuse/core'
+import useDark from '../composables/useDark'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
