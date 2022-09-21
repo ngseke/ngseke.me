@@ -1,4 +1,4 @@
-import { useIntersectionObserver } from '@vueuse/core'
+import { isClient, useIntersectionObserver } from '@vueuse/core'
 import { ref, nextTick, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -9,7 +9,7 @@ export default function useIsCoverVisible () {
 
   onMounted(() => {
     watch(route, async () => {
-      if (typeof document === 'undefined') return
+      if (!isClient) return
       await nextTick()
       $cover.value = document.querySelector('#cover')
       if (!$cover.value) isCoverVisible.value = null

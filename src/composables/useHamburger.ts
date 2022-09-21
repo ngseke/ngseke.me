@@ -1,10 +1,10 @@
-import { useToggle, useScrollLock, useWindowSize } from '@vueuse/core'
+import { useToggle, useScrollLock, useWindowSize, isClient } from '@vueuse/core'
 import { computed, watch } from 'vue'
 
 export default function useHamburger () {
   const [isExpanded, toggleIsExpanded] = useToggle()
   const bodyEl = computed(() => {
-    if (typeof document === 'undefined') return
+    if (!isClient) return
     return document.querySelector('body')
   })
   const isLocked = useScrollLock(bodyEl)

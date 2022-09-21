@@ -1,8 +1,9 @@
+import { isClient } from '@vueuse/core'
 import { onMounted } from 'vue'
 
 export default function useMountedBodyClass () {
   onMounted(async () => {
-    if (typeof document === 'undefined') return
+    if (!isClient) return
 
     await new Promise(resolve => setTimeout(resolve))
     document.querySelector('body')?.classList
