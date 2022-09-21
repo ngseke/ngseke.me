@@ -7,7 +7,7 @@ import ButtonDarkMode from './ButtonDarkMode.vue'
 import NavbarLink from './NavbarLink.vue'
 import NavbarLogo from './NavbarLogo.vue'
 
-import { scrollToAboutMe } from '../modules/scroll-to'
+import { aboutMeSectionHash, scrollToAboutMe } from '../modules/about-me-section'
 import { useWindowScroll } from '@vueuse/core'
 import ButtonHamburger from './ButtonHamburger.vue'
 import type NavbarLinkType from '../types/NavbarLink'
@@ -20,7 +20,7 @@ const { isCoverVisible } = useIsCoverVisible()
 const shouldShowLogo = computed(() => {
   if (isCoverVisible.value == null) {
     return (route.name !== 'index') ||
-      (route.name === 'index' && route.hash === '#about')
+      (route.name === 'index' && route.hash === aboutMeSectionHash)
   }
   return !isCoverVisible.value
 })
@@ -28,7 +28,7 @@ const shouldShowLogo = computed(() => {
 const links: NavbarLinkType[] = [
   {
     name: 'About',
-    to: { name: 'index', hash: '#about' },
+    to: { name: 'index', hash: aboutMeSectionHash },
     handler: (e) => {
       if (route.name === 'index') {
         e.preventDefault()

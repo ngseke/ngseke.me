@@ -8,14 +8,12 @@ import { nextTick, onMounted } from 'vue'
 import { useHead } from '@vueuse/head'
 import Cover from '../components/Cover.vue'
 import AboutMe from '../components/AboutMe.vue'
-import { scrollToAboutMe } from '../modules/scroll-to'
+import { aboutMeSectionHash, aboutMeSectionId, scrollToAboutMe } from '../modules/about-me-section'
 import { VITE_SITE_NAME } from '../modules/constants'
-
-const aboutId = 'about'
 
 const route = useRoute()
 onMounted(async () => {
-  if (route.hash === `#${aboutId}`) {
+  if (route.hash === aboutMeSectionHash) {
     await nextTick()
     scrollToAboutMe({ duration: 1 })
   }
@@ -28,5 +26,5 @@ useHead({
 
 <template>
   <Cover />
-  <AboutMe :id="aboutId" />
+  <AboutMe :id="aboutMeSectionId" />
 </template>
