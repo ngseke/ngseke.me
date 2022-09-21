@@ -3,6 +3,7 @@ import AboutMeSectionSkills from './AboutMeSectionSkills.vue'
 import AboutMeSectionContactMe from './AboutMeSectionContactMe.vue'
 import AboutMeSectionSelfIntroduction from './AboutMeSectionSelfIntroduction.vue'
 import AboutMeSectionExperience from './AboutMeSectionExperience.vue'
+import AboutMeSectionProjects from './AboutMeSectionProjects.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import AboutMeSectionExperience from './AboutMeSectionExperience.vue'
         <AboutMeSectionSkills />
         <AboutMeSectionExperience />
         <AboutMeSectionContactMe />
+        <AboutMeSectionProjects />
       </article>
     </div>
   </div>
