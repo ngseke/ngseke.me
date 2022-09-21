@@ -5,8 +5,8 @@ import { useRoute } from 'vue-router'
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 import ButtonDarkMode from './ButtonDarkMode.vue'
 import NavbarLink from './NavbarLink.vue'
-
 import NavbarLogo from './NavbarLogo.vue'
+
 import { scrollToAboutMe } from '../modules/scroll-to'
 import { useWindowScroll } from '@vueuse/core'
 import ButtonHamburger from './ButtonHamburger.vue'

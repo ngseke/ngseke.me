@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import useMountedBodyClass from './composables/useMountedBodyClass'
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import TheNavbar from './components/TheNavbar.vue'
+import TheFooter from './components/TheFooter.vue'
 useMountedBodyClass()
 </script>
 
 <template>
   <div>
-    <Navbar />
+    <TheNavbar />
     <RouterView />
-    <Footer />
+    <TheFooter />
   </div>
 </template>
