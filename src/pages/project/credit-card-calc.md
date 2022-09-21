@@ -22,6 +22,6 @@ cover: /img/project-cover/credit-card-calc.png
 
 [https://ngseke.github.io/sinopac-dual-currency-card-calculator/](https://ngseke.github.io/sinopac-dual-currency-card-calculator/)
 <br>
-（註：2022 年後將不再適用此回饋規則）
+（註：一代神卡已殞落，2022 年後已不再適用此回饋規則）
 
 <iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=/sinopac-dual-currency-card-calculator&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
