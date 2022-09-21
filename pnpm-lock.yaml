@@ -21,6 +21,7 @@ specifiers:
   eslint-plugin-vue: ^9.4.0
   fs-extra: ^10.1.0
   gray-matter: ^4.0.3
+  medium-zoom: ^1.0.6
   postcss: ^8.1.0
   sass: ^1.54.9
   scroll-to-element: ^2.0.3
@@ -44,6 +45,7 @@ dependencies:
   '@fortawesome/vue-fontawesome': 3.0.1_4h6vf4pkzarhnju6fzmo7mfhke
   '@vueuse/core': 9.2.0_vue@3.2.39
   dayjs: 1.11.5
+  medium-zoom: 1.0.6
   scroll-to-element: 2.0.3
   vite-plugin-md: 0.20.4_igxy6wrgti6mtktaugxifd3erm
   vite-plugin-pages: 0.26.0_vite@3.1.1
@@ -3045,6 +3047,10 @@ packages:
 
   /mdurl/1.0.1:
     resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
+    dev: false
+
+  /medium-zoom/1.0.6:
+    resolution: {integrity: sha512-UdiUWfvz9fZMg1pzf4dcuqA0W079o0mpqbTnOz5ip4VGYX96QjmbM+OgOU/0uOzAytxC0Ny4z+VcYQnhdifimg==}
     dev: false
 
   /merge2/1.4.1:
