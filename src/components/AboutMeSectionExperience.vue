@@ -32,14 +32,11 @@ const list = [
       <li
         v-for="({ title, company, period }, index) in list"
         :key="index"
-        class="
-          flex
-          flex-1
-          before:mr-1
-          before:opacity-50
-          before:content-['•']
-        "
-        :class="{ 'opacity-75': index }"
+        class="flex flex-1 before:mr-1 before:min-w-[.5rem] before:text-center"
+        :class="{
+          'opacity-60 before:content-[\'•\']': index,
+          'before:content-[\'▸\']': !index,
+        }"
       >
         <div class="ml-2">
           <span>{{ title }}</span>
