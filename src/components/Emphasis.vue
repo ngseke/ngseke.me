@@ -8,8 +8,8 @@
       not-italic
       after:absolute
       after:inset-x-[-1px]
-      after:bottom-[2px]
-      after:h-[5px]
+      after:bottom-[10%]
+      after:h-[20%]
     "
   >
     <span class="relative z-10">
