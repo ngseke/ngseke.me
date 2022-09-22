@@ -7,16 +7,23 @@ import { useHead } from '@vueuse/head'
 import { computed } from 'vue'
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
 import LinkIcon from '../components/LinkIcon.vue'
-import { VITE_SITE_NAME } from '../modules/constants'
+import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
 import useMediumZoom from '../composables/useMediumZoom'
 
 const { frontmatter } = useProjectFrontmatter()
 
+const description = computed(() => frontmatter.value?.briefDescription)
+
 useHead({
   title: `${frontmatter.value?.title} | ${VITE_SITE_NAME}`,
   meta: [
-    { property: 'description', content: frontmatter.value?.briefDescription },
+    { property: 'description', content: description.value },
+    { property: 'og:description', content: description.value },
+    {
+      property: 'og:image',
+      content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
+    },
   ],
 })
 
