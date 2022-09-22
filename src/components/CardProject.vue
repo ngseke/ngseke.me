@@ -14,7 +14,7 @@ defineProps<{
 
 <template>
   <div class="relative flex">
-    <CardProjectLinkOverlay v-if="path" :to="path" />
+    <CardProjectLinkOverlay v-if="path" :href="path" />
 
     <div class="mr-5 flex-none">
       <img
@@ -43,6 +43,7 @@ defineProps<{
           v-if="link"
           :href="link"
           :icon="['fas', 'up-right-from-square']"
+          external
           @click.stop=""
         />
       </div>

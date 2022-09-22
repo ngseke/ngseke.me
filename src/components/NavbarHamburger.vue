@@ -26,12 +26,11 @@ const transitionFromClassName = 'opacity-0 -translate-x-4'
       >
         <ul class="flex h-full flex-col items-center space-y-8 pt-12 text-2xl font-medium text-white/80">
           <li
-            v-for="({ name, to, href, handler }, index) in links"
+            v-for="({ name, href, handler }, index) in links"
             :key="index"
           >
             <NavbarLink
               :href="href"
-              :to="to"
               @click="($event) => {
                 handler?.($event)
                 $emit('clickLink')

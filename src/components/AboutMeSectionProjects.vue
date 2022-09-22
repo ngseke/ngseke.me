@@ -18,7 +18,7 @@ const list = [
       <ProjectList :list="list" class="pt-4" />
 
       <div class="pl-2">
-        <Link :to="{ name: 'projects' }">
+        <Link :href="{ name: 'projects' }">
           View More
           <Fa :icon="['fas', 'caret-right']" class="ml-1" />
         </Link>

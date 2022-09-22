@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import type { RouterLinkProps } from 'vue-router'
-
-defineProps<{
-  to: RouterLinkProps['to'],
-}>()
+import IsomorphicLink from './IsomorphicLink.vue'
 </script>
 
 <template>
-  <RouterLink
-    :to="to"
+  <IsomorphicLink
     class="
       absolute
       inset-0

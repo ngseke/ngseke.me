@@ -1,40 +1,22 @@
 <script setup lang="ts">
-import type { AnchorHTMLAttributes } from 'vue'
-import type { RouterLinkProps } from 'vue-router'
-
-defineProps<{
-  href?: AnchorHTMLAttributes['href'],
-  to?: RouterLinkProps['to'],
-}>()
-
-const className = `
-  link-effect
-  uppercase
-  after:-inset-x-2
-  after:-inset-y-1
-  after:rounded-lg
-  after:bg-white/10
-`
+import IsomorphicLink from './IsomorphicLink.vue'
 </script>
 
 <template>
-  <a
-    v-if="href"
-    :href="href"
-    :class="className"
-    target="_blank"
-    rel="noreferrer noopener"
+  <IsomorphicLink
+    v-slot="{ isExternal }"
+    class="
+    link-effect
+    uppercase
+    after:-inset-x-2
+    after:-inset-y-1
+    after:rounded-lg
+    after:bg-white/10
+    "
   >
     <slot />
-    <Fa :icon="['fas', 'up-right-from-square']" class="ml-2" />
-  </a>
-  <RouterLink
-    v-else-if="to"
-    :to="to"
-    :class="className"
-  >
-    <slot />
-  </RouterLink>
+    <Fa v-if="isExternal" :icon="['fas', 'up-right-from-square']" class="ml-2" />
+  </IsomorphicLink>
 </template>
 
 <style lang="scss" scoped>

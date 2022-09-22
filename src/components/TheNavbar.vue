@@ -28,7 +28,7 @@ const shouldShowLogo = computed(() => {
 const links: Link[] = [
   {
     name: 'About',
-    to: { name: 'index', hash: aboutMeSectionHash },
+    href: { name: 'index', hash: aboutMeSectionHash },
     handler: (e) => {
       if (route.name === 'index') {
         e.preventDefault()
@@ -38,7 +38,7 @@ const links: Link[] = [
   },
   {
     name: 'Projects',
-    to: { name: 'projects' },
+    href: { name: 'projects' },
   },
   {
     name: 'Notes',
@@ -69,12 +69,11 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
 
         <ul class="mr-6 hidden space-x-6 font-medium sm:flex">
           <li
-            v-for="({ name, to, href, handler }, index) in links"
+            v-for="({ name, href, handler }, index) in links"
             :key="index"
           >
             <NavbarLink
               :href="href"
-              :to="to"
               @click="handler?.($event) ?? (() => {})"
             >
               {{ name }}

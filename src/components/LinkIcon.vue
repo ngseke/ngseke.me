@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import type { AnchorHTMLAttributes } from 'vue'
+import IsomorphicLink from './IsomorphicLink.vue'
 
 defineProps<{
-  href?: AnchorHTMLAttributes['href'],
   icon: string | string[],
 }>()
 </script>
 
 <template>
-  <a
+  <IsomorphicLink
     class="
       link-effect
       inline-flex
@@ -22,12 +21,9 @@ defineProps<{
       after:bg-black/10
       dark:after:bg-white/10
     "
-    target="_blank"
-    rel="noreferrer noopener"
-    :href="href"
   >
     <Fa :icon="icon" />
-  </a>
+  </IsomorphicLink>
 </template>
 
 <style lang="sass" scoped>
