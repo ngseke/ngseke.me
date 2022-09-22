@@ -10,7 +10,7 @@ import Link from './Link.vue'
       <div class="flex w-full justify-between">
         <div>
           © 2018 - {{ new Date().getFullYear() }}
-          <Link href="." class="ml-1">
+          <Link href="/" class="ml-1">
             ngseke.me
           </Link>
         </div>
