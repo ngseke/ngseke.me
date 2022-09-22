@@ -44,7 +44,7 @@ export default function useProjects () {
         list: [
           map.koasu,
           map['credit-card-calc'],
-          map.emo,
+          map['em-optimization-lab'],
         ],
       },
       {
@@ -67,15 +67,15 @@ export default function useProjects () {
           },
           map.gomoku,
           map['tic-tac-toe'],
-          map.flag,
-          map.typingtyping,
+          map['raise-your-red-flag'],
+          map['typing-typing'],
         ],
       },
       {
         title: 'Design',
         cover: 'https://images.unsplash.com/photo-1616941245386-fc2f3458836f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80',
         list: [
-          map.camp2017,
+          map['camp-2017'],
           map.shanlinliang,
         ],
       },
