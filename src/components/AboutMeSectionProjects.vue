@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import useProjects from '../composables/useProjects'
-import AboutMeSection from './AboutMeSection.vue'
+import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 import CardProject from './CardProject.vue'
 import Link from './Link.vue'
 
@@ -13,7 +13,7 @@ const list = [
 </script>
 
 <template>
-  <AboutMeSection title="My Projects">
+  <AboutMeSectionLayout title="My Projects">
     <div>
       <ul class="-mx-4 flex flex-wrap pt-4">
         <li
@@ -38,5 +38,5 @@ const list = [
         </Link>
       </div>
     </div>
-  </AboutMeSection>
+  </AboutMeSectionLayout>
 </template>

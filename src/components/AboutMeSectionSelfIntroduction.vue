@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import AboutMeSection from './AboutMeSection.vue'
+import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 import Emphasis from './Emphasis.vue'
 </script>
 
 <template>
-  <AboutMeSection>
+  <AboutMeSectionLayout>
     <div class="flex flex-col space-y-2">
       <h2 class="text-5xl font-bold md:text-6xl">
         Hi, I'm
@@ -36,5 +36,5 @@ import Emphasis from './Emphasis.vue'
       >黃省喬</span>
       / HUANG Xingqiao
     </p>
-  </AboutMeSection>
+  </AboutMeSectionLayout>
 </template>

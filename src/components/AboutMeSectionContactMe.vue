@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import links from '../modules/links'
-import AboutMeSection from './AboutMeSection.vue'
+import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 import Link from './Link.vue'
 
 const list = [
@@ -13,7 +13,7 @@ const list = [
 </script>
 
 <template>
-  <AboutMeSection title=" Contact Me">
+  <AboutMeSectionLayout title=" Contact Me">
     <ul class="flex flex-col">
       <li
         v-for="({ title, url, icon }, index) in list"
@@ -27,5 +27,5 @@ const list = [
         </Link>
       </li>
     </ul>
-  </AboutMeSection>
+  </AboutMeSectionLayout>
 </template>

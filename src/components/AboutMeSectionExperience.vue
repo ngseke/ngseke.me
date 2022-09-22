@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getFormattedDate } from '../modules/date'
-import AboutMeSection from './AboutMeSection.vue'
+import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 
 const getListClassName = (index: number) => ({
   'flex flex-1 before:mr-1 before:min-w-[.5rem] before:text-center': true,
@@ -33,7 +33,7 @@ const list = [
 </script>
 
 <template>
-  <AboutMeSection title="Experience">
+  <AboutMeSectionLayout title="Experience">
     <ul class="flex max-w-md flex-col space-y-3 pt-2 leading-tight">
       <li
         v-for="({ title, company, period }, index) in list"
@@ -54,5 +54,5 @@ const list = [
         </div>
       </li>
     </ul>
-  </AboutMeSection>
+  </AboutMeSectionLayout>
 </template>

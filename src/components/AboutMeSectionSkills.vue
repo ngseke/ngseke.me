@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AboutMeSection from './AboutMeSection.vue'
+import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 const skills = [
   'React',
   'Vue 3',
@@ -11,7 +11,7 @@ const skills = [
 </script>
 
 <template>
-  <AboutMeSection title="Skills">
+  <AboutMeSectionLayout title="Skills">
     <ul class="flex max-w-md flex-wrap">
       <li
         v-for="(item, index) in skills"
@@ -28,5 +28,5 @@ const skills = [
         <span class="ml-2">{{ item }}</span>
       </li>
     </ul>
-  </AboutMeSection>
+  </AboutMeSectionLayout>
 </template>
