@@ -5,9 +5,9 @@ name: "projects"
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 import TitleCategory from '../components/TitleCategory.vue'
-import CardProject from '../components/CardProject.vue'
 import useProjects from '../composables/useProjects'
 import { VITE_SITE_NAME } from '../modules/constants'
+import ProjectList from '../components/ProjectList.vue'
 
 useHead({
   title: `Projects | ${VITE_SITE_NAME}`,
@@ -25,22 +25,7 @@ const { projects } = useProjects()
         class="mb-16 space-y-8"
       >
         <TitleCategory>{{ title }}</TitleCategory>
-        <ul class="-mx-4 flex flex-wrap">
-          <li
-            v-for="({ path, title, briefDescription, githubLink, demoLink, cover }, index) in list"
-            :key="index"
-            class="mb-8 w-full px-4 md:w-1/2"
-          >
-            <CardProject
-              :title="title"
-              :path="path"
-              :description="briefDescription"
-              :github="githubLink"
-              :link="demoLink"
-              :img="cover"
-            />
-          </li>
-        </ul>
+        <ProjectList :list="list" />
       </section>
     </div>
   </div>

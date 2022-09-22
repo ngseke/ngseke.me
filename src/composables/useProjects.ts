@@ -1,10 +1,7 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import Project from '../types/Project'
 import ProjectFrontmatter from '../types/ProjectFrontmatter'
-
-type Project = ProjectFrontmatter & {
-  path?: string,
-}
 
 export default function useProjects () {
   const router = useRouter()
