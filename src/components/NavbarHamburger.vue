@@ -11,7 +11,7 @@ defineEmits<{
   (e: 'clickLink'): void,
 }>()
 
-const transitionFromClassName = 'opacity-0 -translate-x-4'
+const transitionFromClassName = 'opacity-0 -translate-x-16'
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const transitionFromClassName = 'opacity-0 -translate-x-4'
     >
       <div
         v-if="show"
-        class="fixed inset-x-0 top-16 bottom-0 z-20 origin-top bg-black p-4 transition-all sm:hidden"
+        class="fixed inset-x-0 top-16 bottom-0 z-20 bg-black p-4 transition-all sm:hidden"
       >
         <ul class="flex h-full flex-col items-center space-y-8 pt-12 text-2xl font-medium text-white/80">
           <li
