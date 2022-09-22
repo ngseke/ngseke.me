@@ -42,8 +42,8 @@ const list = [
       >
         <div class="ml-2">
           <span>{{ title }}</span>
-          <span class="ml-1 mr-3 font-medium before:content-['@_']">
-            {{ company }}
+          <span class="ml-1 mr-3 font-medium">
+            @ {{ company }}
           </span>
           <br class="inline-block sm:hidden">
           <span class="whitespace-nowrap text-base text-stone-700 dark:text-stone-300">
