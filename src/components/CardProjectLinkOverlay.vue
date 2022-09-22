@@ -8,7 +8,8 @@ import IsomorphicLink from './IsomorphicLink.vue'
       absolute
       inset-0
       after:pointer-events-none
-      after:absolute after:-inset-3
+      after:absolute
+      after:-inset-3
       after:scale-[97%]
       after:rounded-xl
       after:bg-black/10

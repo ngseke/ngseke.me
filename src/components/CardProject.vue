@@ -16,7 +16,7 @@ defineProps<{
   <div class="relative flex">
     <CardProjectLinkOverlay v-if="path" :href="path" />
 
-    <div class="mr-5 flex-none">
+    <div class="pointer-events-none z-10 mr-5 flex-none ">
       <img
         class="h-[5.5rem] w-[8rem] overflow-hidden rounded-xl border border-stone-200 bg-stone-200 object-cover transition-colors dark:border-stone-800 dark:bg-stone-800"
         :src="img"
@@ -24,7 +24,7 @@ defineProps<{
     </div>
 
     <div class="flex flex-1 flex-col justify-center">
-      <div>
+      <div class="pointer-events-none z-10">
         <h3 class="mb-1 text-lg font-medium leading-5">
           {{ title }}
         </h3>
