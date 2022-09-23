@@ -8,12 +8,14 @@ import TitleCategory from '../components/TitleCategory.vue'
 import useProjects from '../composables/useProjects'
 import { VITE_SITE_NAME } from '../modules/constants'
 import ProjectList from '../components/ProjectList.vue'
+import useReadHistory from '../composables/useReadHistory'
 
 useHead({
   title: `Projects | ${VITE_SITE_NAME}`,
 })
 
 const { projects } = useProjects()
+const { isReadAll } = useReadHistory()
 </script>
 
 <template>
@@ -27,6 +29,10 @@ const { projects } = useProjects()
         <TitleCategory>{{ title }}</TitleCategory>
         <ProjectList :list="list" />
       </section>
+
+      <div v-if="isReadAll" class="mt-2 font-mono text-xs">
+        Wow, you've read all of my projects 😳
+      </div>
     </div>
   </div>
 </template>

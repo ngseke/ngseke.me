@@ -10,6 +10,7 @@ export default function useProjects () {
     const routes = router.getRoutes()
     return routes
       .filter(route => /\/project\/(.+)/.test(route.path))
+      .filter(route => !route.redirect)
       .reduce<Record<string, Project>>((map, route) => {
       const key = (route.name as string)?.split('project-')[1]
       map[key] = {
