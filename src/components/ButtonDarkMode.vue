@@ -13,7 +13,3 @@ const toggleDark = useToggle(isDark)
     <Fa v-else :icon="['fas','moon']" />
   </ButtonRotateIcon>
 </template>
-
-<style lang="sass" scoped>
-@use '../styles/link-effect'
-</style>
