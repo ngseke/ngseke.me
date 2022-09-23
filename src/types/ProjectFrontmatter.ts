@@ -6,4 +6,5 @@ export default interface ProjectFrontmatter{
   demoLink?: string,
   period?: string | [string, string],
   members?: string[],
+  name?: string,
 }

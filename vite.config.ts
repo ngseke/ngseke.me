@@ -23,8 +23,11 @@ export default defineConfig({
       extendRoute (route) {
         const path = resolve(__dirname, route.component.slice(1))
         if (/project\/(.+).md/.test(path)) {
+          const name = path.split(/project\/(.+).md/)[1]
+
           const md = fs.readFileSync(path, 'utf-8')
           const { data } = matter(md)
+          data.name = name
           route.meta = {
             ...(route.meta || {}),
             frontmatter: data,

@@ -10,6 +10,7 @@ import LinkIcon from '../components/LinkIcon.vue'
 import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
 import useMediumZoom from '../composables/useMediumZoom'
+import useReadHistory from '../composables/useReadHistory'
 
 const { frontmatter } = useProjectFrontmatter()
 
@@ -44,6 +45,9 @@ const periodText = computed(() => {
 
 const github = computed(() => frontmatter.value?.githubLink)
 const link = computed(() => frontmatter.value?.demoLink)
+
+const { pushReadHistory } = useReadHistory()
+if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
 </script>
 
 <template>
