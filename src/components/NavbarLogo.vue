@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import scrollToElement from 'scroll-to-element'
+import TransitionUniversal from './TransitionUniversal.vue'
 
 defineProps<{
   show: boolean,
@@ -17,14 +18,11 @@ const handleClick = (e: Event) => {
     })
   }
 }
-
-const transitionFromClassName = 'scale-95 sm:scale-100 sm:!w-0 opacity-0'
 </script>
 
 <template>
-  <transition
-    :enter-from-class="transitionFromClassName"
-    :leave-to-class="transitionFromClassName"
+  <TransitionUniversal
+    enter-from-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
   >
     <div
       v-if="show"
@@ -38,7 +36,7 @@ const transitionFromClassName = 'scale-95 sm:scale-100 sm:!w-0 opacity-0'
         ngseke
       </RouterLink>
     </div>
-  </transition>
+  </TransitionUniversal>
 </template>
 
 <style lang="scss" scoped>

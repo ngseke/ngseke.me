@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NavbarLink from './NavbarLink.vue'
 import Link from '../types/Link'
+import TransitionUniversal from './TransitionUniversal.vue'
 
 defineProps<{
   links?: Link[],
@@ -10,16 +11,11 @@ defineProps<{
 defineEmits<{
   (e: 'clickLink'): void,
 }>()
-
-const transitionFromClassName = 'opacity-0 -translate-x-16'
 </script>
 
 <template>
   <Teleport to="body">
-    <transition
-      :enter-from-class="transitionFromClassName"
-      :leave-to-class="transitionFromClassName"
-    >
+    <TransitionUniversal enter-from-class="opacity-0 -translate-x-16">
       <div
         v-if="show"
         class="fixed inset-x-0 top-16 bottom-0 z-20 bg-black p-4 transition-all sm:hidden"
@@ -41,6 +37,6 @@ const transitionFromClassName = 'opacity-0 -translate-x-16'
           </li>
         </ul>
       </div>
-    </transition>
+    </TransitionUniversal>
   </Teleport>
 </template>
