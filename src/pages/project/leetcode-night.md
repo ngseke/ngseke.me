@@ -7,14 +7,16 @@ period: 2022/02
 cover: /img/project-cover/leetcode-night.png
 ---
 
+![](../../assets/img/article/leetcode-night/banner.png)
 
-長久以來都只有[中國版力扣](https://leetcode-cn.com/)支援完整的暗黑模式，可惜美國 LeetCode 主站則僅有在 Problem List、Profile 等少數頁面頁才支援，而獨缺解題頁。
 
-某夜在深夜刷題的我，突發奇想，說不定可以取力扣的色票，直接複寫 LeetCode 的 CSS 樣式來實現深色模式，於是誕生了 *LeetCode Night*。
+長久以來都只有[中國版力扣](https://leetcode-cn.com/)支援完整的暗黑模式，而美國 LeetCode 主站則僅有在 Problem List、Profile 等少數頁面頁才支援，獨缺解題頁。
 
-原本也僅僅是寫好玩，就扔到了 GitHub 上，甚至名字也是隨意取的。後來發現其實[蠻多人](https://leetcode.com/discuss/general-discussion/544429/dark-mode)都在跟官方敲碗深色模式。因此後來我決定把它上架到商店，讓它變得更親民、更容易安裝。對我來說，這也是個難得可以從頭到尾，完整地開發擴充套件的機會。過程除了前端相關的開發、打包、上版號，甚至也包含 UI 和 Logo 設計 、截圖和宣傳橫幅的設計、發布送審套件等。
+某夜在深夜刷題的我突發奇想，說不定我可以取用力扣的色票，直接複寫 LeetCode 的樣式來實現深色模式，於是便誕生了這個專案。
 
-經過了半年左右時間，使用者終於人數突破了 1K，還拿到了一個小藍勾勾（徽章），也算是達成了不值得一提的小成就吧。
+原本也僅僅是寫好玩，就把它扔上了 GitHub，甚至連名字都是隨意取的。後來發現其實[蠻多人](https://leetcode.com/discuss/general-discussion/544429/dark-mode)都在跟官方敲碗深色模式。因此後來我決定把它上架到商店，讓它變得更親民、更容易安裝。對我來說，這也是個難得可以從頭到尾，完整地開發擴充套件的機會。過程除了前端相關的開發、打包、上版號，甚至也包含 UI 和 Logo 設計 、截圖和宣傳橫幅的設計、發布送審套件等。
+
+經過了半年左右時間，使用者終於人數突破了 1K，還拿到了一個小藍勾勾（徽章），也算是達成了不值得一提的小小成就。
 
 ![](../../assets/img/article/leetcode-night/store.png)
 
@@ -36,7 +38,6 @@ cover: /img/project-cover/leetcode-night.png
 3. 自動清空編輯器裡前一次送出過的程式碼，特別適合刷題狂人，避免不小心瞄到答案
 
 
-![](../../assets/img/article/leetcode-night/banner.png)
 
 ![啟用 LeetCode 深色模式](../../assets/img/article/leetcode-night/1.png)
 ![Popup 視窗](../../assets/img/article/leetcode-night/2.png)
