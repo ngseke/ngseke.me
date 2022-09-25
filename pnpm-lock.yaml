@@ -11,6 +11,7 @@ specifiers:
   '@vitejs/plugin-vue-jsx': ^2.0.1
   '@vue/eslint-config-standard': ^8.0.1
   '@vue/eslint-config-typescript': ^11.0.1
+  '@vue/runtime-core': 3.2.39
   '@vueuse/core': ^9.2.0
   '@vueuse/head': ^0.7.11
   autoprefixer: ^10.4.11
@@ -60,6 +61,7 @@ devDependencies:
   '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.1+vue@3.2.39
   '@vue/eslint-config-standard': 8.0.1_qkhysaiz2uqtfghetq7m26msmu
   '@vue/eslint-config-typescript': 11.0.1_lt74cxsrofekofa4xcjvnzkbqy
+  '@vue/runtime-core': 3.2.39
   '@vueuse/head': 0.7.11_vue@3.2.39
   autoprefixer: 10.4.11_postcss@8.4.16
   critters: 0.0.16

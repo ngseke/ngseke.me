@@ -36,6 +36,7 @@
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-standard": "^8.0.1",
     "@vue/eslint-config-typescript": "^11.0.1",
+    "@vue/runtime-core": "3.2.39",
     "@vueuse/head": "^0.7.11",
     "autoprefixer": "^10.4.11",
     "critters": "^0.0.16",
