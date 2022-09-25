@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import useIsCoverVisible from '../composables/useIsCoverVisible'
-import ButtonDarkMode from './ButtonDarkMode.vue'
-import NavbarLink from './NavbarLink.vue'
-import NavbarLogo from './NavbarLogo.vue'
 
 import { aboutMeSectionHash, scrollToAboutMe } from '../modules/about-me-section'
 import { useWindowScroll } from '@vueuse/core'
-import ButtonHamburger from './ButtonHamburger.vue'
 import type Link from '../types/Link'
-import NavbarHamburger from './NavbarHamburger.vue'
 import useHamburger from '../composables/useHamburger'
 
 const route = useRoute()

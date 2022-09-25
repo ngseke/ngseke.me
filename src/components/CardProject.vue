@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import LinkIcon from './LinkIcon.vue'
-import CardProjectLinkOverlay from './CardProjectLinkOverlay.vue'
-
 defineProps<{
   path?: string,
   img?: string,

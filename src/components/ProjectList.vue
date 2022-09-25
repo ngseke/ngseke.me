@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Project from '../types/Project'
-import CardProject from './CardProject.vue'
 
 defineProps<{
   list?: Project[],

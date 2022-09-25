@@ -3,10 +3,8 @@ name: "projects"
 </route>
 
 <script setup lang="ts">
-import TitleCategory from '../components/TitleCategory.vue'
 import useProjects from '../composables/useProjects'
 import { VITE_SITE_NAME } from '../modules/constants'
-import ProjectList from '../components/ProjectList.vue'
 import useReadHistory from '../composables/useReadHistory'
 
 useHead({

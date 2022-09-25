@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { getFormattedDate } from '../modules/date'
-import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 
 const getListClassName = (index: number) => ({
   'flex flex-1 before:mr-1 before:min-w-[.5rem] before:text-center': true,

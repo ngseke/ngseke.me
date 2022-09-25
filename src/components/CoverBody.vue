@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import useMounted from '../composables/useMounted'
 import { scrollToAboutMe } from '../modules/about-me-section'
-import ButtonScrollDown from './ButtonScrollDown.vue'
-import TransitionUniversal from './TransitionUniversal.vue'
 
 const { isMounted } = useMounted()
 

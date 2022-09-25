@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ButtonRotateIcon from './ButtonRotateIcon.vue'
 defineProps<{
   active?: boolean,
 }>()

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
 const skills = [
   'React',
   'Vue 3',

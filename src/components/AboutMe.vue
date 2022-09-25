@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import AboutMeSectionSkills from './AboutMeSectionSkills.vue'
-import AboutMeSectionContactMe from './AboutMeSectionContactMe.vue'
-import AboutMeSectionSelfIntroduction from './AboutMeSectionSelfIntroduction.vue'
-import AboutMeSectionExperience from './AboutMeSectionExperience.vue'
-import AboutMeSectionProjects from './AboutMeSectionProjects.vue'
 </script>
 
 <template>

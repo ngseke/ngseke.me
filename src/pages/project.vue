@@ -4,12 +4,10 @@ name: "project"
 
 <script setup lang="ts">
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
-import LinkIcon from '../components/LinkIcon.vue'
 import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
 import useMediumZoom from '../composables/useMediumZoom'
 import useReadHistory from '../composables/useReadHistory'
-import Prose from '../components/Prose.vue'
 
 const { frontmatter } = useProjectFrontmatter()
 

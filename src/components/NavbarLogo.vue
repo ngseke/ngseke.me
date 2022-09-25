@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import scrollToElement from 'scroll-to-element'
-import TransitionUniversal from './TransitionUniversal.vue'
 
 defineProps<{
   show: boolean,

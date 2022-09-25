@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import IsomorphicLink from './IsomorphicLink.vue'
 
 defineProps<{
   icon: string | string[],

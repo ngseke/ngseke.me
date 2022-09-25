@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useToggle } from '@vueuse/core'
 import useDark from '../composables/useDark'
-import ButtonRotateIcon from './ButtonRotateIcon.vue'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)

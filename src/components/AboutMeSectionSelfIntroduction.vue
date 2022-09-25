@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
-import Emphasis from './Emphasis.vue'
 </script>
 
 <template>

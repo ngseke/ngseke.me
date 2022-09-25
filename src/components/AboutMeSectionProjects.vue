@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import useProjects from '../composables/useProjects'
-import AboutMeSectionLayout from './AboutMeSectionLayout.vue'
-import Link from './Link.vue'
-import ProjectList from './ProjectList.vue'
 
 const { projectMap } = useProjects()
 

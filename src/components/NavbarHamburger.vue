@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import NavbarLink from './NavbarLink.vue'
 import Link from '../types/Link'
-import TransitionUniversal from './TransitionUniversal.vue'
 
 defineProps<{
   links?: Link[],

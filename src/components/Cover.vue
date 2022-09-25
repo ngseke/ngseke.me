@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import CoverBody from './CoverBody.vue'
 import image from '../assets/img/cover-background.jpg'
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 

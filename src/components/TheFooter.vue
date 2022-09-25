@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import LinkIcon from './LinkIcon.vue'
 import links from '../modules/links'
-import Link from './Link.vue'
 </script>
 
 <template>
