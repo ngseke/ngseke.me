@@ -1,4 +1,4 @@
-import { useToggle, useScrollLock, useWindowSize, isClient } from '@vueuse/core'
+import { useToggle, useScrollLock, useWindowSize } from '@vueuse/core'
 
 export default function useHamburger () {
   const [isExpanded, toggleIsExpanded] = useToggle()

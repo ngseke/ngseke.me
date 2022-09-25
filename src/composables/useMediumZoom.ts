@@ -1,4 +1,4 @@
-import { isClient, useStyleTag } from '@vueuse/core'
+import { useStyleTag } from '@vueuse/core'
 import mediumZoom, { Zoom } from 'medium-zoom'
 import useDark from './useDark'
 

@@ -1,5 +1,3 @@
-import { isClient } from '@vueuse/core'
-
 export default function useMountedBodyClass () {
   onMounted(async () => {
     if (!isClient) return

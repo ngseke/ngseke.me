@@ -1,4 +1,4 @@
-import { isClient, useIntersectionObserver } from '@vueuse/core'
+import { useIntersectionObserver } from '@vueuse/core'
 
 export default function useIsCoverVisible () {
   const route = useRoute()

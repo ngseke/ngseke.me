@@ -11,6 +11,7 @@
     "getCurrentScope": true,
     "h": true,
     "inject": true,
+    "isClient": true,
     "isProxy": true,
     "isReactive": true,
     "isReadonly": true,
