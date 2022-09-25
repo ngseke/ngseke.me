@@ -9,7 +9,6 @@ export default function useReadHistory () {
   const readHistory = useLocalStorage<ReadHistory>(storageKey, {})
 
   const pushReadHistory = (name: string) => {
-    console.log(name)
     if (!(name in readHistory)) {
       readHistory.value[name] = +new Date()
     }
