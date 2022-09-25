@@ -2,13 +2,9 @@
 import useMounted from '../composables/useMounted'
 import { scrollToAboutMe } from '../modules/about-me-section'
 import ButtonScrollDown from './ButtonScrollDown.vue'
+import TransitionUniversal from './TransitionUniversal.vue'
 
 const { isMounted } = useMounted()
-
-const transitionBind = {
-  enterActiveClass: 'transition-all origin-top-left duration-500',
-  enterFromClass: 'opacity-0',
-} as const
 
 const handleClickScrollDown = () => {
   scrollToAboutMe({ duration: 500 })
@@ -28,16 +24,16 @@ const handleClickScrollDown = () => {
     "
   >
     <div class="flex justify-center md:flex-1">
-      <transition v-bind="transitionBind">
-        <div v-show="isMounted">
+      <TransitionUniversal enter-from-class="opacity-0">
+        <div v-show="isMounted" class="transition-opacity duration-500">
           <h1
             class="font-pacifico relative rotate-[-4deg] whitespace-nowrap text-8xl tracking-tight text-white delay-200"
           >
             <span class="neon">ngseke</span>
-            <span class="blink animate-blink after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
+            <span class="blink animate-blink pointer-events-none after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
           </h1>
         </div>
-      </transition>
+      </TransitionUniversal>
     </div>
     <div class="absolute left-1/2 bottom-10 -translate-x-1/2">
       <ButtonScrollDown @click="handleClickScrollDown" />
