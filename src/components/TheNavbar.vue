@@ -46,7 +46,7 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
 
 <template>
   <nav
-    class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center bg-black shadow-lg transition-all duration-300"
+    class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center bg-black shadow-lg transition-all duration-300 print:hidden"
     :class="{
       'shadow-stone-900/0': !isScrolled,
       'shadow-stone-900/40': isScrolled,
