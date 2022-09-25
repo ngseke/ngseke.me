@@ -14,7 +14,6 @@
   max-width: min(30rem, 100%)
 
 :deep(.prose)
-  @apply mx-auto
   h2
     @apply mb-4 text-2xl font-medium md:text-3xl
     &:not(:first-child)
@@ -38,7 +37,7 @@
     @apply mx-auto w-auto mb-4
     +media
   a
-    @apply underline
+    @apply underline inline-block
   hr
     @apply my-6 border-current opacity-30
   .embed-responsive
