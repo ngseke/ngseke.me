@@ -3,9 +3,6 @@ name: "index"
 </route>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { nextTick, onMounted } from 'vue'
-import { useHead } from '@vueuse/head'
 import Cover from '../components/Cover.vue'
 import AboutMe from '../components/AboutMe.vue'
 import { aboutMeSectionHash, aboutMeSectionId, scrollToAboutMe } from '../modules/about-me-section'

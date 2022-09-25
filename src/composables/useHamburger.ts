@@ -1,5 +1,4 @@
 import { useToggle, useScrollLock, useWindowSize, isClient } from '@vueuse/core'
-import { computed, watch } from 'vue'
 
 export default function useHamburger () {
   const [isExpanded, toggleIsExpanded] = useToggle()

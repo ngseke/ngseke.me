@@ -3,8 +3,6 @@ name: "project"
 </route>
 
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
-import { computed } from 'vue'
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
 import LinkIcon from '../components/LinkIcon.vue'
 import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'

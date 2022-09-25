@@ -1,5 +1,4 @@
 import { isClient } from '@vueuse/core'
-import { onMounted } from 'vue'
 
 export default function useMountedBodyClass () {
   onMounted(async () => {

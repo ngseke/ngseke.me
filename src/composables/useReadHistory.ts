@@ -1,5 +1,4 @@
 import { useLocalStorage } from '@vueuse/core'
-import { computed } from 'vue'
 import useProjects from './useProjects'
 
 const storageKey = 'readHistory'

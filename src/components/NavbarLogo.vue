@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 import scrollToElement from 'scroll-to-element'
 import TransitionUniversal from './TransitionUniversal.vue'
 

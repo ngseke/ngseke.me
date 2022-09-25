@@ -1,6 +1,5 @@
 import { isClient, useStyleTag } from '@vueuse/core'
 import mediumZoom, { Zoom } from 'medium-zoom'
-import { nextTick, onMounted, onUnmounted, watch } from 'vue'
 import useDark from './useDark'
 
 export default function useMediumZoom (selector = '*:not(a) > img') {

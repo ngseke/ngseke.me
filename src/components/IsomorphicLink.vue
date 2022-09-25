@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { RouterLink, RouterLinkProps } from 'vue-router'
 
 const props = withDefaults(defineProps<{

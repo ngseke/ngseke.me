@@ -1,5 +1,3 @@
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
 import ProjectFrontmatter from '../types/ProjectFrontmatter'
 
 export default function useProjectFrontmatter () {

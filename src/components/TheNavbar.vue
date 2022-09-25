@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 import ButtonDarkMode from './ButtonDarkMode.vue'
 import NavbarLink from './NavbarLink.vue'

@@ -3,7 +3,6 @@ name: "projects"
 </route>
 
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
 import TitleCategory from '../components/TitleCategory.vue'
 import useProjects from '../composables/useProjects'
 import { VITE_SITE_NAME } from '../modules/constants'

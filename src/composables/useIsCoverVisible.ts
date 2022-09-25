@@ -1,6 +1,4 @@
 import { isClient, useIntersectionObserver } from '@vueuse/core'
-import { ref, nextTick, watch, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 
 export default function useIsCoverVisible () {
   const route = useRoute()
