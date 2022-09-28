@@ -31,6 +31,7 @@ declare module '@vue/runtime-core' {
     NavbarHamburger: typeof import('./src/components/NavbarHamburger.vue')['default']
     NavbarLink: typeof import('./src/components/NavbarLink.vue')['default']
     NavbarLogo: typeof import('./src/components/NavbarLogo.vue')['default']
+    PostLayout: typeof import('./src/components/PostLayout.vue')['default']
     PostList: typeof import('./src/components/PostList.vue')['default']
     PostTags: typeof import('./src/components/PostTags.vue')['default']
     ProjectList: typeof import('./src/components/ProjectList.vue')['default']

@@ -48,9 +48,9 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
 </script>
 
 <template>
-  <div class="container px-4 pt-8 md:pt-16">
-    <div class="mx-auto max-w-3xl py-16">
-      <div class="mb-12 space-y-3 border-b border-stone-300 pb-4 dark:border-stone-700">
+  <PostLayout>
+    <template #header>
+      <div class="space-y-3 ">
         <h1 class="dark:text-ngsek text-4xl font-semibold md:text-5xl">
           {{ frontmatter?.title }}
         </h1>
@@ -82,10 +82,8 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
           />
         </div>
       </div>
+    </template>
 
-      <Prose>
-        <RouterView />
-      </Prose>
-    </div>
-  </div>
+    <RouterView />
+  </PostLayout>
 </template>

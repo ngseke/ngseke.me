@@ -30,23 +30,19 @@ const author = 'Sean Huang'
 </script>
 
 <template>
-  <div class="container px-4 pt-8 md:pt-16">
-    <div class="mx-auto max-w-3xl py-16">
-      <div class="mb-12 border-b border-stone-300 pb-4 dark:border-stone-700">
-        <PostTags :list="frontmatter?.tags" />
-        <h1 class="mb-6 text-3xl font-semibold md:text-4xl md:leading-tight">
-          {{ frontmatter?.title }}
-        </h1>
-        <ul class="flex space-x-1 text-sm text-stone-700 dark:text-stone-300">
-          <li>{{ dateText }}</li>
-          <span class="opacity-60 before:content-[&quot;•&quot;]" />
-          <li>by {{ author }}</li>
-        </ul>
-      </div>
+  <PostLayout>
+    <template #header>
+      <PostTags :list="frontmatter?.tags" />
+      <h1 class="mb-6 text-3xl font-semibold md:text-4xl md:leading-tight">
+        {{ frontmatter?.title }}
+      </h1>
+      <ul class="flex space-x-1 text-sm text-stone-700 dark:text-stone-300">
+        <li>{{ dateText }}</li>
+        <span class="opacity-60 before:content-[&quot;•&quot;]" />
+        <li>by {{ author }}</li>
+      </ul>
+    </template>
 
-      <Prose>
-        <RouterView />
-      </Prose>
-    </div>
-  </div>
+    <RouterView />
+  </PostLayout>
 </template>
