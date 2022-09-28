@@ -42,8 +42,8 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       extendRoute (route) {
         const path = resolve(__dirname, route.component.slice(1))
-        if (/project\/(.+).md/.test(path)) {
-          const name = path.split(/project\/(.+).md/)[1]
+        if (/(project|blog)\/(.+).md/.test(path)) {
+          const name = path.split(/(project|blog)\/(.+).md/)[1]
 
           const md = fs.readFileSync(path, 'utf-8')
           const { data } = matter(md)
