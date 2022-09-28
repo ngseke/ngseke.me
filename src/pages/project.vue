@@ -64,7 +64,7 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
           <li>{{ periodText }}</li>
           <li v-if="frontmatter?.members ">
             Team Member:
-            {{ frontmatter?.members.join('、') }}
+            <TeamMembers :list="frontmatter?.members" />
           </li>
         </ul>
         <div v-if="github || link" class="space-x-3">
