@@ -62,8 +62,8 @@ export default defineConfig({
       markdownItSetup (md) {
         md.use(Shiki, {
           theme: {
-            light: 'min-light',
-            dark: 'min-dark',
+            light: 'vitesse-light',
+            dark: 'vitesse-dark',
           },
         })
       },

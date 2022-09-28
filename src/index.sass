@@ -6,9 +6,6 @@
   html
     font-family: 'Barlow Semi Condensed', 'Noto Sans TC', Nunito Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Microsoft JhengHei
 
-    &.dark .shiki-light
-      display: none
-
   body
     @apply text-stone-900 dark:bg-stone-900 dark:text-white touch-manipulation
 
@@ -16,5 +13,8 @@ html
   &.dark .shiki-light
     @apply hidden
 
-  &:not(.dark) .shiki-dark
-    @apply hidden
+  &:not(.dark)
+    .shiki-light
+      @apply bg-stone-100 #{!important}
+    .shiki-dark
+      @apply hidden
