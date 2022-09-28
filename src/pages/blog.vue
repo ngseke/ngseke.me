@@ -32,8 +32,9 @@ const author = 'Sean Huang'
 <template>
   <div class="container px-4 pt-8 md:pt-16">
     <div class="mx-auto max-w-3xl py-16">
-      <div class="mb-12 space-y-6 border-b border-stone-300 pb-4 dark:border-stone-700">
-        <h1 class="text-3xl font-semibold md:text-4xl md:leading-tight">
+      <div class="mb-12 border-b border-stone-300 pb-4 dark:border-stone-700">
+        <PostTags :list="frontmatter?.tags" />
+        <h1 class="mb-6 text-3xl font-semibold md:text-4xl md:leading-tight">
           {{ frontmatter?.title }}
         </h1>
         <ul class="flex space-x-1 text-sm text-stone-700 dark:text-stone-300">

@@ -32,6 +32,7 @@ declare module '@vue/runtime-core' {
     NavbarLink: typeof import('./src/components/NavbarLink.vue')['default']
     NavbarLogo: typeof import('./src/components/NavbarLogo.vue')['default']
     PostList: typeof import('./src/components/PostList.vue')['default']
+    PostTags: typeof import('./src/components/PostTags.vue')['default']
     ProjectList: typeof import('./src/components/ProjectList.vue')['default']
     Prose: typeof import('./src/components/Prose.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
