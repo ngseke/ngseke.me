@@ -10,6 +10,7 @@ import Markdown from 'vite-plugin-md'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import Shiki from 'markdown-it-shiki'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -57,7 +58,16 @@ export default defineConfig({
         return route
       },
     }),
-    Markdown({}),
+    Markdown({
+      markdownItSetup (md) {
+        md.use(Shiki, {
+          theme: {
+            light: 'min-light',
+            dark: 'min-dark',
+          },
+        })
+      },
+    }),
     vueJsx({}),
   ],
 })
