@@ -38,6 +38,9 @@
     +media
   a
     @apply underline inline-block
+  s
+    &, > a
+      @apply line-through
   hr
     @apply my-6 border-current opacity-30
   .embed-responsive
