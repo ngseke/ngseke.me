@@ -29,6 +29,10 @@ const links: Link[] = [
     },
   },
   {
+    name: 'Blog',
+    href: { name: 'posts' },
+  },
+  {
     name: 'Projects',
     href: { name: 'projects' },
   },
