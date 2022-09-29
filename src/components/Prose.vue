@@ -42,13 +42,13 @@
     @apply list-decimal
 
   a
-    @apply underline inline-block
+    @apply underline
   s
     &, > a
       @apply line-through
   hr
     @apply my-6 border-current opacity-30
-  code
+  a, code
     @apply break-words
   .embed-responsive
     @apply mb-12 mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block
