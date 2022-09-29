@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <ul class="space-y-6">
+  <ul class="space-y-8">
     <li
       v-for="(post, index) in list"
       :key="index"
