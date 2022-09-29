@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite-ssg build",
+    "build": "vite-ssg build",
     "preview": "vite preview",
     "lint:fix": "npx eslint --fix src --ext .ts,.js,.vue",
     "prepare": "husky install"
