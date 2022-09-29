@@ -56,5 +56,5 @@
     .embed-responsive-item
       @apply absolute inset-0 h-full w-full
   pre.shiki
-    @apply p-4 rounded-lg overflow-x-auto mb-4
+    @apply p-4 rounded-lg overflow-x-auto mt-2 mb-4
 </style>
