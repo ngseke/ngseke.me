@@ -9,7 +9,7 @@ cover: /img/project-cover/mcip.png
 
 樂台計畫官方網站是基於 Nuxt 建構的 SSR 網站，現已導入 Composition API 與 ESLint，使得維護與開發工作變得更流暢。
 
-![首頁](../../assets/img/article/mcip/cover.png)
+![首頁](../../assets/img/project/mcip/cover.png)
 
 
 樂台計畫在初期並未規劃官方網站，但隨著規模逐漸成長，有越來越多人與音樂社團對我們感到好奇，這讓我們重新思考品牌形象的建立與加強推廣。為了能接觸到更多群眾，讓更多人可以透過 Facebook 粉絲專頁以外的管道來認識我們，遂開始著手官方網站的構思。
@@ -20,7 +20,7 @@ cover: /img/project-cover/mcip.png
 
 為了盡快的製作出 prototype，當時選用 Parcel 這個易上手的打包工具。只要設定好進入點，它就會自動分析所有相依的資源，並自動封裝成 bundle，也省去很多繁複的手動配置。
 
-![陽春的初版網站首頁](../../assets/img/article/mcip/legacy.png)
+![陽春的初版網站首頁](../../assets/img/project/mcip/legacy.png)
 
 ## 以 Nuxt 重新架構
 
@@ -30,7 +30,7 @@ cover: /img/project-cover/mcip.png
 
 例如在社群媒體或是通訊軟體分享最新消息的文章時，縮圖和文章內容就能夠順利的被平台抓取，直接秀出預覽的資訊，提升使用者對連結的興趣。
 
-![Messenger 分享連結預覽](../../assets/img/article/mcip/facebook-messenger.png)
+![Messenger 分享連結預覽](../../assets/img/project/mcip/facebook-messenger.png)
 
 ## 部署
 
@@ -42,7 +42,7 @@ cover: /img/project-cover/mcip.png
 
 我為識別 Logo 設計了簡單 SVG 動畫，藉著操控 `stroke-dashoffset` 和 `stroke-dasharray` 屬性，僅靠純 CSS3 就能達到酷炫的虛線描邊特效。
 
-![Logo 動畫示意](../../assets/img/article/mcip/logo-animation.gif)
+![Logo 動畫示意](../../assets/img/project/mcip/logo-animation.gif)
 
 ## Demo
 

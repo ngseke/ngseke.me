@@ -9,7 +9,7 @@ period:
 cover: /img/project-cover/credit-card-calc.png
 ---
 
-![](../../assets/img/article/credit-card-calc/cover.png)
+![](../../assets/img/project/credit-card-calc/cover.png)
 
 簡明的信用卡回饋計算機，輸入刷卡金額並選擇帳戶資格即可試算回饋金額。
 

@@ -10,8 +10,8 @@ cover: /img/project-cover/tic-tac-toe.png
 ---
 
 
-![](../../assets/img/article/tic-tac-toe/1.png)
-![](../../assets/img/article/tic-tac-toe/2.png)
+![](../../assets/img/project/tic-tac-toe/1.png)
+![](../../assets/img/project/tic-tac-toe/2.png)
 
 簡直不可理喻的圈圈叉叉遊戲。在這個星球上同一時間，最多只能供兩個人類遊玩。
 

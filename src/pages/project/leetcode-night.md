@@ -7,7 +7,7 @@ period: 2022/02
 cover: /img/project-cover/leetcode-night.png
 ---
 
-![](../../assets/img/article/leetcode-night/banner.png)
+![](../../assets/img/project/leetcode-night/banner.png)
 
 
 長久以來都只有[中國版力扣](https://leetcode-cn.com/)支援完整的暗黑模式，而美國 LeetCode 主站則僅有在 Problem List、Profile 等少數頁面頁才支援，獨缺解題頁。
@@ -18,7 +18,7 @@ cover: /img/project-cover/leetcode-night.png
 
 經過了半年左右時間，使用者終於人數突破了 1K，還拿到了一個小藍勾勾（徽章），也算是達成了不值得一提的小小成就。
 
-![](../../assets/img/article/leetcode-night/store.png)
+![](../../assets/img/project/leetcode-night/store.png)
 
 ## 簡介
 
@@ -39,8 +39,8 @@ cover: /img/project-cover/leetcode-night.png
 
 
 
-![啟用 LeetCode 深色模式](../../assets/img/article/leetcode-night/1.png)
-![Popup 視窗](../../assets/img/article/leetcode-night/2.png)
+![啟用 LeetCode 深色模式](../../assets/img/project/leetcode-night/1.png)
+![Popup 視窗](../../assets/img/project/leetcode-night/2.png)
 
 
 ## Demo
