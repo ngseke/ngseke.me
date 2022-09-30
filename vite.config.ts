@@ -36,6 +36,7 @@ export default defineConfig({
     }),
     Components({
       dts: true,
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
     eslint(),
     checker({ typescript: true, vueTsc: true }),
