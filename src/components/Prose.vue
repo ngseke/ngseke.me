@@ -13,19 +13,26 @@
 =media
   max-width: min(30rem, 100%)
 
+=block-margin
+  @apply mt-6 mb-4
+
 :deep(.prose)
+  h2, h3, h4
+    @apply mt-12 mb-4 font-medium
   h2
-    @apply mb-4 text-2xl font-medium md:text-3xl
-    &:not(:first-child)
-      @apply mt-12
+    @apply text-3xl
   h3
-    @apply mb-4 text-xl font-medium
+    @apply text-2xl
+  h4
+    @apply text-xl
 
   p
-    @apply leading-7 mb-6
+    +block-margin
+    @apply leading-7
     & > img
-      @apply mx-auto w-auto mb-4
+      +block-margin
       +media
+      @apply mx-auto w-auto
 
   blockquote
     @apply border-l-4 px-4 border-stone-500/50
@@ -33,7 +40,7 @@
       @apply mx-0 max-w-full
 
   ul, ol
-    @apply list-outside pl-5 mb-6 space-y-1
+    @apply list-outside pl-5 mt-6 mb-4 space-y-1
     li
       @apply pl-2
   ul
@@ -51,10 +58,12 @@
   a, code
     @apply break-words
   .embed-responsive
-    @apply mb-12 mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block
+    +block-margin
+    @apply mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block
     +media
     .embed-responsive-item
       @apply absolute inset-0 h-full w-full
   pre.shiki
-    @apply p-4 rounded-lg overflow-x-auto mt-2 mb-4
+    +block-margin
+    @apply p-4 rounded-lg overflow-x-auto
 </style>
