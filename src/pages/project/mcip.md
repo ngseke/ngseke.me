@@ -36,7 +36,10 @@ cover: /img/project-cover/mcip.png
 
 此專案部署在 [Vercel](https://vercel.com/) 上，堪稱是最最無腦的託管平台。基本上只需要按照官方指南，在根目錄建立配置檔 `vercel.json`，接著在平台上綁定 GitHub 版本庫即可。
 
-預設下它 Vercel 已內建 CI/CD，每當任何一個分支有新的 push，它都會立即執行建構和部署，並針對每個 commit 都產生出一個預覽用的 domain，方便查看在線上的結果。
+在預設情況下 Vercel 就內建了 CI/CD，每當任何一個分支有新的 push，它都會立即執行建構和部署，並針對每個 commit 都產生出一個預覽用的 domain，方便驗證線上的結果。
+
+![Vercel Deployment](../../assets/img/project/mcip/deployment.png)
+
 
 ## Landing Page
 
