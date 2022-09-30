@@ -3,4 +3,5 @@ export default interface PostFrontmatter{
   date?: string,
   tags?: string[],
   original?: string,
+  draft?: boolean,
 }

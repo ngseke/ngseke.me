@@ -5,7 +5,6 @@ import Post from '../types/Post'
 defineProps<{
   list?: Post[],
 }>()
-
 </script>
 
 <template>

@@ -18,6 +18,7 @@ export default function usePosts () {
           path: route.path,
         }
       })
+      .filter(post => !post.draft)
       .sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
   })
 
