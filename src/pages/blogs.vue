@@ -16,7 +16,7 @@ const { posts } = usePosts()
 
 <template>
   <div class="container px-4 pt-16">
-    <div class="mx-auto max-w-5xl py-16">
+    <div class="mx-auto max-w-3xl py-16">
       <section class="mb-16 space-y-8">
         <h1 class="text-4xl font-semibold md:text-5xl">
           Blog
