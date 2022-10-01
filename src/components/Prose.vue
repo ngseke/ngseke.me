@@ -57,6 +57,9 @@
     @apply my-6 border-current opacity-30
   a, code
     @apply break-words
+  :not(pre) > code
+    @apply bg-stone-400/20 px-[.4rem] rounded-md
+
   .embed-responsive
     +block-margin
     @apply mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block
