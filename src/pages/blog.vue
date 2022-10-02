@@ -8,6 +8,8 @@ import useMediumZoom from '../composables/useMediumZoom'
 import usePostFrontmatter from '../composables/usePostFrontmatter'
 import { getPostFormattedDate } from '../modules/date'
 
+const route = useRoute()
+
 const { frontmatter } = usePostFrontmatter()
 const description = computed(() => 'post')
 
@@ -30,7 +32,9 @@ const author = 'Sean Huang'
 </script>
 
 <template>
-  <PostLayout>
+  <RouterView v-if="route.name === 'posts'" />
+
+  <PostLayout v-else>
     <template #header>
       <PostTags :list="frontmatter?.tags" />
       <h1 class="mb-6 text-3xl font-semibold md:text-4xl md:leading-tight">
