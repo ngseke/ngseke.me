@@ -30,17 +30,17 @@ Người Đài Loan
 
 若按照英語的文法，人們通常習慣這樣命名組件：
 
-- <font color="#f07167">Primary *(a.)*</font> + <font color="#0081a7"> Button *(n.)*</font> = **<font color="#f07167">Primary</font><font color="#0081a7">Button</font>**
-- <font color="#f07167">Date *(n.)*</font> + <font color="#0081a7"> TextField *(n.)*</font> = **<font color="#f07167">Date</font><font color="#0081a7">TextField</font>**
-- <font color="#f07167">Confirm *(v.)*</font> + <font color="#0081a7"> Dialog *(n.)*</font> = **<font color="#f07167">Confirm</font><font color="#0081a7">Dialog</font>**
+- <span class="text-rose-600">Primary *(a.)*</span> + <span class="text-sky-600"> Button *(n.)*</span> = **<span class="text-rose-600">Primary</span><span class="text-sky-600">Button</span>**
+- <span class="text-rose-600">Date *(n.)*</span> + <span class="text-sky-600"> TextField *(n.)*</span> = **<span class="text-rose-600">Date</span><span class="text-sky-600">TextField</span>**
+- <span class="text-rose-600">Confirm *(v.)*</span> + <span class="text-sky-600"> Dialog *(n.)*</span> = **<span class="text-rose-600">Confirm</span><span class="text-sky-600">Dialog</span>**
 
 但如指南所述，它認為應該把**🔵主語/主詞**（文中所謂*高級別的詞*）擺到前面；**🔴修飾性的詞**則是放在結尾。形容詞、動詞或名詞都可算是修飾詞。
 
 因此推薦的命名法如下：
 
-- <font color="#0081a7"> Button *(n.)*</font> + <font color="#f07167">Primary *(a.)*</font> = **<font color="#0081a7">Button</font><font color="#f07167">Primary</font>**
-- <font color="#0081a7"> TextField *(n.)*</font> + <font color="#f07167">Date *(n.)*</font> = **<font color="#0081a7">TextField</font><font color="#f07167">Date</font>**
-- <font color="#0081a7"> Dialog *(n.)*</font> + <font color="#f07167">Confirm *(v.)*</font> = **<font color="#0081a7">Dialog</font><font color="#f07167">Confirm</font>**
+- <span class="text-sky-600"> Button *(n.)*</span> + <span class="text-rose-600">Primary *(a.)*</span> = **<span class="text-sky-600">Button</span><span class="text-rose-600">Primary</span>**
+- <span class="text-sky-600"> TextField *(n.)*</span> + <span class="text-rose-600">Date *(n.)*</span> = **<span class="text-sky-600">TextField</span><span class="text-rose-600">Date</span>**
+- <span class="text-sky-600"> Dialog *(n.)*</span> + <span class="text-rose-600">Confirm *(v.)*</span> = **<span class="text-sky-600">Dialog</span><span class="text-rose-600">Confirm</span>**
 
 ## 在特定語境內的組件
 
@@ -48,13 +48,13 @@ Người Đài Loan
 
 例如：
 
-- <font color="#2a9d8f"> Search *(父組件)*</font> + <font color="#0081a7">TextField</font> + <font color="#f07167">Date</font> = **<font color="#2a9d8f"> Search</font><font color="#0081a7">TextField</font><font color="#f07167">Date</font>**
+- <span class="text-teal-600"> Search *(父組件)*</span> + <span class="text-sky-600">TextField</span> + <span class="text-rose-600">Date</span> = **<span class="text-teal-600"> Search</span><span class="text-sky-600">TextField</span><span class="text-rose-600">Date</span>**
   <br>Search 組件內專用的日期輸入框
-- <font color="#2a9d8f"> Search *(父組件)*</font> + <font color="#0081a7">Button</font> + <font color="#f07167">Submit</font> = **<font color="#2a9d8f"> Search</font><font color="#0081a7">Button</font><font color="#f07167">Submit</font>**
+- <span class="text-teal-600"> Search *(父組件)*</span> + <span class="text-sky-600">Button</span> + <span class="text-rose-600">Submit</span> = **<span class="text-teal-600"> Search</span><span class="text-sky-600">Button</span><span class="text-rose-600">Submit</span>**
   <br>Search 組件內專用的送出按鈕
-- <font color="#2a9d8f"> LandingPage *(頁面)*</font> + <font color="#0081a7">List</font> + <font color="#f07167">News</font> = **<font color="#2a9d8f">LandingPage</font><font color="#0081a7">List</font><font color="#f07167">News</font>**
+- <span class="text-teal-600"> LandingPage *(頁面)*</span> + <span class="text-sky-600">List</span> + <span class="text-rose-600">News</span> = **<span class="text-teal-600">LandingPage</span><span class="text-sky-600">List</span><span class="text-rose-600">News</span>**
   <br>只在 Landing Page 用到的新聞列表
-- <font color="#2a9d8f"> LandingPage *(頁面)*</font> + <font color="#0081a7">List</font> + <font color="#f07167">Features</font> = **<font color="#2a9d8f">LandingPage</font><font color="#0081a7">List</font><font color="#f07167">Features</font>**
+- <span class="text-teal-600"> LandingPage *(頁面)*</span> + <span class="text-sky-600">List</span> + <span class="text-rose-600">Features</span> = **<span class="text-teal-600">LandingPage</span><span class="text-sky-600">List</span><span class="text-rose-600">Features</span>**
   <br>只在 Landing Page 用到的產品特色列表
 
 
