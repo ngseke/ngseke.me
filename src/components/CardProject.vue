@@ -30,19 +30,8 @@ defineProps<{
         </p>
       </div>
       <div v-if="github || link" class="mt-3 space-x-2">
-        <LinkIcon
-          v-if="github"
-          :href="github"
-          :icon="['fab', 'github']"
-          @click.stop=""
-        />
-        <LinkIcon
-          v-if="link"
-          :href="link"
-          :icon="['fas', 'up-right-from-square']"
-          external
-          @click.stop=""
-        />
+        <LinkIconGithub v-if="github" :href="github" />
+        <LinkIconDemo v-if="link" :href="link" />
       </div>
     </div>
   </div>

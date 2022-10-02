@@ -68,18 +68,8 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
           </li>
         </ul>
         <div v-if="github || link" class="space-x-3">
-          <LinkIcon
-            v-if="github"
-            :href="github"
-            :icon="['fab', 'github']"
-            @click.stop=""
-          />
-          <LinkIcon
-            v-if="link"
-            :href="link"
-            :icon="['fas', 'up-right-from-square']"
-            @click.stop=""
-          />
+          <LinkIconGithub v-if="github" :href="github" />
+          <LinkIconDemo v-if="link" :href="link" />
         </div>
       </div>
     </template>
