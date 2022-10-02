@@ -13,13 +13,13 @@ const route = useRoute()
 const { frontmatter } = usePostFrontmatter()
 const description = computed(() => 'post')
 
-useHead({
+useHead(computed(() => ({
   title: `${frontmatter.value?.title} | ${VITE_SITE_NAME}`,
   meta: [
     { property: 'description', content: description.value },
     { property: 'og:description', content: description.value },
   ],
-})
+})))
 
 useMediumZoom()
 
