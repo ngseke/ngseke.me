@@ -17,7 +17,3 @@
     <Fa v-if="isExternal" :icon="['fas', 'up-right-from-square']" class="ml-2" />
   </IsomorphicLink>
 </template>
-
-<style lang="scss" scoped>
-@use '../styles/link-effect';
-</style>

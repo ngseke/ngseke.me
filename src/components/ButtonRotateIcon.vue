@@ -25,7 +25,3 @@
     </transition>
   </button>
 </template>
-
-<style lang="sass" scoped>
-@use '../styles/link-effect'
-</style>
