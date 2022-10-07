@@ -7,6 +7,12 @@ period: 2019/02
 cover: /img/project-cover/mcip.png
 ---
 
+<script setup lang="ts">
+import useProjects from '../../composables/useProjects'
+const { projectMap } = useProjects()
+const list = [projectMap.value['mcip-cms']]
+</script>
+
 樂台計畫官方網站是基於 Nuxt 建構的 SSR 網站，現已導入 Composition API 與 ESLint，使得維護與開發工作變得更流暢。
 
 ![首頁](../../assets/img/project/mcip/cover.png)
@@ -53,6 +59,7 @@ cover: /img/project-cover/mcip.png
 
 <iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=mcip.ml&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
 
----
 
-related project: [《樂台計畫》後台管理系統](/project/mcip-cms)
+## Related Project
+
+<ProjectList :list="list" class="!mt-10" />

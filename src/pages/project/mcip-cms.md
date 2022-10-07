@@ -5,6 +5,12 @@ period: 2018/11
 cover: /img/project-cover/mcip-cms.png
 ---
 
+<script setup lang="ts">
+import useProjects from '../../composables/useProjects'
+const { projectMap } = useProjects()
+const list = [projectMap.value.mcip]
+</script>
+
 ![](../../assets/img/project/mcip-cms/fb-cover.png)
 
 [樂台計畫](https://mcip.ml/)誕生於 2018 年之冬，是我與大學好友鎧企（K7）攜手開發的大專院校音樂平台。我們皆來自吉他社，體認到各個賽事在籌辦時的痛點，於是樂台計畫應運而生。樂台計畫專為音樂賽事量身打造，宗旨是建構更優質的賽事環境，簡化社團在處理報名業務的作業流程。
@@ -32,6 +38,6 @@ cover: /img/project-cover/mcip-cms.png
 ![編輯賽況資訊](../../assets/img/project/mcip-cms/competition.png)
 ![設定學校資訊](../../assets/img/project/mcip-cms/config.png)
 
----
+## Related Project
 
-related project: [《樂台計畫》官方網站](/project/mcip)
+<ProjectList :list="list" class="!mt-10" />

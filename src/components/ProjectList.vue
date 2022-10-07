@@ -8,11 +8,11 @@ defineProps<{
 </script>
 
 <template>
-  <ul class="-mx-4 flex flex-wrap">
+  <ul class="!-mx-4 flex !list-none !flex-wrap !p-0">
     <li
       v-for="({ path, title, briefDescription, githubLink, demoLink, cover }, index) in list"
       :key="index"
-      class="mb-8 w-full px-4 md:w-1/2"
+      class="!mb-8 !w-full !px-4 md:!w-1/2"
     >
       <CardProject
         :title="title"
