@@ -27,8 +27,8 @@ const handleClickScrollDown = () => {
           <h1
             class="font-pacifico relative rotate-[-4deg] whitespace-nowrap text-8xl tracking-tight text-white delay-200"
           >
-            <span class="neon">ngseke</span>
-            <span class="blink animate-blink pointer-events-none after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
+            <span class="neon relative z-10">ngseke</span>
+            <span class="blink animate-blink text-transparent after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
           </h1>
         </div>
       </TransitionUniversal>
