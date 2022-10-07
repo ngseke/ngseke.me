@@ -1,4 +1,6 @@
-import { defineConfig } from 'vite'
+/// <reference types="vite-ssg" />
+
+import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
@@ -11,9 +13,16 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Shiki from 'markdown-it-shiki'
+import generateSitemap from 'vite-ssg-sitemap'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default ({ mode }) => defineConfig({
+  ssgOptions: {
+    onFinished: () => generateSitemap({
+      hostname: loadEnv(mode, process.cwd()).VITE_SITE_ORIGIN,
+      exclude: ['/404'],
+    }),
+  },
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],

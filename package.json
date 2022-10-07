@@ -60,6 +60,7 @@
     "vite-plugin-checker": "^0.5.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-ssg": "^0.20.2",
+    "vite-ssg-sitemap": "^0.4.3",
     "vue-tsc": "^0.40.4"
   }
 }
