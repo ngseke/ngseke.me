@@ -22,7 +22,7 @@ defineProps<{
 
     <div class="flex flex-1 flex-col justify-center">
       <div class="pointer-events-none z-10">
-        <h3 class="!mb-1 !mt-0 !text-lg font-medium leading-5">
+        <h3 class="!mb-2 !mt-0 !text-lg !font-medium !leading-5">
           {{ title }}
         </h3>
         <p class="!m-0 !text-sm !leading-4 text-stone-700 dark:text-stone-300">
