@@ -29,7 +29,7 @@ const { postGroups } = usePosts()
         <h2 class="flex items-center text-3xl font-medium italic">
           {{ name }}
         </h2>
-        <div class="transition-all sm:pl-4">
+        <div class="sm:pl-4">
           <PostList :list="posts" />
         </div>
       </section>
