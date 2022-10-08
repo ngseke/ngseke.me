@@ -35,7 +35,7 @@
       @apply mx-auto w-auto
 
   blockquote
-    @apply border-l-4 px-4 border-stone-500/50
+    @apply italic border-l-4 px-4 border-stone-500/50
     p img
       @apply mx-0 max-w-full
 
