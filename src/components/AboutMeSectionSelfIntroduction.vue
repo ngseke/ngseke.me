@@ -4,12 +4,14 @@
 <template>
   <AboutMeSectionLayout>
     <div class="flex flex-col space-y-2">
-      <h2 class="text-5xl font-bold md:text-6xl">
+      <h2 class="text-5xl font-bold sm:text-6xl md:text-7xl">
         Hi, I'm
-        <Emphasis>
-          Sean<!---->
-        </Emphasis>
-        <!---->. 👋
+        <span class="whitespace-nowrap">
+          <Emphasis>
+            Sean<!---->
+          </Emphasis>
+          <!---->. 🍻
+        </span>
       </h2>
       <span class="font-mono text-stone-700 dark:text-stone-400">
         @ngseke

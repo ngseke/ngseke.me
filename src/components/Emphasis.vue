@@ -4,7 +4,9 @@
 <template>
   <em
     class="
-      after:bg-ngsek/50 relative
+      after:bg-ngsek/60
+      dark:after:bg-ngsek/30
+      relative
       not-italic
       after:absolute
       after:inset-x-[-1px]
