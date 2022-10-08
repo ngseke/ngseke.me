@@ -15,7 +15,8 @@ import links from '../modules/links'
         <div>
           <LinkIcon
             :icon="['fab', 'github']"
-            :href="links.github.url"
+            :href="links.githubNgsekeMe.url"
+            :title="links.githubNgsekeMe.title"
           />
         </div>
       </div>

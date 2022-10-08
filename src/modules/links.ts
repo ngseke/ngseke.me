@@ -19,6 +19,11 @@ export default {
     url: 'https://github.com/ngseke',
     title: 'GitHub',
   },
+  githubNgsekeMe: {
+    icon: ['fab', 'github'],
+    url: 'https://github.com/ngseke/ngseke.me',
+    title: 'GitHub: ngseke.me',
+  },
   linkedin: {
     icon: ['fab', 'linkedin'],
     url: 'https://www.linkedin.com/in/xqng/',
