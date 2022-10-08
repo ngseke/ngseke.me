@@ -20,7 +20,13 @@ export default ({ mode }) => defineConfig({
   ssgOptions: {
     onFinished: () => generateSitemap({
       hostname: loadEnv(mode, process.cwd()).VITE_SITE_ORIGIN,
-      exclude: ['/404'],
+      exclude: [
+        '/404',
+        '/projects',
+        '/project/emo',
+        '/project/typingtyping',
+        '/project/camp2017',
+      ],
     }),
   },
   plugins: [
