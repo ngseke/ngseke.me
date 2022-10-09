@@ -31,7 +31,7 @@ const vBind = computed(() => (
 </script>
 
 <template>
-  <component :is="is" v-bind="vBind">
+  <Component :is="is" v-bind="vBind">
     <slot :is-external="isExternal" />
-  </component>
+  </Component>
 </template>

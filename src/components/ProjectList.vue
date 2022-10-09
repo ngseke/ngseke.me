@@ -15,12 +15,12 @@ defineProps<{
       class="!mb-8 !w-full !px-4 md:!w-1/2"
     >
       <CardProject
-        :title="title"
-        :path="path"
         :description="briefDescription"
         :github="githubLink"
-        :link="demoLink"
         :img="cover"
+        :link="demoLink"
+        :path="path"
+        :title="title"
       />
     </li>
   </ul>

@@ -31,8 +31,8 @@
     <p>
       aka
       <span
-        title="ㄏㄨㄤˊ ㄒㄧㄥˇ ㄑㄧㄠˊ"
         class="underline decoration-dotted"
+        title="ㄏㄨㄤˊ ㄒㄧㄥˇ ㄑㄧㄠˊ"
       >黃省喬</span>
       / HUANG Xingqiao
     </p>

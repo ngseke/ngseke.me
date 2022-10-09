@@ -12,6 +12,6 @@ const toggleDark = useToggle(isDark)
     @click="toggleDark()"
   >
     <Fa v-if="isDark" :icon="['fas', 'sun']" />
-    <Fa v-else :icon="['fas','moon']" />
+    <Fa v-else :icon="['fas', 'moon']" />
   </ButtonRotateIcon>
 </template>

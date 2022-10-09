@@ -13,15 +13,16 @@
       after:rounded-full
       after:bg-white/10
     "
+    type="button"
   >
-    <transition
-      mode="out-in"
+    <Transition
       enter-active-class="transition-all duration-400"
-      leave-active-class="transition-all duration-100"
       enter-from-class="opacity-0 -rotate-45"
+      leave-active-class="transition-all duration-100"
       leave-to-class="opacity-0 rotate-45"
+      mode="out-in"
     >
       <slot />
-    </transition>
+    </Transition>
   </button>
 </template>

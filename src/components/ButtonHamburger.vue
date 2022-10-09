@@ -7,6 +7,6 @@ defineProps<{
 <template>
   <ButtonRotateIcon>
     <Fa v-if="active" :icon="['fas', 'xmark']" />
-    <Fa v-else :icon="['fas','bars']" />
+    <Fa v-else :icon="['fas', 'bars']" />
   </ButtonRotateIcon>
 </template>

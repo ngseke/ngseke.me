@@ -12,12 +12,12 @@ const list = [
 <template>
   <AboutMeSectionLayout title="My Projects">
     <div>
-      <ProjectList :list="list" class="pt-4" />
+      <ProjectList class="pt-4" :list="list" />
 
       <div class="pl-2">
         <Link :href="{ name: 'projects' }">
           View More
-          <Fa :icon="['fas', 'caret-right']" class="ml-1" />
+          <Fa class="ml-1" :icon="['fas', 'caret-right']" />
         </Link>
       </div>
     </div>

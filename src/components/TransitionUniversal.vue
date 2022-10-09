@@ -8,12 +8,12 @@ defineProps<{
 </script>
 
 <template>
-  <transition
-    :enter-from-class="enterFromClass"
-    :leave-to-class="enterFromClass ?? leaveToClass"
+  <Transition
     :enter-active-class="enterActiveClass"
+    :enter-from-class="enterFromClass"
     :leave-active-class="enterActiveClass ?? leaveActiveClass"
+    :leave-to-class="enterFromClass ?? leaveToClass"
   >
     <slot />
-  </transition>
+  </Transition>
 </template>

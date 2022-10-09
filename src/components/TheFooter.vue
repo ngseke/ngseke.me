@@ -8,14 +8,14 @@ import links from '../modules/links'
       <div class="flex w-full justify-between">
         <div>
           © 2018 - {{ new Date().getFullYear() }}
-          <Link href="/" class="ml-1">
+          <Link class="ml-1" href="/">
             ngseke.me
           </Link>
         </div>
         <div>
           <LinkIcon
-            :icon="['fab', 'github']"
             :href="links.githubNgsekeMe.url"
+            :icon="['fab', 'github']"
             :title="links.githubNgsekeMe.title"
           />
         </div>

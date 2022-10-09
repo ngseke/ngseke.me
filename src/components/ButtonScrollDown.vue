@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <button class="inline-flex min-w-[5rem] flex-col items-center space-y-5 text-sm uppercase tracking-wide text-white opacity-80 transition-all hover:opacity-60">
+  <button
+    class="inline-flex min-w-[5rem] flex-col items-center space-y-5 text-sm uppercase tracking-wide text-white opacity-80 transition-all hover:opacity-60"
+    type="button"
+  >
     <span>Scroll Down</span>
     <span
       class="
@@ -25,7 +28,3 @@
     />
   </button>
 </template>
-
-<style lang="scss" scoped>
-
-</style>

@@ -14,9 +14,9 @@ defineProps<{
       :key="index"
     >
       <LinkPost
-        :title="post.title"
         :date="getPostFormattedDate(post.date)"
         :href="post.path"
+        :title="post.title"
       />
     </li>
   </ul>
