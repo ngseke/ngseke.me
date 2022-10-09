@@ -4,7 +4,6 @@ name: "post"
 
 <script setup lang="ts">
 import { VITE_SITE_NAME } from '../modules/constants'
-import useMediumZoom from '../composables/useMediumZoom'
 import usePostFrontmatter from '../composables/usePostFrontmatter'
 import { getPostFormattedDate } from '../modules/date'
 
@@ -20,8 +19,6 @@ useHead(computed(() => ({
     { property: 'og:description', content: description.value },
   ],
 })))
-
-useMediumZoom()
 
 const dateText = computed(() => {
   const date = frontmatter.value?.date

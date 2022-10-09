@@ -9,7 +9,7 @@ export default function useMediumZoom (selector = '*:not(a) > img') {
     zoom = mediumZoom(selector)
   })
 
-  onUnmounted(() => {
+  onBeforeUnmount(() => {
     zoom.detach()
   })
 

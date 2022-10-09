@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import useMediumZoom from '../composables/useMediumZoom'
+useMediumZoom()
 </script>
 
 <template>
