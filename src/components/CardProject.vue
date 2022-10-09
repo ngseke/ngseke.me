@@ -29,7 +29,7 @@ defineProps<{
           {{ description }}
         </p>
       </div>
-      <div v-if="github || link" class="mt-3 space-x-2">
+      <div v-if="github || link" class="mt-3 space-x-2 leading-none">
         <LinkIconGithub v-if="github" :href="github" />
         <LinkIconDemo v-if="link" :href="link" />
       </div>
