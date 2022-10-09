@@ -4,6 +4,9 @@
 <template>
   <AboutMeSectionLayout>
     <div class="flex flex-col space-y-2">
+      <span class="font-mono text-stone-700 dark:text-stone-400">
+        @ngseke
+      </span>
       <h2 class="text-5xl font-bold sm:text-6xl md:text-7xl">
         Hi, I'm
         <span class="whitespace-nowrap">
@@ -13,9 +16,6 @@
           <!---->. 🍻
         </span>
       </h2>
-      <span class="font-mono text-stone-700 dark:text-stone-400">
-        @ngseke
-      </span>
     </div>
 
     <p>

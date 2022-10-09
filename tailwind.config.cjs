@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       fontFamily: {
         pacifico: ['Pacifico', 'cursive'],
+        mono: ['Fira Code', 'monospace'],
       },
       colors: {
         ngsek: '#ffd019',
