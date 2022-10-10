@@ -13,10 +13,17 @@ const { projectMap } = useProjects()
 const list = [projectMap.value['mcip-cms']]
 </script>
 
-樂台計畫官方網站是基於 Nuxt 建構的 SSR 網站，現已導入 Composition API 與 ESLint，使得維護與開發工作變得更流暢。
+[**樂台計畫官方網站**](https://mcip.ml)是以 Nuxt 建構的 SSR 形象網站，關於《樂台計畫》平台的詳情可參考[MCIP CMS](/project/mcip-cms)。
 
-![首頁](../../assets/img/project/mcip/cover.png)
+在此專案中，我所負責的項目包含定義網站架構與規格、UI/UX 設計、開發與部署。
 
+
+![Cover](../../assets/img/project/mcip/1.png)
+![LINE QRCode & Statistics](../../assets/img/project/mcip/2.png)
+![News & Partners](../../assets/img/project/mcip/3.png)
+
+
+## 緣由
 
 樂台計畫在初期並未規劃官方網站，但隨著規模逐漸成長，有越來越多人與音樂社團對我們感到好奇，這讓我們重新思考品牌形象的建立與加強推廣。為了能接觸到更多群眾，讓更多人可以透過 Facebook 粉絲專頁以外的管道來認識我們，遂開始著手官方網站的構思。
 
@@ -46,8 +53,7 @@ const list = [projectMap.value['mcip-cms']]
 
 ![Vercel Deployment](../../assets/img/project/mcip/deployment.png)
 
-
-## Landing Page
+## Landing Page 的 Logo 動畫
 
 我為識別 Logo 設計了簡單 SVG 動畫，藉著操控 `stroke-dashoffset` 和 `stroke-dasharray` 屬性，僅靠純 CSS3 就能達到酷炫的虛線描邊特效。
 
