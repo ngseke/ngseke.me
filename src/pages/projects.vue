@@ -5,14 +5,12 @@ name: "projects"
 <script setup lang="ts">
 import useProjects from '../composables/useProjects'
 import { VITE_SITE_NAME } from '../modules/constants'
-import useReadHistory from '../composables/useReadHistory'
 
 useHead({
   title: `Projects | ${VITE_SITE_NAME}`,
 })
 
 const { projects } = useProjects()
-const { isReadAll } = useReadHistory()
 </script>
 
 <template>
@@ -27,9 +25,7 @@ const { isReadAll } = useReadHistory()
         <ProjectList :list="list" />
       </section>
 
-      <div v-if="isReadAll" class="mt-2 font-mono text-xs">
-        Wow, you've read all of my projects 😳
-      </div>
+      <AlertReadAllProject />
     </div>
   </div>
 </template>

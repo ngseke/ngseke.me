@@ -20,9 +20,12 @@ export default function useReadHistory () {
     Object.keys(projectMap.value).every((key) => key in readHistory.value)
   ))
 
+  const clearReadHistory = () => { readHistory.value = {} }
+
   return {
     readHistory,
     pushReadHistory,
     isReadAll,
+    clearReadHistory,
   }
 }
