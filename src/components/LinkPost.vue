@@ -10,6 +10,7 @@ defineProps<{
   <IsomorphicLink
     class="
       relative
+      inline-block
       w-full
       space-y-1
       rounded-lg
