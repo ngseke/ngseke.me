@@ -1,3 +1,5 @@
+@use "nprogress/nprogress.css"
+
 @tailwind base
 @tailwind components
 @tailwind utilities
@@ -25,3 +27,9 @@ html
       @apply bg-stone-100 #{!important}
     .shiki-dark
       @apply hidden
+
+#nprogress
+  .bar
+    @apply bg-ngsek
+  .peg
+    box-shadow: 0 0 20px theme('colors.ngsek'), 0 0 10px theme('colors.ngsek'), 0 0 5px theme('colors.ngsek')

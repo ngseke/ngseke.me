@@ -26,6 +26,7 @@
     "@vueuse/core": "^9.2.0",
     "dayjs": "^1.11.5",
     "medium-zoom": "^1.0.6",
+    "nprogress": "^0.2.0",
     "scroll-to-element": "^2.0.3",
     "vite-plugin-md": "^0.20.4",
     "vite-plugin-pages": "^0.26.0",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/nprogress": "^0.2.0",
     "@types/scroll-to-element": "^2.0.2",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",

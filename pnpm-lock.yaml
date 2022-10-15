@@ -8,6 +8,7 @@ specifiers:
   '@fortawesome/free-regular-svg-icons': ^6.2.0
   '@fortawesome/free-solid-svg-icons': ^6.2.0
   '@fortawesome/vue-fontawesome': ^3.0.1
+  '@types/nprogress': ^0.2.0
   '@types/scroll-to-element': ^2.0.2
   '@vitejs/plugin-vue': ^3.1.0
   '@vitejs/plugin-vue-jsx': ^2.0.1
@@ -27,6 +28,7 @@ specifiers:
   husky: ^8.0.1
   markdown-it-shiki: ^0.5.1
   medium-zoom: ^1.0.6
+  nprogress: ^0.2.0
   postcss: ^8.1.0
   sass: ^1.54.9
   scroll-to-element: ^2.0.3
@@ -54,6 +56,7 @@ dependencies:
   '@vueuse/core': 9.2.0_vue@3.2.39
   dayjs: 1.11.5
   medium-zoom: 1.0.6
+  nprogress: 0.2.0
   scroll-to-element: 2.0.3
   vite-plugin-md: 0.20.4_igxy6wrgti6mtktaugxifd3erm
   vite-plugin-pages: 0.26.0_vite@3.1.1
@@ -63,6 +66,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
+  '@types/nprogress': 0.2.0
   '@types/scroll-to-element': 2.0.2
   '@vitejs/plugin-vue': 3.1.0_vite@3.1.1+vue@3.2.39
   '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.1+vue@3.2.39
@@ -836,6 +840,10 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
+    dev: true
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
     dev: true
 
   /@types/parse-json/4.0.0:
@@ -3826,6 +3834,10 @@ packages:
     dependencies:
       path-key: 3.1.1
     dev: true
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /nth-check/2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
