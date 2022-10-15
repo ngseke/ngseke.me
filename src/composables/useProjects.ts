@@ -11,9 +11,11 @@ export default function useProjects () {
       .filter(route => !route.redirect)
       .reduce<Record<string, Project>>((map, route) => {
       const key = (route.name as string)?.split('project-')[1]
+      const frontmatter = route.meta.frontmatter as ProjectFrontmatter
       map[key] = {
-        ...route.meta.frontmatter as ProjectFrontmatter,
+        ...frontmatter,
         path: route.path,
+        cover: `${frontmatter.cover}?v=${__COMMIT_HASH__}`,
       }
       return map
     }, {})

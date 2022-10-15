@@ -14,9 +14,17 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Shiki from 'markdown-it-shiki'
 import generateSitemap from 'vite-ssg-sitemap'
+import * as child from 'child_process'
+
+const commitHash = child
+  .execSync('git rev-parse --short HEAD')
+  .toString()
 
 // https://vitejs.dev/config/
 export default ({ mode }) => defineConfig({
+  define: {
+    __COMMIT_HASH__: JSON.stringify(commitHash),
+  },
   ssgOptions: {
     onFinished: () => generateSitemap({
       hostname: loadEnv(mode, process.cwd()).VITE_SITE_ORIGIN,
