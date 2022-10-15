@@ -1,22 +1,21 @@
 import { useStyleTag } from '@vueuse/core'
-import mediumZoom, { Zoom } from 'medium-zoom'
+import mediumZoom from 'medium-zoom'
 import useDark from './useDark'
 
 export default function useMediumZoom (selector = '*:not(a) > img') {
-  let zoom: Zoom
   onMounted(() => {
     if (!isClient) return
-    zoom = mediumZoom(selector)
-  })
+    const zoom = mediumZoom(selector, {
+      margin: 16,
+    })
 
-  onBeforeUnmount(() => {
-    zoom.detach()
-  })
+    onBeforeUnmount(() => zoom.detach())
 
-  watch(useDark(), async (isDark) => {
-    await nextTick()
-    zoom?.update({ background: isDark ? '#1B1917' : '#fff' })
-  }, { immediate: true })
+    watch(useDark(), async (isDark) => {
+      await nextTick()
+      zoom.update({ background: isDark ? '#1B1917' : '#fff' })
+    }, { immediate: true })
+  })
 
   useStyleTag(`
     .medium-zoom-overlay {

@@ -6,7 +6,6 @@ name: "project"
 import useProjectFrontmatter from '../composables/useProjectFrontmatter'
 import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
-import useMediumZoom from '../composables/useMediumZoom'
 import useReadHistory from '../composables/useReadHistory'
 
 const { frontmatter } = useProjectFrontmatter()
@@ -24,8 +23,6 @@ useHead({
     },
   ],
 })
-
-useMediumZoom()
 
 const periodText = computed(() => {
   const period = frontmatter.value?.period
