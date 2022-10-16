@@ -30,7 +30,7 @@ export default ({ mode }) => defineConfig({
       hostname: loadEnv(mode, process.cwd()).VITE_SITE_ORIGIN,
       exclude: [
         '/404',
-        '/projects',
+        '/project',
         '/project/emo',
         '/project/typingtyping',
         '/project/camp2017',
