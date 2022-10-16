@@ -5,6 +5,8 @@ githubLink: https://github.com/ngseke/koasu
 demoLink: https://ngseke.github.io/koasu/
 period: 2021/08
 cover: /img/project-cover/koasu.png
+tags:
+  - Hexo
 ---
 
 KOASÛ 也就是台語「<ruby>歌詞<rt>koa-sû</rt></ruby>」的白話字。

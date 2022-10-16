@@ -7,4 +7,5 @@ export default interface ProjectFrontmatter{
   period?: string | [string, string],
   members?: string[],
   name?: string,
+  tags?: string[],
 }

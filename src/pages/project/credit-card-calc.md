@@ -7,6 +7,12 @@ period:
   - 2021/06
   - 2021/06
 cover: /img/project-cover/credit-card-calc.png
+tags:
+  - Vue
+  - TypeScript
+  - Tailwind CSS
+  - Vite
+  - UI/UX
 ---
 
 ![](../../assets/img/project/credit-card-calc/cover.png)

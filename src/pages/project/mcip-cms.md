@@ -3,6 +3,11 @@ title: MCIP CMS
 briefDescription: 《樂台計畫》後台管理系統
 period: 2018/11
 cover: /img/project-cover/mcip-cms.png
+tags:
+  - Vue
+  - Vuetify
+  - ECharts
+  - UI/UX
 ---
 
 <script setup lang="ts">

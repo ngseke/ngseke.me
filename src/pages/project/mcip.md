@@ -5,6 +5,10 @@ githubLink: https://github.com/ngseke/mcip.ml
 demoLink: https://mcip.ml
 period: 2019/02
 cover: /img/project-cover/mcip.png
+tags:
+  - Nuxt
+  - Schema.org
+  - UI/UX
 ---
 
 <script setup lang="ts">

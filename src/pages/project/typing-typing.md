@@ -10,6 +10,8 @@ members:
   - 余鎧企
   - 黃省喬
 cover: /img/project-cover/typing-typing.png
+tags:
+  - C++
 ---
 
 物件導向程式設計期末專題。

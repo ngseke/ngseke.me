@@ -57,6 +57,7 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
         >
           {{ frontmatter?.briefDescription }}
         </p>
+        <ProjectTags :list="frontmatter?.tags" />
         <ul class="space-y-1 text-sm text-stone-700 dark:text-stone-300">
           <li>{{ periodText }}</li>
           <li v-if="frontmatter?.members ">

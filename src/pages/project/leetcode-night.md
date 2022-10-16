@@ -5,6 +5,12 @@ githubLink: https://github.com/ngseke/leetcode-night
 demoLink: https://chrome.google.com/webstore/detail/leetcode-night/aaokgipfeeeciodnffigjfiafledhcii
 period: 2022/02
 cover: /img/project-cover/leetcode-night.png
+tags:
+  - React
+  - TypeScript
+  - i18n
+  - styled-components
+  - UI/UX
 ---
 
 ![](../../assets/img/project/leetcode-night/banner.png)

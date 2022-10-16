@@ -7,6 +7,10 @@ period:
   - 2018/10
   - 2018/11
 cover: /img/project-cover/gomoku.png
+tags:
+  - Vue
+  - Firebase
+  - UI/UX
 ---
 
 ![](../../assets/img/project/gomoku/title.png)

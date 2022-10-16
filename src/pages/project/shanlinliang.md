@@ -5,6 +5,8 @@ period:
   - 2017/10
   - 2017/10
 cover: /img/project-cover/shanlinliang.png
+tags:
+  - Illustrator
 ---
 
 

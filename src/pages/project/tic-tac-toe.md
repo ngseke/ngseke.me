@@ -7,6 +7,11 @@ period:
   - 2018/10
   - 2018/10
 cover: /img/project-cover/tic-tac-toe.png
+tags:
+  - Vue
+  - gulp
+  - Firebase
+  - UI/UX
 ---
 
 
