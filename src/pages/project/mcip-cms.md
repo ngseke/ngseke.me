@@ -11,6 +11,7 @@ tags:
 ---
 
 <script setup lang="ts">
+import ProjectList from '../../components/ProjectList.vue'
 import useProjects from '../../composables/useProjects'
 const { projectMap } = useProjects()
 const list = [projectMap.value.mcip]
