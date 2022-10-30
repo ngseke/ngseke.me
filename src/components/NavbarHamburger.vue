@@ -25,7 +25,7 @@ defineEmits<{
           >
             <NavbarLink
               :href="href"
-              @click="($event) => {
+              @click="($event: Event) => {
                 handler?.($event)
                 $emit('clickLink')
               }"
