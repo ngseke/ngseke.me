@@ -80,9 +80,8 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
         <div class="absolute left-0 top-1/2 block -translate-y-1/2 sm:static sm:right-auto sm:top-auto sm:hidden sm:transform-none">
           <ButtonHamburger :active="isExpanded" @click="toggleIsExpanded()" />
           <NavbarHamburger
+            v-model:show="isExpanded"
             :links="links"
-            :show="isExpanded"
-            @click-link="isExpanded = false"
           />
         </div>
 

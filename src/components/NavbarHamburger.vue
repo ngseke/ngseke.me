@@ -7,7 +7,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'clickLink'): void,
+  (e: 'update:show'): void,
 }>()
 </script>
 
@@ -27,7 +27,7 @@ defineEmits<{
               :href="href"
               @click="($event: Event) => {
                 handler?.($event)
-                $emit('clickLink')
+                $emit('update:show', false)
               }"
             >
               {{ name }}
