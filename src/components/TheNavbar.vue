@@ -2,7 +2,6 @@
 import useIsCoverVisible from '../composables/useIsCoverVisible'
 
 import { aboutMeSectionHash, scrollToAboutMe } from '../modules/about-me-section'
-import { useWindowScroll } from '@vueuse/core'
 import type Link from '../types/Link'
 import useHamburger from '../composables/useHamburger'
 
@@ -41,10 +40,6 @@ const links: Link[] = [
     href: 'https://hackmd.io/@xq',
   },
 ]
-
-const { y } = useWindowScroll()
-const isScrolled = computed(() => y.value > 1)
-
 const { isExpanded, toggleIsExpanded } = useHamburger()
 </script>
 
@@ -52,8 +47,8 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
   <nav
     class="fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center bg-black shadow-lg transition-all duration-300 print:hidden"
     :class="{
-      'shadow-stone-900/0': !isScrolled,
-      'shadow-stone-900/40': isScrolled,
+      'shadow-transparent': !shouldShowLogo,
+      'shadow-black/20': shouldShowLogo,
     }"
   >
     <div class="container flex px-4">
