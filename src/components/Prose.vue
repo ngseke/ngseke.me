@@ -30,7 +30,7 @@ useMediumZoom()
 
   p
     +block-margin
-    @apply leading-7
+    @apply leading-7 tracking-[.2px]
     & > img
       +block-margin
       +media
