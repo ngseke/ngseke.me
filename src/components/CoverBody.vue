@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import useMounted from '../composables/useMounted'
+import { useMounted } from '@vueuse/core'
 import { scrollToAboutMe } from '../modules/about-me-section'
 
-const { isMounted } = useMounted()
+const isMounted = useMounted()
 
-const handleClickScrollDown = () => {
-  scrollToAboutMe({ duration: 500 })
-}
+const handleClickScrollDown = () => scrollToAboutMe({ duration: 500 })
 </script>
 
 <template>
