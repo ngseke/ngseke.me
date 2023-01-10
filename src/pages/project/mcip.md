@@ -2,7 +2,7 @@
 title: MCIP Official Website
 briefDescription: 《樂台計畫》官方網站
 githubLink: https://github.com/ngseke/mcip.ml
-demoLink: https://mcip.ml
+demoLink: https://mcip.app
 period: 2019/02
 cover: /img/project-cover/mcip.png
 tags:
@@ -18,15 +18,13 @@ const { projectMap } = useProjects()
 const list = [projectMap.value['mcip-cms']]
 </script>
 
-[**樂台計畫官方網站**](https://mcip.ml)是以 Nuxt 建構的 SSR 形象網站，關於《樂台計畫》平台的詳情可參考[MCIP CMS](/project/mcip-cms)。
+[**樂台計畫官方網站**](https://mcip.app)是以 Nuxt 建構的 SSR 形象網站。在此專案我負責的項目，包含定義網站架構與規格、UI/UX 設計、開發與部署。
 
-在此專案中，我所負責的項目包含定義網站架構與規格、UI/UX 設計、開發與部署。
-
+> 關於《樂台計畫》平台詳細介紹請見[MCIP CMS](/project/mcip-cms)。
 
 ![Cover](../../assets/img/project/mcip/1.png)
 ![LINE QRCode & Statistics](../../assets/img/project/mcip/2.png)
 ![News & Partners](../../assets/img/project/mcip/3.png)
-
 
 ## 緣由
 
@@ -66,9 +64,9 @@ const list = [projectMap.value['mcip-cms']]
 
 ## Demo
 
-[https://mcip.ml/](https://mcip.ml/)
+[https://mcip.app/](https://mcip.app/)
 
-<iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=mcip.ml&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=mcip.app&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
 
 
 ## Related Project
