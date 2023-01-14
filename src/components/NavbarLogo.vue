@@ -23,7 +23,7 @@ const handleClick = (e: Event) => {
     enter-from-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
   >
     <div
-      v-if="show"
+      v-show="show"
       class="transition-all duration-200 sm:w-24"
     >
       <RouterLink
