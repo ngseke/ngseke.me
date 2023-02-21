@@ -2,7 +2,7 @@
 title: Gomoku
 briefDescription: 線上五子棋對戰
 githubLink: https://github.com/ngseke/gomoku
-demoLink: https://gomoku.ga/
+demoLink: https://gomoku.ngseke.me
 period:
   - 2018/10
   - 2018/11
@@ -15,7 +15,7 @@ tags:
 
 ![](../../assets/img/project/gomoku/title.png)
 
-[Gomoku: 五子棋對戰](https://gomoku.ga/)是簡約的五子棋遊戲，是與小夥伴在悠閒午後消磨時間的良伴。
+[Gomoku: 五子棋對戰](https://gomoku.ngseke.me)是簡約的五子棋遊戲，是與小夥伴在悠閒午後消磨時間的良伴。
 
 ![註冊畫面](../../assets/img/project/gomoku/register.png)
 ![大廳房間列表](../../assets/img/project/gomoku/room.png)
@@ -26,6 +26,6 @@ tags:
 
 ## Demo
 
-[https://gomoku.ga/](https://gomoku.ga/)
+[https://gomoku.ngseke.me](https://gomoku.ngseke.me)
 
 <iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=gomoku&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
