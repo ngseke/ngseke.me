@@ -25,6 +25,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@vueuse/core": "^9.2.0",
     "dayjs": "^1.11.5",
+    "markdown-it-anchor": "^8.6.7",
     "medium-zoom": "^1.0.6",
     "nprogress": "^0.2.0",
     "scroll-to-element": "^2.0.3",
