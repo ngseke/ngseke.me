@@ -22,6 +22,7 @@ import {
   faSun,
   faUpRightFromSquare,
   faXmark,
+  faLink,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -61,6 +62,7 @@ library.add(
   faSun,
   faUpRightFromSquare,
   faXmark,
+  faLink,
 )
 
 export { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'

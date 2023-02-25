@@ -14,6 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Shiki from 'markdown-it-shiki'
 import generateSitemap from 'vite-ssg-sitemap'
+import MarkdownItAnchor from 'markdown-it-anchor'
 import * as child from 'child_process'
 
 const commitHash = child
@@ -89,6 +90,14 @@ export default ({ mode }) => defineConfig({
             light: 'vitesse-light',
             dark: 'vitesse-dark',
           },
+        })
+        md.use(MarkdownItAnchor, {
+          permalink: MarkdownItAnchor.permalink.linkInsideHeader({
+            symbol: `
+              <Fa :icon="['fas', 'link']" />
+            `,
+            placement: 'after',
+          }),
         })
       },
     }),

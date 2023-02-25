@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import useMediumZoom from '../composables/useMediumZoom'
+import useScrollToAnchor from '../composables/useScrollToAnchor'
+
 useMediumZoom()
+useScrollToAnchor()
 </script>
 
 <template>
@@ -21,6 +24,12 @@ useMediumZoom()
 :deep(.prose)
   h2, h3, h4
     @apply mt-12 mb-4 font-medium
+    // fix anchor position
+    @apply before:content-[''] before:block before:h-20 before:-mt-20
+    a.header-anchor
+      @apply text-sm inline-block mt-[10px] align-top ml-1 opacity-0 scale-90 transition-all
+    &:hover .header-anchor
+      @apply opacity-80 scale-100
   h2
     @apply text-3xl
   h3
