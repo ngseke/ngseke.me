@@ -19,7 +19,7 @@ const { projects } = useProjects()
       <section
         v-for="({ title, list }, index) in projects"
         :key="index"
-        class="mb-16 space-y-8"
+        class="mb-24 space-y-8"
       >
         <TitleCategory>{{ title }}</TitleCategory>
         <ProjectList :list="list" />
