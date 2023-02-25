@@ -11,7 +11,7 @@ const list = [
 
 <template>
   <AboutMeSectionLayout title="My Projects">
-    <div>
+    <div class="space-y-8">
       <ProjectList class="pt-4" :list="list" />
 
       <div class="pl-2">
