@@ -1,18 +1,25 @@
 <script setup lang="ts">
+withDefaults(defineProps<{
+  size?: 'md' | 'lg',
+}>(), {
+  size: 'md',
+})
 </script>
 
 <template>
   <button
     class="
       link-effect
-      h-8 w-8
       select-none
       rounded-full
-      text-lg
       after:inset-[-.3rem]
       after:rounded-full
       after:bg-white/10
     "
+    :class="{
+      'h-8 w-8 text-xl': size === 'md',
+      'h-10 w-10 text-3xl': size === 'lg',
+    }"
     type="button"
   >
     <Transition
