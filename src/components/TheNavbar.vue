@@ -54,7 +54,7 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
     <div class="container flex px-4">
       <div class="relative z-10 flex w-full items-center justify-center py-2 text-white/80 sm:justify-start">
         <NavbarLogo
-          :show="shouldShowLogo || isExpanded"
+          :show="shouldShowLogo"
           @click="isExpanded = false"
         />
 
@@ -73,7 +73,7 @@ const { isExpanded, toggleIsExpanded } = useHamburger()
         </ul>
 
         <div class="absolute left-0 top-1/2 block -translate-y-1/2 sm:static sm:right-auto sm:top-auto sm:hidden sm:transform-none">
-          <ButtonHamburger :active="isExpanded" @click="toggleIsExpanded()" />
+          <ButtonHamburger @click="toggleIsExpanded()" />
           <NavbarHamburger
             v-model:show="isExpanded"
             :links="links"

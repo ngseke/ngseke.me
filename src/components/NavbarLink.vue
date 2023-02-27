@@ -5,12 +5,13 @@
   <IsomorphicLink
     v-slot="{ isExternal }"
     class="
-    link-effect
-    uppercase
-    after:-inset-x-2
-    after:-inset-y-1
-    after:rounded-lg
-    after:bg-white/10
+      link-effect
+      inline-block
+      uppercase
+      after:-inset-x-2
+      after:-inset-y-1
+      after:rounded-lg
+      after:bg-white/10
     "
   >
     <slot />
