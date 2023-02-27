@@ -26,12 +26,10 @@ const { postGroups } = usePosts()
         :key="index"
         class="mb-16 space-y-8"
       >
-        <h2 class="flex items-center text-3xl font-medium italic">
+        <h2 class="flex items-center text-3xl font-medium">
           {{ name }}
         </h2>
-        <div class="sm:pl-4">
-          <PostList :list="posts" />
-        </div>
+        <PostList :list="posts" />
       </section>
     </div>
   </div>
