@@ -17,12 +17,14 @@ specifiers:
   '@vue/runtime-core': 3.2.39
   '@vueuse/core': 9.13.0
   '@vueuse/head': ^0.7.11
+  '@vueuse/integrations': ^9.13.0
   autoprefixer: ^10.4.11
   critters: ^0.0.16
   dayjs: ^1.11.5
   eslint: ^8.23.1
   eslint-plugin-tailwindcss: ^3.6.1
   eslint-plugin-vue: ^9.4.0
+  focus-trap: ^7.3.1
   fs-extra: ^10.1.0
   gray-matter: ^4.0.3
   husky: ^8.0.1
@@ -55,7 +57,9 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@fortawesome/vue-fontawesome': 3.0.1_4h6vf4pkzarhnju6fzmo7mfhke
   '@vueuse/core': 9.13.0_vue@3.2.39
+  '@vueuse/integrations': 9.13.0_q7hxjoyqafjzxe4mg4sjtzy4iy
   dayjs: 1.11.5
+  focus-trap: 7.3.1
   markdown-it-anchor: 8.6.7_ea7kj7wzjkld5jo2noyjqxi764
   medium-zoom: 1.0.6
   nprogress: 0.2.0
@@ -1239,6 +1243,54 @@ packages:
       '@zhead/schema-vue': 0.7.1_vue@3.2.39
       vue: 3.2.39
     dev: true
+
+  /@vueuse/integrations/9.13.0_q7hxjoyqafjzxe4mg4sjtzy4iy:
+    resolution: {integrity: sha512-I1kX/tsfcvWWLZD7HZaP0LsSfchK13YxReLfharXhk72SFXp87doLbRaTfIF5w8m/gr/vPtcNyQPAXW7Ubpuww==}
+    peerDependencies:
+      async-validator: '*'
+      axios: '*'
+      change-case: '*'
+      drauu: '*'
+      focus-trap: '*'
+      fuse.js: '*'
+      idb-keyval: '*'
+      jwt-decode: '*'
+      nprogress: '*'
+      qrcode: '*'
+      universal-cookie: '*'
+    peerDependenciesMeta:
+      async-validator:
+        optional: true
+      axios:
+        optional: true
+      change-case:
+        optional: true
+      drauu:
+        optional: true
+      focus-trap:
+        optional: true
+      fuse.js:
+        optional: true
+      idb-keyval:
+        optional: true
+      jwt-decode:
+        optional: true
+      nprogress:
+        optional: true
+      qrcode:
+        optional: true
+      universal-cookie:
+        optional: true
+    dependencies:
+      '@vueuse/core': 9.13.0_vue@3.2.39
+      '@vueuse/shared': 9.13.0_vue@3.2.39
+      focus-trap: 7.3.1
+      nprogress: 0.2.0
+      vue-demi: 0.13.11_vue@3.2.39
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@vueuse/metadata/9.13.0:
     resolution: {integrity: sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==}
@@ -2811,6 +2863,12 @@ packages:
   /flatted/3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
+
+  /focus-trap/7.3.1:
+    resolution: {integrity: sha512-bX/u4FJ+F0Pp6b/8Q9W8Br/JaLJ7rrhOJAzai9JU8bh4BPdOjEATy4pxHcbBBxFjPN4d1oHy7/KqknEdOetm9w==}
+    dependencies:
+      tabbable: 6.1.1
+    dev: false
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -4651,6 +4709,10 @@ packages:
       '@pkgr/utils': 2.3.1
       tslib: 2.4.0
     dev: true
+
+  /tabbable/6.1.1:
+    resolution: {integrity: sha512-4kl5w+nCB44EVRdO0g/UGoOp3vlwgycUVtkk/7DPyeLZUCuNFFKCFG6/t/DgHLrUPHjrZg6s5tNm+56Q2B0xyg==}
+    dev: false
 
   /tailwindcss/3.1.8_57znarxsqwmnneadci5z5fd5gu:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
