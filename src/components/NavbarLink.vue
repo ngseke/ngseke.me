@@ -11,7 +11,8 @@
       after:-inset-x-2
       after:-inset-y-1
       after:rounded-lg
-      after:bg-white/10
+      after:bg-black/10
+      dark:after:bg-white/10
     "
   >
     <slot />
