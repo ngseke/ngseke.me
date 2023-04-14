@@ -34,7 +34,7 @@
         class="underline decoration-dotted"
         title="ㄏㄨㄤˊ ㄒㄧㄥˇ ㄑㄧㄠˊ"
       >黃省喬</span>
-      / HUANG Xingqiao
+      / HUANG Sing-Ciao
     </p>
   </AboutMeSectionLayout>
 </template>
