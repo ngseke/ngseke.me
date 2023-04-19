@@ -36,10 +36,10 @@ const profile = {
 
 'name' in profile // true
 
-// ⚠️
-// 雖然以下 key 沒有在 `profile` 中明確定義，
-// 但因為它們存在於物件的 prototype 中，
-// 所以依然會得到 true。
+/*
+  ⚠️ 雖然以下 key 沒有在 `profile` 中明確定義，
+  但因為它們存在於物件的 prototype 中，所以依然會得到 true。
+*/
 'valueOf' in profile // true
 'toString' in profile // true
 ```
@@ -54,7 +54,6 @@ const profile = {
 
 由於 JavaScript 未保護 `hasOwnProperty`，所以你完全可以直接複寫這個屬性，讓它刻意回傳錯誤的結果。
 
-
 ```javascript
 const profile = {
   name: 'Sean',
@@ -62,16 +61,16 @@ const profile = {
   hasOwnProperty: () => true,
 }
 
-// 😢 永遠都會得到 true
+/* 😢 永遠都會得到 true */
 profile.hasOwnProperty('🍺') // true
 profile.hasOwnProperty(123456789) // true
 ```
 
-利用 `Object.prototype.hasOwnProperty.call()` 即可避免此情況發生。
+利用 `Object.prototype.hasOwnProperty.call()` 即可避免此情況發生，也不會遍歷原型鏈。
 
 
 ```javascript
-// 😎 雖然冗長但較安全
+/* 😎 雖然冗長但最安全 */
 Object.prototype.hasOwnProperty.call(profile, '🍺') // false
 Object.prototype.hasOwnProperty.call(profile, 'name') // true
 ```
@@ -94,14 +93,13 @@ keys.includes('name') // true
 keys.includes('valueOf') // false
 ```
 
-
 ## ⚠️ 其他常見方法，但小心有陷阱
 
 ### `!== undefined`
 
 當試圖存取不存在於物件的 key 時，會得到 `undefined`。
 
-但當某 key 存在，而且值剛好是  `undefined` 時，那就仍會得到 `false`。
+但當某 key 存在而且值剛好是  `undefined` 時，那就仍會得到 `false`。
 
 ```javascript
 const profile = {
@@ -109,8 +107,8 @@ const profile = {
   phone: undefined,
 }
 
-profile['address'] !== undefined // false
-profile['phone'] !== undefined // ⚠️ false
+profile.address !== undefined // false
+profile.phone !== undefined // ⚠️ false
 ```
 
 
@@ -118,9 +116,9 @@ profile['phone'] !== undefined // ⚠️ false
 
 簡單暴力的寫法，也就是直接將值轉型成 boolean。
 
-但這顯然是相對不可靠的方法，因為只要是 [*falsy*](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy) 值，例如 `0` 、空字串 `''` 、 `null` 等 ，即使 key 存在但依然會得到 `false`。
+但這方法顯然很不可靠，因為只要是 [*falsy*](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy) 值，例如 `0` 、空字串 `''` 、 `null` 等 ，即使 key 存在但依然會得到 `false`。
 
-除非你可以保證物件的值的型別，例如在有使用 TypeScript 的場合，否則並不推薦這寫法。
+除非你對物件型別有十足的信心，例如在有 TypeScript 的場合，否則不太推薦這寫法。
 
 ```javascript
 const profile = {
@@ -129,11 +127,9 @@ const profile = {
   isDead: false,
 }
 
-!!profile['name'] // true
-
-// ⚠️
-!!profile['balance'] // false
-Boolean(profile['isDead']) // false
+!!profile.name // true
+!!profile.balance // ⚠️ false
+Boolean(profile.isDead) // ⚠️ false
 ```
 
 ## 參考資料
