@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { useMounted } from '@vueuse/core'
-import { scrollToAboutMe } from '../modules/about-me-section'
 
 const isMounted = useMounted()
-
-const handleClickScrollDown = () => scrollToAboutMe({ duration: 500 })
 </script>
 
 <template>
@@ -30,9 +27,6 @@ const handleClickScrollDown = () => scrollToAboutMe({ duration: 500 })
           </h1>
         </div>
       </TransitionUniversal>
-    </div>
-    <div class="absolute left-1/2 bottom-10 -translate-x-1/2">
-      <ButtonScrollDown @click="handleClickScrollDown" />
     </div>
   </div>
 </template>
