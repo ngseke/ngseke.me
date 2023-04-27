@@ -54,6 +54,7 @@
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
     "husky": "^8.0.1",
+    "lint-staged": "^13.2.2",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-shiki": "^0.5.1",
     "postcss": "^8.1.0",

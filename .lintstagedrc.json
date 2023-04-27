@@ -1,0 +1,3 @@
+{
+  "*.ts|*.js|*.cjs|*.vue": "npx eslint"
+}
