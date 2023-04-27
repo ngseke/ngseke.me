@@ -1,11 +1,11 @@
 import dayjs from 'dayjs'
-import Post from '../types/Post'
-import PostFrontmatter from '../types/PostFrontmatter'
-import PostGroup from '../types/PostGroup'
+import { Post } from '../types/Post'
+import { PostFrontmatter } from '../types/PostFrontmatter'
+import { PostGroup } from '../types/PostGroup'
 
 const toTimestamp = (date: dayjs.ConfigType) => +dayjs(date)
 
-export default function usePosts () {
+export function usePosts () {
   const router = useRouter()
 
   const posts = computed<Post[]>(() => {

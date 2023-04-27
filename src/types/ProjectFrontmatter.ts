@@ -1,4 +1,4 @@
-export default interface ProjectFrontmatter{
+export interface ProjectFrontmatter{
   title: string,
   briefDescription?: string,
   cover?: string,

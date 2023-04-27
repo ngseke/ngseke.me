@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Link from '../types/Link'
+import { Link } from '../types/Link'
 import { onClickOutside } from '@vueuse/core'
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
 

@@ -3,7 +3,7 @@ name: "projects"
 </route>
 
 <script setup lang="ts">
-import useProjects from '../composables/useProjects'
+import { useProjects } from '../composables/useProjects'
 import { VITE_SITE_NAME } from '../modules/constants'
 
 useHead({

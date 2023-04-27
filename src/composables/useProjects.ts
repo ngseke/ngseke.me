@@ -1,7 +1,7 @@
-import Project from '../types/Project'
-import ProjectFrontmatter from '../types/ProjectFrontmatter'
+import { Project } from '../types/Project'
+import { ProjectFrontmatter } from '../types/ProjectFrontmatter'
 
-export default function useProjects () {
+export function useProjects () {
   const router = useRouter()
 
   const projectMap = computed(() => {

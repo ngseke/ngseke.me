@@ -1,4 +1,4 @@
-export default function useMountedBodyClass () {
+export function useMountedBodyClass () {
   onMounted(async () => {
     if (!isClient) return
 

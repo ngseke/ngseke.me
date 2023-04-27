@@ -1,6 +1,6 @@
 import { useToggle, useScrollLock, useWindowSize } from '@vueuse/core'
 
-export default function useHamburger () {
+export function useHamburger () {
   const [isExpanded, toggleIsExpanded] = useToggle()
   const bodyEl = computed(() => {
     if (!isClient) return

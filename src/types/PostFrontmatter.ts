@@ -1,4 +1,4 @@
-export default interface PostFrontmatter{
+export interface PostFrontmatter{
   title: string,
   date?: string,
   tags?: string[],

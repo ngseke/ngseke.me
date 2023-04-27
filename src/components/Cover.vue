@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import image from '../assets/img/cover-background.jpg'
-import useIsCoverVisible from '../composables/useIsCoverVisible'
+import { useIsCoverVisible } from '../composables/useIsCoverVisible'
 
 const style = {
   backgroundImage: `url(${image})`,

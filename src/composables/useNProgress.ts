@@ -1,6 +1,6 @@
 import NProgress from 'nprogress'
 
-export default function useNProgress () {
+export function useNProgress () {
   const { beforeEach, afterEach } = useRouter()
 
   beforeEach((_to, _from, next) => {

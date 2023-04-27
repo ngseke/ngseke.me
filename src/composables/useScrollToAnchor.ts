@@ -1,4 +1,4 @@
-export default function useScrollToAnchor () {
+export function useScrollToAnchor () {
   onMounted(async () => {
     await nextTick()
     const { hash } = location

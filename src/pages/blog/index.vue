@@ -4,7 +4,7 @@ name: "posts"
 
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
-import usePosts from '../../composables/usePosts'
+import { usePosts } from '../../composables/usePosts'
 import { VITE_SITE_NAME } from '../../modules/constants'
 
 useHead({

@@ -1,5 +1,5 @@
-import PostFrontmatter from './PostFrontmatter'
+import { PostFrontmatter } from './PostFrontmatter'
 
-export default interface Post extends PostFrontmatter {
+export interface Post extends PostFrontmatter {
   path?: string,
 }

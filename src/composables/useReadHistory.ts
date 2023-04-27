@@ -1,11 +1,11 @@
 import { useLocalStorage } from '@vueuse/core'
-import useProjects from './useProjects'
+import { useProjects } from './useProjects'
 
 const storageKey = 'readHistory'
 
 type ReadHistory = Record<string, number>
 
-export default function useReadHistory () {
+export function useReadHistory () {
   const readHistory = useLocalStorage<ReadHistory>(storageKey, {})
 
   const pushReadHistory = (name: string) => {

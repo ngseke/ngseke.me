@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Project from '../types/Project'
+import { Project } from '../types/Project'
 
 defineProps<{
   list?: Project[],

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import useIsCoverVisible from '../composables/useIsCoverVisible'
+import { useIsCoverVisible } from '../composables/useIsCoverVisible'
 import { aboutMeSectionHash, scrollToAboutMe } from '../modules/about-me-section'
-import type Link from '../types/Link'
-import useHamburger from '../composables/useHamburger'
-import useIsScrolledToTop from '../composables/useIsScrolledToTop'
+import type { Link } from '../types/Link'
+import { useHamburger } from '../composables/useHamburger'
+import { useIsScrolledToTop } from '../composables/useIsScrolledToTop'
 
 const route = useRoute()
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getPostFormattedDate } from '../modules/date'
-import Post from '../types/Post'
+import { Post } from '../types/Post'
 
 defineProps<{
   list?: Post[],

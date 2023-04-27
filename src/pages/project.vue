@@ -3,10 +3,10 @@ name: "project"
 </route>
 
 <script setup lang="ts">
-import useProjectFrontmatter from '../composables/useProjectFrontmatter'
+import { useProjectFrontmatter } from '../composables/useProjectFrontmatter'
 import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
-import useReadHistory from '../composables/useReadHistory'
+import { useReadHistory } from '../composables/useReadHistory'
 
 const { frontmatter } = useProjectFrontmatter()
 

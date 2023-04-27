@@ -4,7 +4,7 @@ name: "post"
 
 <script setup lang="ts">
 import { VITE_SITE_NAME } from '../modules/constants'
-import usePostFrontmatter from '../composables/usePostFrontmatter'
+import { usePostFrontmatter } from '../composables/usePostFrontmatter'
 import { getPostFormattedDate } from '../modules/date'
 
 const route = useRoute()

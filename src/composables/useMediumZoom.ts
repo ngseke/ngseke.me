@@ -1,8 +1,8 @@
 import { useStyleTag } from '@vueuse/core'
 import mediumZoom from 'medium-zoom'
-import useDark from './useDark'
+import { useDark } from './useDark'
 
-export default function useMediumZoom (selector = '*:not(a) > img') {
+export function useMediumZoom (selector = '*:not(a) > img') {
   onMounted(() => {
     if (!isClient) return
     const zoom = mediumZoom(selector, {

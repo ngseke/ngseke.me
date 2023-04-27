@@ -2,6 +2,6 @@ import { useDark as baseUseDark } from '@vueuse/core'
 
 const isDark = baseUseDark()
 
-export default function useDark () {
+export function useDark () {
   return isDark
 }

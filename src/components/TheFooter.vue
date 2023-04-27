@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import links from '../modules/links'
+import { links } from '../modules/links'
 </script>
 
 <template>

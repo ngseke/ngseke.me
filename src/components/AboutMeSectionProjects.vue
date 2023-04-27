@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useProjects from '../composables/useProjects'
+import { useProjects } from '../composables/useProjects'
 
 const { projectMap } = useProjects()
 

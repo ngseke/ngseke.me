@@ -1,5 +1,5 @@
-import ProjectFrontmatter from './ProjectFrontmatter'
+import { ProjectFrontmatter } from './ProjectFrontmatter'
 
-export default interface Project extends ProjectFrontmatter {
+export interface Project extends ProjectFrontmatter {
   path?: string,
 }

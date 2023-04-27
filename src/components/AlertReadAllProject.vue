@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useReadHistory from '../composables/useReadHistory'
+import { useReadHistory } from '../composables/useReadHistory'
 const { isReadAll, clearReadHistory } = useReadHistory()
 </script>
 

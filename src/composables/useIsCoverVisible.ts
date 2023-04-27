@@ -2,7 +2,7 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const coverRef = ref<HTMLElement | null>(null)
 
-export default function useIsCoverVisible () {
+export function useIsCoverVisible () {
   const route = useRoute()
   const isCoverVisible = ref<boolean | null>(null)
 
