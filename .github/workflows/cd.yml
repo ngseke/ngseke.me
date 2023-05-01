@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'master'
+
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
@@ -19,11 +20,17 @@ jobs:
         with:
           version: 7.11.0
 
-      - name: Install and Build 🔧
-        run: |
-          pnpm i
-          pnpm run build
-          cp CNAME dist/CNAME
+      - name: Install Dependencies
+        run: pnpm i
+
+      - name: Run Tests
+        run: pnpm test
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Copy `CNAME` file
+        run: cp CNAME dist/CNAME
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
