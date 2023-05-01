@@ -26,7 +26,7 @@ export const links = {
   },
   linkedin: {
     icon: ['fab', 'linkedin'],
-    url: 'https://www.linkedin.com/in/xqng/',
+    url: 'https://www.linkedin.com/in/ngseke/',
     title: 'LinkedIn',
   },
   email: {
