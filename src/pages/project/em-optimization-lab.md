@@ -10,6 +10,7 @@ cover: /img/project-cover/emo.png
 tags:
   - Vue
   - Firebase
+  - gulp.js
   - UI/UX
 ---
 
