@@ -20,12 +20,14 @@ specifiers:
   '@vueuse/head': ^0.7.11
   '@vueuse/integrations': ^9.13.0
   autoprefixer: ^10.4.11
+  axios: ^1.4.0
   critters: ^0.0.16
   dayjs: ^1.11.5
   eslint: ^8.23.1
   eslint-plugin-tailwindcss: 3.12.1
   eslint-plugin-vue: ^9.4.0
   expect-puppeteer: ^8.0.5
+  fast-glob: ^3.2.12
   focus-trap: ^7.3.1
   fs-extra: ^10.1.0
   gray-matter: ^4.0.3
@@ -65,7 +67,7 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@fortawesome/vue-fontawesome': 3.0.1_4h6vf4pkzarhnju6fzmo7mfhke
   '@vueuse/core': 9.13.0_vue@3.2.39
-  '@vueuse/integrations': 9.13.0_q7hxjoyqafjzxe4mg4sjtzy4iy
+  '@vueuse/integrations': 9.13.0_osegsx2zwfqjqpntakygn4esxy
   dayjs: 1.11.5
   focus-trap: 7.3.1
   medium-zoom: 1.0.6
@@ -89,11 +91,13 @@ devDependencies:
   '@vue/runtime-core': 3.2.39
   '@vueuse/head': 0.7.11_vue@3.2.39
   autoprefixer: 10.4.11_postcss@8.4.16
+  axios: 1.4.0
   critters: 0.0.16
   eslint: 8.23.1
   eslint-plugin-tailwindcss: 3.12.1_tailwindcss@3.3.2
   eslint-plugin-vue: 9.4.0_eslint@8.23.1
   expect-puppeteer: 8.0.5
+  fast-glob: 3.2.12
   fs-extra: 10.1.0
   gray-matter: 4.0.3
   husky: 8.0.1
@@ -1763,7 +1767,7 @@ packages:
       vue: 3.2.39
     dev: true
 
-  /@vueuse/integrations/9.13.0_q7hxjoyqafjzxe4mg4sjtzy4iy:
+  /@vueuse/integrations/9.13.0_osegsx2zwfqjqpntakygn4esxy:
     resolution: {integrity: sha512-I1kX/tsfcvWWLZD7HZaP0LsSfchK13YxReLfharXhk72SFXp87doLbRaTfIF5w8m/gr/vPtcNyQPAXW7Ubpuww==}
     peerDependencies:
       async-validator: '*'
@@ -1803,6 +1807,7 @@ packages:
     dependencies:
       '@vueuse/core': 9.13.0_vue@3.2.39
       '@vueuse/shared': 9.13.0_vue@3.2.39
+      axios: 1.4.0
       focus-trap: 7.3.1
       nprogress: 0.2.0
       vue-demi: 0.13.11_vue@3.2.39
@@ -2114,6 +2119,15 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: true
+
+  /axios/1.4.0:
+    resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
+    dependencies:
+      follow-redirects: 1.15.2
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
 
   /babel-jest/29.5.0_@babel+core@7.19.1:
     resolution: {integrity: sha512-mA4eCDh5mSo2EcA9xQjVTpmbbNk32Zb3Q3QFQsNhaK56Q+yoXowzFodLux30HRgyOho5rsQ6B0P9QpMkvvnJ0Q==}
@@ -3791,7 +3805,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: true
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -3815,7 +3828,6 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: true
 
   /fp-ts/2.12.3:
     resolution: {integrity: sha512-8m0XvW8kZbfnJOA4NvSVXu95mLbPf4LQGwQyqVukIYS4KzSNJiyKSmuZUmbVHteUi6MGkAJGPb0goPZqI+Tsqg==}
@@ -6026,7 +6038,6 @@ packages:
 
   /proxy-from-env/1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-    dev: true
 
   /psl/1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
