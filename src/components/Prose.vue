@@ -1,14 +1,17 @@
 <script setup lang="ts">
+import { useDark } from '../composables/useDark'
 import { useMediumZoom } from '../composables/useMediumZoom'
 import { useScrollToAnchor } from '../composables/useScrollToAnchor'
 
 useMediumZoom()
 useScrollToAnchor()
+
+const isDark = useDark()
 </script>
 
 <template>
   <div>
-    <article class="prose">
+    <article class="prose" :class="{ dark: isDark }">
       <slot />
     </article>
   </div>
@@ -46,9 +49,13 @@ useScrollToAnchor()
       @apply mx-auto w-auto
 
   blockquote
-    @apply italic border-l-4 px-4 border-stone-500/50
+    @apply border-l-4 px-4 border-stone-500/50 text-stone-600
     p img
       @apply mx-0 max-w-full
+
+  &.dark
+    blockquote
+      @apply text-neutral-400
 
   ul, ol
     @apply list-outside pl-5 mt-6 mb-4 space-y-1

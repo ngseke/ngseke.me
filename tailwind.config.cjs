@@ -19,7 +19,6 @@ module.exports = {
       },
       colors: {
         ngsek: '#ffd019',
-        light: 'hsl(0, 0%, 90%)',
       },
       animation: {
         blink: 'blink .08s ease-in-out infinite alternate',
