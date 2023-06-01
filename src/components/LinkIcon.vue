@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 defineProps<{
-  icon: string | string[],
+  icon: string | string[] | readonly string[],
 }>()
 </script>
 

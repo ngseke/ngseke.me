@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import { links } from '../modules/links'
+
+const thisYear = new Date().getFullYear()
+
+const linkIcons = [
+  links.email,
+  links.linkedin,
+  links.githubNgsekeMe,
+]
 </script>
 
 <template>
@@ -7,16 +15,18 @@ import { links } from '../modules/links'
     <div class="container flex min-h-[8rem] flex-col justify-center p-4">
       <div class="flex w-full justify-between">
         <div>
-          © 2018 - {{ new Date().getFullYear() }}
+          © 2018 - {{ thisYear }}
           <Link class="ml-1" href="/">
             ngseke.me
           </Link>
         </div>
-        <div>
+        <div class="space-x-3">
           <LinkIcon
-            :href="links.githubNgsekeMe.url"
-            :icon="['fab', 'github']"
-            :title="links.githubNgsekeMe.title"
+            v-for="linkIcon in linkIcons"
+            :key="linkIcon.url"
+            :href="linkIcon.url"
+            :icon="linkIcon.icon"
+            :title="linkIcon.title"
           />
         </div>
       </div>
