@@ -16,7 +16,7 @@ const { postGroups } = usePosts()
 
 <template>
   <div class="container px-4 pt-16">
-    <div class="mx-auto max-w-3xl py-16">
+    <div class="mx-auto max-w-3xl py-8 sm:py-16">
       <h1 class="dark:text-ngsek mb-12 text-4xl font-semibold md:text-5xl">
         ngseke's Blog
       </h1>

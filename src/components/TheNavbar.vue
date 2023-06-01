@@ -49,12 +49,12 @@ const shouldShowBorder = computed(() => shouldShowLogo.value && !isScrolledToTop
 <template>
   <nav
     class="
-      fixed top-0 left-0 z-20 flex h-16 w-full flex-col justify-center border-b transition-all duration-300
-      after:absolute after:left-0 after:-bottom-8 after:h-8 after:w-full after:bg-gradient-to-b after:from-white
-      after:to-[transparent_70%]
+      fixed top-0 left-0 z-20 flex h-14 w-full flex-col justify-center border-b transition-all duration-300 after:absolute
+      after:left-0 after:-bottom-8 after:h-8 after:w-full after:bg-gradient-to-b after:from-white after:to-[transparent_70%]
       after:opacity-0
       dark:after:from-stone-900
       print:hidden
+      sm:h-16
     "
     :class="{
       'border-stone-200 bg-white text-stone-900/80 dark:bg-stone-900 dark:text-white/80': shouldShowLogo,
