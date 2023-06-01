@@ -11,7 +11,7 @@ const list = [
   {
     title: 'Software Engineer',
     company: 'ASUS AICS',
-    period: ['2022/07'],
+    period: ['2022/07', '2023/05'],
   },
   {
     title: 'Software Engineer',
