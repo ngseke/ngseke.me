@@ -24,9 +24,9 @@ const { postGroups } = usePosts()
       <section
         v-for="({ name, posts }, index) in postGroups"
         :key="index"
-        class="mb-16 space-y-8"
+        class="relative mb-16 space-y-8"
       >
-        <h2 class="flex items-center text-3xl font-medium">
+        <h2 class="flex items-center text-3xl font-medium opacity-70 lg:absolute lg:-left-6 lg:-translate-x-full">
           {{ name }}
         </h2>
         <PostList :list="posts" />
