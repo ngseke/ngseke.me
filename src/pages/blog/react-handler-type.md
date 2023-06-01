@@ -99,7 +99,7 @@ function App () {
 ```
 
 > BTW 這一長串型別的定義，可以透過將游標放在 JSX 事件上得知。
-> ![](https://i.imgur.com/kruZwRv.png)
+> ![](../../assets/img/post/react-handler-type/hover-type.png)
 
 ## Synthetic Event
 

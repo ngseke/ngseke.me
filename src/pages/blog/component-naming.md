@@ -113,13 +113,13 @@ components/
 
 利用 `⌘ + P` 搜尋眾多同名的組件時，在 VSCode 裡很難快速定位到目標，因為它們乍看之下都一模一樣。
 
-![](https://i.imgur.com/iSU2cvI.png)
+![](../../assets/img/post/component-naming/go-to-file.png)
 
 同樣地，出現在頁籤中的多個同名檔案也是讓人眼花撩亂。
 
-![](https://i.imgur.com/LSBBQpZ.png)
+![](../../assets/img/post/component-naming/tabs.png)
 
-![](https://i.imgur.com/mdozVq3.png)
+![](../../assets/img/post/component-naming/open-editors.png)
 
 ## 結語
 

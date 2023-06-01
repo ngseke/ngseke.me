@@ -44,7 +44,7 @@ const profile = {
 'toString' in profile // true
 ```
 
-![](https://i.imgur.com/UOzBVKM.png)
+![](../../assets/img/post/check-if-key-exists/valueOf.png)
 
 > 效能實測：[hasOwnProperty 和 in 哪个性能高？ - frosen的回答 - 知乎](https://www.zhihu.com/question/301305485/answer/1644702242)
 

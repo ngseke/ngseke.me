@@ -11,7 +11,7 @@ https://gist.github.com/ngseke/8b30050e05703f35c753cd0ac6330028
 
 ## 說明
 
-<img src='https://i.imgur.com/6uvtCAO.png' class='mx-auto max-w-[250px] w-full' />
+<img src='../../assets/img/post/customize-youtube-caption-font/youtube-cc-menu.png' class='mx-auto max-w-[250px] w-full' />
 
 YouTube CC 字幕雖然有內建設定字體的功能，然而可用的選項並不多，這些選項也都是基於英文字體。
 
@@ -27,7 +27,7 @@ const fontFamily = '"jf-openhuninn-1.1"'
 ## 結果
 
 **Before:**
-![](https://i.imgur.com/zkK5Q4I.jpg)
+![](../../assets/img/post/customize-youtube-caption-font/before.jpg)
 
 **After:**
-![](https://i.imgur.com/NWI45dB.jpg)
+![](../../assets/img/post/customize-youtube-caption-font/after.jpg)

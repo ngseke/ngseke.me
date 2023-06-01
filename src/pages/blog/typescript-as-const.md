@@ -56,7 +56,7 @@ type Difficulty = typeof difficulties[number] // "easy" | "normal" | "hard"
 
 搭配 VSCode 的 IntelliSense 還可以得到代碼提示，也不再怕手殘拼錯字。（快速鍵 `⌘ + I` 呼出）
 
-![](https://i.imgur.com/vDHZYre.png)
+![](../../assets/img/post/typescript-as-const/intellisense.png)
 
 
 甚至連 `map()` 等回調函式的參數，都會自動推斷出型別。
@@ -82,7 +82,7 @@ const options: Difficulty[] = ['easy', 'normal', 'hard']
 
 而這便是 `as const` 無法做到的，因此建議還是根據實際使用場景做權衡。
 
-![](https://i.imgur.com/byhhYDg.png)
+![](../../assets/img/post/typescript-as-const/rename-symbol.png)
 
 ## 情境二：日期區間的 tuple
 
