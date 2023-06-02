@@ -48,7 +48,7 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
   <PostLayout>
     <template #header>
       <div class="space-y-3 ">
-        <h1 class="dark:text-ngsek text-4xl font-semibold md:text-5xl">
+        <h1 class="text-4xl font-semibold dark:text-ngsek md:text-5xl">
           {{ frontmatter?.title }}
         </h1>
         <p

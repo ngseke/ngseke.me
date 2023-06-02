@@ -27,7 +27,7 @@ const handleClick = (e: Event) => {
       class="transition-all duration-200 sm:w-24"
     >
       <RouterLink
-        class="font-pacifico inline-block rotate-[-4deg] text-lg text-stone-900/80 transition-colors duration-200 dark:text-white/80"
+        class="inline-block rotate-[-4deg] font-pacifico text-lg text-stone-900/80 transition-colors duration-200 dark:text-white/80"
         :to="{ name: 'index' }"
         @click="handleClick"
       >

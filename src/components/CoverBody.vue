@@ -20,10 +20,10 @@ const isMounted = useMounted()
       <TransitionUniversal enter-from-class="opacity-0">
         <div v-show="isMounted" class="transition-opacity duration-500">
           <h1
-            class="font-pacifico relative rotate-[-4deg] whitespace-nowrap text-8xl tracking-tight text-white delay-200"
+            class="relative rotate-[-4deg] whitespace-nowrap font-pacifico text-8xl tracking-tight text-white delay-200"
           >
             <span class="neon relative z-10">ngseke</span>
-            <span class="blink animate-blink text-transparent after:absolute after:top-0 after:left-0 after:content-['ngseke']" />
+            <span class="blink animate-blink text-transparent after:absolute after:left-0 after:top-0 after:content-['ngseke']" />
           </h1>
         </div>
       </TransitionUniversal>

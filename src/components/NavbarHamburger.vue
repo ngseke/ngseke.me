@@ -58,7 +58,7 @@ onClickOutside(target, close)
           </div>
 
           <div class="flex-1 overflow-y-auto">
-            <ul class="flex flex-col space-y-6 px-8 pt-4 pb-8 text-2xl font-medium dark:text-white/80">
+            <ul class="flex flex-col space-y-6 px-8 pb-8 pt-4 text-2xl font-medium dark:text-white/80">
               <li
                 v-for="({ name, href, handler }, index) in linksWithHome"
                 :key="index"
