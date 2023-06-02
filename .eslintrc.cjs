@@ -2,6 +2,14 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    jest: true,
+  },
+  globals: {
+    page: true,
+    browser: true,
+    context: true,
+    puppeteerConfig: true,
+    jestPuppeteer: true,
   },
   plugins: [
     'tailwindcss',
