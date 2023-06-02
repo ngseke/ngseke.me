@@ -4,11 +4,12 @@ import { Post } from '../types/Post'
 
 defineProps<{
   list?: Post[],
+  dense?: boolean,
 }>()
 </script>
 
 <template>
-  <ul class="space-y-8">
+  <ul :class="[dense ? 'space-y-5' : 'space-y-8']">
     <li
       v-for="(post, index) in list"
       :key="index"

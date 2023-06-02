@@ -11,14 +11,11 @@ const list = [
 
 <template>
   <AboutMeSectionLayout title="My Projects">
-    <div class="space-y-8">
-      <ProjectList class="pt-4" :list="list" />
+    <div class="space-y-8 pt-4">
+      <ProjectList :list="list" />
 
-      <div class="pl-2">
-        <Link :href="{ name: 'projects' }">
-          View More
-          <Fa class="ml-1" :icon="['fas', 'caret-right']" />
-        </Link>
+      <div class="pl-1">
+        <LinkViewMore :href="{ name: 'projects' }" />
       </div>
     </div>
   </AboutMeSectionLayout>

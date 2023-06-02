@@ -10,6 +10,7 @@
         <AboutMeSectionExperience />
         <AboutMeSectionContactMe />
         <AboutMeSectionProjects />
+        <AboutMeSectionPosts />
       </article>
     </div>
   </div>
