@@ -32,7 +32,7 @@ defineProps<{
     <div class="text-lg font-medium">
       {{ title }}
     </div>
-    <div class="text-stone-700 dark:text-stone-300">
+    <div class="text-base text-stone-700 dark:text-stone-300">
       {{ date }}
     </div>
   </IsomorphicLink>
