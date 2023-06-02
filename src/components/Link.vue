@@ -5,8 +5,10 @@
   <IsomorphicLink
     class="
       link-effect
-      whitespace-nowrap font-semibold
-      after:inset-x-[-6px] after:inset-y-[-3px]
+      inline-block
+      whitespace-nowrap
+      font-semibold leading-none
+      after:inset-x-[-8px] after:inset-y-[-6px]
       after:rounded-lg
       after:bg-black/10
       dark:after:bg-white/10
