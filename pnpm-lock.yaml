@@ -22,7 +22,7 @@ specifiers:
   critters: ^0.0.16
   dayjs: ^1.11.5
   eslint: ^8.23.1
-  eslint-plugin-tailwindcss: ^3.6.1
+  eslint-plugin-tailwindcss: 3.12.1
   eslint-plugin-vue: ^9.4.0
   focus-trap: ^7.3.1
   fs-extra: ^10.1.0
@@ -83,7 +83,7 @@ devDependencies:
   autoprefixer: 10.4.11_postcss@8.4.16
   critters: 0.0.16
   eslint: 8.23.1
-  eslint-plugin-tailwindcss: 3.6.1_ts-node@10.9.1
+  eslint-plugin-tailwindcss: 3.12.1_tailwindcss@3.3.2
   eslint-plugin-vue: 9.4.0_eslint@8.23.1
   fs-extra: 10.1.0
   gray-matter: 4.0.3
@@ -2651,15 +2651,15 @@ packages:
       eslint: 8.23.1
     dev: true
 
-  /eslint-plugin-tailwindcss/3.6.1_ts-node@10.9.1:
-    resolution: {integrity: sha512-a44pb62X6wS3j5hLqedsroYrSyOuSZ7PaTl08gJVoChzHlgyZRVpDMCw17Kj6q2zQuDqqRbNZuo8VyNWlGlVLA==}
+  /eslint-plugin-tailwindcss/3.12.1_tailwindcss@3.3.2:
+    resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
     engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: ^3.3.2
     dependencies:
       fast-glob: 3.2.12
-      postcss: 8.4.16
+      postcss: 8.4.24
       tailwindcss: 3.3.2_ts-node@10.9.1
-    transitivePeerDependencies:
-      - ts-node
     dev: true
 
   /eslint-plugin-vue/9.4.0_eslint@8.23.1:

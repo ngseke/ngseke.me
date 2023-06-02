@@ -49,7 +49,7 @@
     "autoprefixer": "^10.4.11",
     "critters": "^0.0.16",
     "eslint": "^8.23.1",
-    "eslint-plugin-tailwindcss": "^3.6.1",
+    "eslint-plugin-tailwindcss": "3.12.1",
     "eslint-plugin-vue": "^9.4.0",
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
