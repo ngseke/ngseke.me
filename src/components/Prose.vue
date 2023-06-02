@@ -17,74 +17,90 @@ const isDark = useDark()
   </div>
 </template>
 
-<style lang="sass" scoped>
-=media
-  max-width: min(30rem, 100%)
+<style lang="scss" scoped>
+@mixin media {
+  max-width: min(30rem, 100%);
+}
 
-=block-margin
-  @apply mt-6 mb-4
+@mixin block-margin {
+  @apply mt-6 mb-4;
+}
 
-:deep(.prose)
-  h2, h3, h4
-    @apply mt-12 mb-4 font-medium
+:deep(.prose) {
+  h2, h3, h4 {
+    @apply mt-12 mb-4 font-medium;
     // fix anchor position
-    @apply before:content-[''] before:block before:h-20 before:-mt-20
-    a.header-anchor
-      @apply text-sm inline-block mt-[10px] align-top ml-1 opacity-0 scale-90 transition-all
-    &:hover .header-anchor
-      @apply opacity-80 scale-100
-  h2
-    @apply text-3xl
-  h3
-    @apply text-2xl
-  h4
-    @apply text-xl
+    @apply before:content-[''] before:block before:h-20 before:-mt-20 before:pointer-events-none;
 
-  p
-    +block-margin
-    @apply leading-7 tracking-[.2px]
-    & > img
-      +block-margin
-      +media
-      @apply mx-auto w-auto
+    a.header-anchor {
+      @apply text-sm inline-block align-middle ml-1 -mt-2 opacity-0 scale-90 transition-all;
+    }
+    &:hover .header-anchor {
+      @apply opacity-80 scale-100;
+    }
+  }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
 
-  blockquote
-    @apply border-l-4 px-4 border-stone-500/50 text-stone-600
-    p img
-      @apply mx-0 max-w-full
+  p {
+    @include block-margin;
+    @apply leading-7 tracking-[.2px];
+    & > img {
+      @include block-margin;
+      @include media;
+      @apply mx-auto w-auto;
+    }
+  }
 
-  &.dark
-    blockquote
-      @apply text-neutral-400
+  blockquote{
+    @apply border-l-4 px-4 border-stone-500/50 text-stone-600;
+    p img { @apply mx-0 max-w-full; }
+  }
 
-  ul, ol
-    @apply list-outside pl-5 mt-6 mb-4 space-y-1
-    li
-      @apply pl-2
-  ul
-    @apply list-disc
-  ol
-    @apply list-decimal
+  ul, ol {
+    @apply list-outside pl-5 mt-6 mb-4 space-y-1;
+    li { @apply pl-2; }
+  }
+  ul { @apply list-disc; }
+  ol { @apply list-decimal; }
 
-  a
-    @apply underline
-  s
-    &, > a
-      @apply line-through
-  hr
-    @apply my-6 border-current opacity-30
-  a, code
-    @apply break-words
-  :not(pre) > code
-    @apply bg-stone-400/20 px-[.4rem] rounded-md
+  a { @apply underline; }
+  s {
+    &, > a {
+      @apply line-through;
+    }
+  }
+  hr {
+    @apply my-6 border-current opacity-30;
+  }
+  a, code {
+    @apply break-words;
+  }
+  :not(pre) > code {
+    @apply bg-stone-400/20 px-[.4rem] rounded-md;
+  }
 
-  .embed-responsive
-    +block-margin
-    @apply mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block
-    +media
-    .embed-responsive-item
+  .embed-responsive {
+    @include block-margin;
+    @include media;
+    @apply mx-auto w-full relative overflow-hidden after:pt-[56.25%] after:block;
+    .embed-responsive-item {
       @apply absolute inset-0 h-full w-full
-  pre.shiki
-    +block-margin
-    @apply p-4 rounded-lg overflow-x-auto
+    }
+  }
+
+  .shiki {
+    @include block-margin;
+    @apply p-4 rounded-lg overflow-x-auto;
+  }
+  .shiki-light { @apply bg-stone-100 #{!important}; }
+  .shiki-dark { @apply hidden; }
+
+  &.dark {
+    blockquote { @apply text-neutral-400; }
+    .shiki-light { @apply hidden }
+    .shiki-dark { @apply block; }
+  }
+}
 </style>

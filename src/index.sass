@@ -21,16 +21,6 @@
   .link-effect
     @apply relative after:absolute after:z-[-1] after:scale-75 after:pointer-events-none after:opacity-0 after:transition-all after:duration-200 hover:after:scale-100 hover:after:opacity-100 active:after:opacity-100 active:after:scale-100 active:scale-95
 
-html
-  &.dark .shiki-light
-    @apply hidden
-
-  &:not(.dark)
-    .shiki-light
-      @apply bg-stone-100 #{!important}
-    .shiki-dark
-      @apply hidden
-
 #nprogress
   .bar
     @apply bg-ngsek
