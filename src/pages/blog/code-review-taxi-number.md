@@ -3,8 +3,6 @@ title: 如果太認真去 Code Review 會發生什麼事？
 date: 2023/05/31
 tags:
   - JavaScript
-  - TypeScript
-  - Clean Code
 ---
 
 ## 前言
