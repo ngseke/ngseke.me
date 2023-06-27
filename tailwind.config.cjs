@@ -20,14 +20,6 @@ module.exports = {
       colors: {
         ngsek: '#ffd019',
       },
-      animation: {
-        blink: 'blink .08s ease-in-out infinite alternate',
-      },
-      keyframes: {
-        blink: {
-          '0%': { opacity: '0%' },
-        },
-      },
     },
   },
   plugins: [],

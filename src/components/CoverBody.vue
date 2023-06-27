@@ -18,12 +18,19 @@ const isMounted = useMounted()
   >
     <div class="flex justify-center md:flex-1">
       <TransitionUniversal enter-from-class="opacity-0">
-        <div v-show="isMounted" class="transition-opacity duration-500">
+        <div v-show="isMounted" class="transition-opacity delay-200 duration-700">
           <h1
-            class="relative rotate-[-4deg] whitespace-nowrap font-pacifico text-8xl tracking-tight text-white delay-200"
+            class="rotate-[-4deg] whitespace-nowrap font-pacifico text-8xl tracking-tight text-white"
           >
-            <span class="neon relative z-10">ngseke</span>
-            <span class="blink animate-blink text-transparent after:absolute after:left-0 after:top-0 after:content-['ngseke']" />
+            <span
+              class="
+                neon blink
+                relative z-10 inline-block
+                after:absolute after:left-0 after:top-0 after:-z-10 after:text-transparent after:content-['ngseke']
+              "
+            >
+              ngseke
+            </span>
           </h1>
         </div>
       </TransitionUniversal>
@@ -46,7 +53,11 @@ $ngsek-light: lighten(#ffd019, 50%);
     0 0 54px rgba($ngsek, 0.5);
 }
 
-.blink {
+.blink:after  {
+  @keyframes blink {
+    from { opacity: 0% }
+  }
   text-shadow: 0 0 54px rgba($ngsek, .3);
+  animation: blink .08s ease-in-out infinite alternate;
 }
 </style>
