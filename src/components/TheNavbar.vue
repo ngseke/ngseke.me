@@ -4,6 +4,7 @@ import { aboutMeSectionHash, scrollToAboutMe } from '../modules/about-me-section
 import type { Link } from '../types/Link'
 import { useHamburger } from '../composables/useHamburger'
 import { useIsScrolledToTop } from '../composables/useIsScrolledToTop'
+import { LINKS } from '../modules/links'
 
 const route = useRoute()
 
@@ -37,7 +38,11 @@ const links: Link[] = [
   },
   {
     name: 'Notes',
-    href: 'https://hackmd.io/@xq',
+    href: LINKS.hackmd.url,
+  },
+  {
+    name: 'Gist',
+    href: LINKS.githubGist.url,
   },
 ]
 const { isExpanded, toggleIsExpanded } = useHamburger()

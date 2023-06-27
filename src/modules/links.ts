@@ -24,6 +24,11 @@ export const LINKS = {
     url: 'https://github.com/ngseke/ngseke.me',
     title: 'GitHub: ngseke.me',
   },
+  githubGist: {
+    icon: ['fab', 'github'],
+    url: 'https://gist.github.com/ngseke',
+    title: 'GitHub Gist',
+  },
   linkedin: {
     icon: ['fab', 'linkedin'],
     url: 'https://www.linkedin.com/in/ngseke/',
