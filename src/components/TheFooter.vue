@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { links } from '../modules/links'
+import { LINKS } from '../modules/links'
 
 const thisYear = new Date().getFullYear()
 
 const linkIcons = [
-  links.email,
-  links.linkedin,
-  links.githubNgsekeMe,
+  LINKS.email,
+  LINKS.linkedin,
+  LINKS.githubNgsekeMe,
 ]
 </script>
 

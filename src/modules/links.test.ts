@@ -1,9 +1,9 @@
-import { links } from './links'
+import { LINKS } from './links'
 
 const mailToPrefix = 'mailto:'
 
 describe('links', () => {
-  const urls = Object.values(links)
+  const urls = Object.values(LINKS)
     .map(({ url }) => url)
     .filter((url) => !url.startsWith(mailToPrefix))
 

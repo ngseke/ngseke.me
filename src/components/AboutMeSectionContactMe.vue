@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { links } from '../modules/links'
+import { LINKS } from '../modules/links'
 
-const list = [
-  links.github,
-  links.discord,
-  links.email,
-  links.hackmd,
-  links.linkedin,
+const links = [
+  LINKS.github,
+  LINKS.discord,
+  LINKS.email,
+  LINKS.hackmd,
+  LINKS.linkedin,
 ]
 </script>
 
@@ -14,7 +14,7 @@ const list = [
   <AboutMeSectionLayout title="Contact Me">
     <ul class="flex flex-col">
       <li
-        v-for="({ title, url, icon }, index) in list"
+        v-for="({ title, url, icon }, index) in links"
         :key="index"
       >
         <Link :href="url">

@@ -1,4 +1,4 @@
-export const links = {
+export const LINKS = {
   cakeResume: {
     icon: ['fas', 'file-alt'],
     url: 'https://www.cakeresume.com/ngseke',
