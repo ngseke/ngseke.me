@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getFormattedDate } from '../modules/date'
+import { getFormattedYear } from '../modules/date'
 
 const getListClassName = (index: number) => ({
   'flex flex-1 before:mr-1 before:min-w-[.5rem] before:text-center': true,
@@ -7,7 +7,11 @@ const getListClassName = (index: number) => ({
   'before:content-["▸"]': !index,
 })
 
-const list = [
+const list: {
+  title: string,
+  company: string,
+  period: [string, string] | string,
+}[] = [
   {
     title: 'Software Engineer',
     company: 'ASUS AICS',
@@ -26,9 +30,18 @@ const list = [
   {
     title: 'Summer Engineering Intern',
     company: 'Hiero7',
-    period: ['2018/07', '2018/08'],
+    period: 'Summer 2018',
   },
 ]
+
+const getFormattedPeriod = (period: [string, string] | string) => {
+  if (typeof period === 'string') return period
+
+  const start = getFormattedYear(period[0])
+  const end = period[1] ? getFormattedYear(period[1]) : 'Present'
+
+  return `${start} — ${end}`
+}
 </script>
 
 <template>
@@ -46,9 +59,7 @@ const list = [
           </span>
           <br class="inline-block sm:hidden">
           <span class="whitespace-nowrap text-base text-stone-700 dark:text-stone-300">
-            {{ getFormattedDate(period[0]) }}
-            -
-            {{ period[1] ? getFormattedDate(period[1]) : 'Present' }}
+            {{ getFormattedPeriod(period) }}
           </span>
         </div>
       </li>
