@@ -2,7 +2,6 @@
 title: Typing Typing!
 briefDescription: 8-bit 復古風格打字遊戲
 githubLink: https://github.com/ngseke/Typing-Typing
-demoLink: /files/TypingTyping.zip
 period:
   - 2017/02
   - 2017/06
