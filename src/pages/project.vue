@@ -10,11 +10,13 @@ import { useReadHistory } from '../composables/useReadHistory'
 
 const { frontmatter } = useProjectFrontmatter()
 
+const title = computed(() => `${frontmatter.value?.title} | ${VITE_SITE_NAME}`)
 const description = computed(() => frontmatter.value?.briefDescription)
 
-useHead({
-  title: `${frontmatter.value?.title} | ${VITE_SITE_NAME}`,
+useHead(computed(() => ({
+  title: title.value,
   meta: [
+    { property: 'og:title', content: title.value },
     { property: 'description', content: description.value },
     { property: 'og:description', content: description.value },
     {
@@ -22,7 +24,7 @@ useHead({
       content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
     },
   ],
-})
+})))
 
 const periodText = computed(() => {
   const period = frontmatter.value?.period
