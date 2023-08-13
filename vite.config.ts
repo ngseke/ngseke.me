@@ -26,6 +26,9 @@ export default ({ mode }) => defineConfig({
   define: {
     __COMMIT_HASH__: JSON.stringify(commitHash),
   },
+  server: {
+    open: true,
+  },
   ssgOptions: {
     onFinished: () => generateSitemap({
       hostname: loadEnv(mode, process.cwd()).VITE_SITE_ORIGIN,
