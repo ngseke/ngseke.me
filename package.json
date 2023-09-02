@@ -29,6 +29,7 @@
     "dayjs": "^1.11.5",
     "focus-trap": "^7.3.1",
     "medium-zoom": "^1.0.6",
+    "nanoid": "^4.0.2",
     "nprogress": "^0.2.0",
     "scroll-to-element": "^2.0.3",
     "vite-plugin-md": "^0.20.4",
