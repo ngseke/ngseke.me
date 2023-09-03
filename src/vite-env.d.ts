@@ -8,3 +8,7 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare interface Document {
+  startViewTransition?: (callback: () => void) => void,
+}
