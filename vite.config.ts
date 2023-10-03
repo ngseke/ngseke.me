@@ -103,6 +103,9 @@ export default ({ mode }) => defineConfig({
           }),
         })
       },
+      markdownItOptions: {
+        breaks: true,
+      },
     }),
     vueJsx({}),
   ],
