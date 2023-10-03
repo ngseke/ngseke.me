@@ -4,17 +4,13 @@ import axios from 'axios'
 
 const urlPattern = /(https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9@:%_+.~#?&//=]*))/g
 
-const ignoreUrls = new Set([
+const ignoredUrls = [
   'http://boss.ngseke.me/',
   'https://www.linkedin.com/in/ngseke/',
   'http://www.cc.ntut.edu.tw/~wkchen/game/',
   'https://myweb.ntut.edu.tw/~yschen/',
-  'https://hackmd.io/@xq/webpack-config-esm',
-  'https://hackmd.io/@xq/as-const',
-  'https://hackmd.io/@xq/component-naming-reversely',
-  'https://hackmd.io/@xq/check-if-key-exist',
-  'https://hackmd.io/@xq/bootstrap-with-nuxt',
-])
+  /https:\/\/hackmd\.io\/@xq\/(.+)/,
+]
 
 const getAllExternalUrls = () => {
   const fileNames = fg.sync(
@@ -29,7 +25,12 @@ const getAllExternalUrls = () => {
     allContent
       .split(urlPattern)
       .filter(url => urlPattern.test(url))
-      .filter(url => !ignoreUrls.has(url))
+      .filter(url => {
+        return !ignoredUrls.some(ignoreUrl => {
+          const pattern = new RegExp(ignoreUrl)
+          return pattern.test(url)
+        })
+      })
   )]
 
   return urls
