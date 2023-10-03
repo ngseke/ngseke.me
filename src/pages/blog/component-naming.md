@@ -49,13 +49,13 @@ Người Đài Loan
 例如：
 
 - <span class="text-teal-600"> Search *(父組件)*</span> + <span class="text-sky-600">TextField</span> + <span class="text-rose-600">Date</span> = **<span class="text-teal-600"> Search</span><span class="text-sky-600">TextField</span><span class="text-rose-600">Date</span>**
-  <br>Search 組件內專用的日期輸入框
+  Search 組件內專用的日期輸入框
 - <span class="text-teal-600"> Search *(父組件)*</span> + <span class="text-sky-600">Button</span> + <span class="text-rose-600">Submit</span> = **<span class="text-teal-600"> Search</span><span class="text-sky-600">Button</span><span class="text-rose-600">Submit</span>**
-  <br>Search 組件內專用的送出按鈕
+  Search 組件內專用的送出按鈕
 - <span class="text-teal-600"> LandingPage *(頁面)*</span> + <span class="text-sky-600">List</span> + <span class="text-rose-600">News</span> = **<span class="text-teal-600">LandingPage</span><span class="text-sky-600">List</span><span class="text-rose-600">News</span>**
-  <br>只在 Landing Page 用到的新聞列表
+  只在 Landing Page 用到的新聞列表
 - <span class="text-teal-600"> LandingPage *(頁面)*</span> + <span class="text-sky-600">List</span> + <span class="text-rose-600">Features</span> = **<span class="text-teal-600">LandingPage</span><span class="text-sky-600">List</span><span class="text-rose-600">Features</span>**
-  <br>只在 Landing Page 用到的產品特色列表
+  只在 Landing Page 用到的產品特色列表
 
 
 ## 停止巢狀資料夾！

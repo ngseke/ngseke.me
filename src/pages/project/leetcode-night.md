@@ -54,6 +54,5 @@ tags:
 </a>
 
 <br/>
-<br/>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=leetcode-night&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>

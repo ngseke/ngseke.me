@@ -46,7 +46,7 @@ tags:
 - `col-6` → `flex-none w-1/2`
 - `col-12` → `flex-none w-full`
 
-有需要的話，你甚至可以在 Tailwind 透過 [Arbitrary Value](https://tailwindcss.com/docs/width#arbitrary-values) 的特性來指定任意寬度，例如：<br>
+有需要的話，你甚至可以在 Tailwind 透過 [Arbitrary Value](https://tailwindcss.com/docs/width#arbitrary-values) 的特性來指定任意寬度，例如：
 `w-[5rem]`、`w-[50px]`。
 
 ### `w-100`
@@ -58,10 +58,10 @@ tags:
 ## 響應式（RWD）
 
 > By default, Tailwind uses a **mobile first** breakpoint system, ...
-> <br>-- [Breakpoints · Bootstrap v5.2](https://tailwindcss.com/docs/responsive-design#mobile-first)
+> -- [Breakpoints · Bootstrap v5.2](https://tailwindcss.com/docs/responsive-design#mobile-first)
 
 > **Mobile first**, responsive design is the goal. ...
-> <br>-- [Responsive Design - Tailwind CSS](https://getbootstrap.com/docs/5.2/layout/breakpoints/#core-concepts)
+> -- [Responsive Design - Tailwind CSS](https://getbootstrap.com/docs/5.2/layout/breakpoints/#core-concepts)
 
 Tailwind 和 Bootstrap 都同樣遵循著**行動裝置優先**的設計哲學，寬度由小到大。也就是說，當什麼斷點都沒加的時候，樣式會套用到所有寬度的裝置（`>= 0px`），而加上 `sm` 時會套用在  `>= 640px`，再加上 `md` 時會套用在  `>= 768px`，依此類推。
 
@@ -71,7 +71,7 @@ Tailwind 和 Bootstrap 都同樣遵循著**行動裝置優先**的設計哲學�
 
 - `col-12` → `flex-none w-full`
 - `col-md-6` → `flex-none md:w-1/2`
-- `col-3 col-sm-auto col-md col-lg-12` →<br>
+- `col-3 col-sm-auto col-md col-lg-12` →
   `flex-1 w-1/4 sm:flex-none sm:w-auto md:flex-1 lg:flex-none lg:w-full`
 
 

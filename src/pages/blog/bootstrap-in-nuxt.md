@@ -75,7 +75,7 @@ $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 140
 ```
 
 
-> 更多可供複寫的變數都列在此處：<br>
+> 更多可供複寫的變數都列在此處：
 > https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 
 
@@ -103,7 +103,7 @@ $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 140
 ```
 
 
-> 可用的元件列表及用途請參考此處：<br>
+> 可用的元件列表及用途請參考此處：
 > https://github.com/twbs/bootstrap/tree/main/scss
 
 
@@ -127,8 +127,7 @@ export default {
 ```
 
 > ⚠️ 注意
->
-> 是在 `css` 匯入 `style.sass`，而不是在`styleResources` 匯入。<br>
+> 是在 `css` 匯入 `style.sass`，而不是在`styleResources` 匯入。
 > 在 `styleResources` 匯入的話，將使得**每個 Vue 組件**都包含一大包的 Bootstrap 樣式，造成專案容量爆肥，編譯速度也會被嚴重拖慢。
 
 

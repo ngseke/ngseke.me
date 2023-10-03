@@ -6,7 +6,7 @@ tags:
 original: https://hackmd.io/@xq/as-const
 ---
 
-> 這是 TypeScript 特有的<strong class="text-ngsek">常數斷言</strong> `as const`，<br>
+> 這是 TypeScript 特有的<strong class="text-ngsek">常數斷言</strong> `as const`，
 > 可別和 JavaScript 宣告常數用的 `const foo = 1` 搞混了！
 
 ## 情境一：常數字串陣列
@@ -110,7 +110,7 @@ foo(range)
 //   Target requires 2 element(s) but source may have fewer.(2345)
 ```
 
-分析跳出的錯誤得知：<br>
+分析跳出的錯誤得知：
 **`Date[]` 不可指派給 `[Date, Date]`**，因為函式只接受**剛剛好**長度是 2 的陣列，但 `range` 卻可能是**任何長度**的陣列。
 
 TypeScript 說的確實沒錯，就算初始宣告 `range` 時是用 `const` 關鍵字，我在中途還是有機會對它作祟。例如 push 新的東西進去，或是執行 `range.length = 0` 來清空陣列，這些都會改變陣列的長度。
