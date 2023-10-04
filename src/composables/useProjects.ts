@@ -43,6 +43,7 @@ export function useProjects () {
         title: 'Web',
         cover: 'https://images.unsplash.com/photo-1505356822725-08ad25f3ffe4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
         list: [
+          map['iphone-price'],
           map.koasu,
           map['credit-card-calc'],
           map['em-optimization-lab'],
