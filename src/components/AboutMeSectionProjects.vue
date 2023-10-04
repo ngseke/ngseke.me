@@ -10,7 +10,7 @@ const list = [
 </script>
 
 <template>
-  <AboutMeSectionLayout title="My Projects">
+  <AboutMeSectionLayout title="Projects">
     <div class="space-y-8 pt-4">
       <ProjectList :list="list" />
 
