@@ -6,8 +6,8 @@ tags:
 original: https://hackmd.io/@xq/as-const
 ---
 
-> 這是 TypeScript 特有的<strong class="text-ngsek">常數斷言</strong> `as const`，
-> 可別和 JavaScript 宣告常數用的 `const foo = 1` 搞混了！
+> 這篇文章討論的是 TypeScript 特有的「常數斷言（Const Assertion）」語法，
+> 和 JavaScript 宣告常數所使用的 `const foo = 1` 是不同東西。
 
 ## 情境一：常數字串陣列
 
@@ -39,12 +39,12 @@ difficulty = '安安' // 😑
 
 [🎡 TS Playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBCAOUCW4IwLwwNoHICmAhhAJ44A0MOYIATgLYEA25lAFgTQCY4C6MRMUJCgAoEVGLw8MACJIAZvKTAArowkYYEqSHlxEKSFjAq6AIzw0eYxnlicFS1euIAuWY+VqNmfEVJiDopeLpo47Fw4MAD00TCAoOQiQU7exGEEZsBRsTCAvBuA1XtiIkLQMPIgIJoAFMkhEu5ywc4SAJQYAHwwAN4xAFQwAHRDML1xAL5iCMioAwzwNZ7Naeid5SALTaktbTnxQA)
 
-這時 `as const` 就派上用場了！寫法就像**型別斷言**那樣。
+這時 `as const` （const assertion）就派上用場了！寫法就像**型別斷言**那樣。
 
 ```typescript
 const options = ['easy', 'normal', 'hard'] as const
 
-// 或是（tsx 以外的場合才能用這種寫法）
+// 或是使用尖括弧（tsx 以外的檔案才能用這種寫法）
 const options = <const>['easy', 'normal', 'hard']
 ```
 
@@ -54,20 +54,19 @@ const options = <const>['easy', 'normal', 'hard']
 type Difficulty = typeof difficulties[number] // "easy" | "normal" | "hard"
 ```
 
-搭配 VSCode 的 IntelliSense 還可以得到代碼提示，也不再怕手殘拼錯字。（快速鍵 `⌘ + I` 呼出）
+搭配 VSCode 的 IntelliSense 可以得到代碼提示，也不再怕手殘拼錯字。（快速鍵 `⌘ + I` 呼出）
 
 ![](../../assets/img/post/typescript-as-const/intellisense.png)
 
 
-甚至連 `map()` 等回調函式的參數，都會自動推斷出型別。
+ `map()` 等回調函式的參數也會自動推斷出型別。
 
 ```typescript
 // 假設有另一個函式參數要求傳入 `Difficulty`
 const foo = (difficulty: Difficulty) => { /* ... */ }
 
+// difficulty: "easy" | "normal" | "hard"
 options.map(difficulty => foo(difficulty))
-//          ^^^^^^^^^^
-//          "easy" | "normal" | "hard"
 ```
 
 當然你也可以一開始就先把型別定義好，再以型別約束變數。
@@ -78,7 +77,7 @@ type Difficulty = 'easy' | 'normal' | 'hard'
 const options: Difficulty[] = ['easy', 'normal', 'hard']
 ```
 
-不過把型別抽出來單獨定義，還是有額外好處的。假設我今天改變心意，想把 `'easy'` 改名成 `'simple'`，就可以活用 VSCode 的 **重新命名符號 (Rename Symbol)** 功能來快速重構（從右鍵選單或快速鍵 `F2` 呼出）。
+不過把型別抽出來單獨定義，還是有額外好處的。假設因為需求改變，需要把 `'easy'` 改名成 `'simple'`，就可以活用 VSCode 的 **重新命名符號（Rename Symbol）** 功能來快速重構（從右鍵選單或快速鍵 `F2` 呼出）。
 
 而這便是 `as const` 無法做到的，因此建議還是根據實際使用場景做權衡。
 
@@ -111,9 +110,9 @@ foo(range)
 ```
 
 分析跳出的錯誤得知：
-**`Date[]` 不可指派給 `[Date, Date]`**，因為函式只接受**剛剛好**長度是 2 的陣列，但 `range` 卻可能是**任何長度**的陣列。
+**`Date[]` 不可指派給 `[Date, Date]`**，因為函式只接受長度剛好是 `2` 的陣列，但 `range` 卻可能是任何長度的陣列。
 
-TypeScript 說的確實沒錯，就算初始宣告 `range` 時是用 `const` 關鍵字，我在中途還是有機會對它作祟。例如 push 新的東西進去，或是執行 `range.length = 0` 來清空陣列，這些都會改變陣列的長度。
+TypeScript 說的確實沒錯，即使原本 `range` 是用 `const` 宣告，但我在中途還是有機會偷改他。例如 push 新的東西進去，或是執行 `range.length = 0` 來清空陣列，這些都會改變陣列的長度。
 
 
 ### 解法
@@ -163,6 +162,60 @@ range[100]
 ```typescript
 type Length = typeof range.length // 2
 ```
+
+### 總結
+
+`as const` 套用在不同型別的變數上會得到不同的效果：
+
+#### string、number、boolean
+
+字面型別（literal type）加上 `as const` 後，型別就不會被「拓寬」，例如字串 `'hello'` 不會被推斷成 `string`，而是會維持原樣。
+
+```typescript
+let a = 'hello' // string
+let b = 'hello' as const // 'hello'
+
+let c = 123 // number
+let d = 123 as const // 123
+
+let e = true // boolean
+let f = true as const // true
+```
+
+#### 陣列
+
+陣列會被轉換成 readonly 的 tuple，也就是：
+1. 唯獨，陣列裡面的值始終相同，也不能被修改
+2. 長度永遠固定，不能執行 `push()` 或 `pop()` 等操作
+
+```typescript
+let a = [123, 'hello'] // (string | number)[]
+let b = [123, 'hello'] as const // readonly [123, 'hello']
+```
+
+#### 物件
+
+物件裡的**所有**屬性都會被加上 readonly，並且裡面的 string、number、boolean 和陣列值都會比照上述處理，型別不會被拓寬。
+
+```typescript
+let a = { text: 'hello', nested: { count: 123 } }
+// {
+//   text: string
+//   nested: { count: number }
+// }
+
+let b = { text: 'hello', nested: { count: 123 } } as const
+// {
+//   readonly text: "hello"
+//   readonly nested: { readonly count: 123; }
+// }
+```
+
+
+
+
+<!-- `as const` 只能用在 string, number, boolean, 陣列或物件 literal。
+ -->
 
 
 ## 參考資料
