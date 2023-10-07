@@ -55,12 +55,12 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
         </h1>
         <p
           v-if="frontmatter?.briefDescription"
-          class="text-xl font-medium tracking-wide text-stone-700 dark:text-stone-300"
+          class="text-xl font-medium tracking-wide text-black-700 dark:text-black-300"
         >
           {{ frontmatter?.briefDescription }}
         </p>
         <ProjectTags :list="frontmatter?.tags" />
-        <ul class="space-y-1 text-sm text-stone-700 dark:text-stone-300">
+        <ul class="space-y-1 text-sm text-black-700 dark:text-black-300">
           <li>{{ periodText }}</li>
           <li v-if="frontmatter?.members ">
             Team Member:

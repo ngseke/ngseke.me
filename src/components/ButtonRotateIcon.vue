@@ -14,8 +14,7 @@ withDefaults(defineProps<{
       rounded-full
       after:inset-[-.3rem]
       after:rounded-full
-      after:bg-black/10
-      dark:after:bg-white/10
+      after:bg-black-400/10
     "
     :class="{
       'h-8 w-8 text-xl': size === 'md',

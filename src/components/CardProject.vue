@@ -22,7 +22,7 @@ defineProps<{
         <h3 class="!mb-2 !mt-0 !text-lg !font-medium !leading-5">
           {{ title }}
         </h3>
-        <p class="!m-0 !text-sm !leading-4 text-stone-700 dark:text-stone-300">
+        <p class="!m-0 !text-sm !leading-4 text-black-700 dark:text-black-300">
           {{ description }}
         </p>
       </div>

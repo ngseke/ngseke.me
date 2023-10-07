@@ -17,8 +17,7 @@ defineProps<{
       text-lg
       after:inset-[-.3rem]
       after:rounded-full
-      after:bg-black/10
-      dark:after:bg-white/10
+      after:bg-black-400/10
     "
   >
     <Fa :icon="icon" />

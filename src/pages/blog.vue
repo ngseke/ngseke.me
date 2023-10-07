@@ -36,7 +36,7 @@ const author = 'Sean Huang'
       <h1 class="mb-6 text-3xl font-semibold md:text-4xl md:leading-tight">
         {{ frontmatter?.title }}
       </h1>
-      <ul class="flex space-x-1 text-sm text-stone-700 dark:text-stone-300">
+      <ul class="flex space-x-1 text-sm text-black-700 dark:text-black-300">
         <li>{{ dateText }}</li>
         <span class="opacity-60 before:content-[&quot;•&quot;]" />
         <li>by {{ author }}</li>

@@ -10,7 +10,7 @@ defineProps<{
     :style="{ '--img': `url(${img})` }"
   >
     <img
-      class="h-[5.5rem] w-[8rem] overflow-hidden rounded-xl bg-stone-200 object-cover transition-colors dark:bg-stone-800"
+      class="h-[5.5rem] w-[8rem] overflow-hidden rounded-xl bg-black-200 object-cover transition-colors dark:bg-black-800"
       :src="img"
     >
   </div>

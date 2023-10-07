@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -19,6 +21,7 @@ module.exports = {
       },
       colors: {
         ngsek: '#ffd019',
+        black: colors.neutral,
       },
     },
   },

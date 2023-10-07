@@ -14,7 +14,7 @@ const { coverRef } = useIsCoverVisible()
     ref="coverRef"
     class="
       flex min-h-screen flex-col justify-center
-      bg-black bg-cover bg-center
+      bg-black-900 bg-cover bg-center
     "
     :style="style"
   >

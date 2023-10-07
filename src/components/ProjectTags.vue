@@ -12,7 +12,7 @@ defineProps<{
     <li
       v-for="(item, index) in list"
       :key="index"
-      class="rounded-md bg-stone-400/20 px-1"
+      class="rounded-md bg-black-400/20 px-1"
     >
       {{ item }}
     </li>

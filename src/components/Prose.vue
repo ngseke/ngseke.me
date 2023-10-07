@@ -54,7 +54,7 @@ const isDark = useDark()
   }
 
   blockquote{
-    @apply border-l-4 px-4 border-stone-500/50 text-stone-600;
+    @apply border-l-4 px-4 border-black-500/50 text-black-600;
     p img { @apply mx-0 max-w-full; }
   }
 
@@ -78,7 +78,7 @@ const isDark = useDark()
     @apply break-words;
   }
   :not(pre) > code {
-    @apply bg-stone-400/20 px-[.4rem] rounded-md;
+    @apply bg-black-400/20 px-[.4rem] rounded-md;
   }
 
   .embed-responsive {
@@ -94,11 +94,11 @@ const isDark = useDark()
     @include block-margin;
     @apply p-4 rounded-lg overflow-x-auto;
   }
-  .shiki-light { @apply bg-stone-100 #{!important}; }
+  .shiki-light { @apply bg-black-100 #{!important}; }
   .shiki-dark { @apply hidden; }
 
   &.dark {
-    blockquote { @apply text-neutral-400; }
+    blockquote { @apply text-black-400; }
     .shiki-light { @apply hidden }
     .shiki-dark { @apply block; }
   }

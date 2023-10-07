@@ -11,7 +11,7 @@ const isMounted = useMounted()
       flex
       h-screen w-full
       flex-col items-center justify-center
-      bg-black/20
+      bg-black-900/20
       px-4
       md:flex-row
     "

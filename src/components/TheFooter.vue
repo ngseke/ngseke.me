@@ -11,7 +11,7 @@ const linkIcons = [
 </script>
 
 <template>
-  <footer class="border-t border-stone-300 text-stone-700 dark:border-stone-700 dark:text-stone-300">
+  <footer class="border-t border-black-300 text-black-700 dark:border-black-700 dark:text-black-300">
     <div class="container flex min-h-[8rem] flex-col justify-center p-4">
       <div class="flex w-full justify-between">
         <div>

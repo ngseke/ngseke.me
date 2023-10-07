@@ -57,14 +57,14 @@ const shouldShowBorder = computed(() => shouldShowLogo.value && !isScrolledToTop
       fixed left-0 top-0 z-20 flex h-14 w-full flex-col justify-center border-b transition-all duration-300 after:absolute
       after:-bottom-8 after:left-0 after:h-8 after:w-full after:bg-gradient-to-b after:from-white after:to-[transparent_70%]
       after:opacity-0
-      dark:after:from-stone-900
+      dark:after:from-black-900
       print:hidden
       sm:h-16
     "
     :class="{
-      'border-stone-200 bg-white text-stone-900/80 dark:bg-stone-900 dark:text-white/80': shouldShowLogo,
+      'bg-white text-black-900/80 dark:bg-black-900 dark:text-white/80': shouldShowLogo,
       'text-white/80': !shouldShowLogo,
-      'border-stone-200 dark:border-stone-800': shouldShowBorder,
+      'border-black-200 dark:border-black-800': shouldShowBorder,
       'border-transparent': !shouldShowBorder,
     }"
   >

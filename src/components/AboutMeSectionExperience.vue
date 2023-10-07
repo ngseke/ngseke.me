@@ -58,7 +58,7 @@ const getFormattedPeriod = (period: [string, string] | string) => {
             @ {{ company }}
           </span>
           <br class="inline-block sm:hidden">
-          <span class="whitespace-nowrap text-base text-stone-700 dark:text-stone-300">
+          <span class="whitespace-nowrap text-base text-black-700 dark:text-black-300">
             {{ getFormattedPeriod(period) }}
           </span>
         </div>

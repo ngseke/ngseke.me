@@ -46,7 +46,7 @@ onClickOutside(target, close)
         v-show="show"
         class="fixed inset-4 z-30 origin-top-left transition-all duration-200"
       >
-        <div ref="target" class="flex max-h-full flex-col rounded-lg border bg-white/95 backdrop-blur-md dark:border-stone-900 dark:bg-black/95">
+        <div ref="target" class="flex max-h-full flex-col rounded-lg border bg-white/95 backdrop-blur-md dark:border-black-800 dark:bg-black-900/95">
           <div class="p-4">
             <ButtonRotateIcon
               class="dark:text-white/80"

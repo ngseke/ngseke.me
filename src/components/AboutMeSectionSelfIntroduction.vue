@@ -4,7 +4,7 @@
 <template>
   <AboutMeSectionLayout>
     <div class="flex flex-col space-y-2">
-      <span class="font-mono text-stone-700 dark:text-stone-400">
+      <span class="font-mono text-black-700 dark:text-black-400">
         @ngseke
       </span>
       <h2 class="text-5xl font-bold sm:text-6xl md:text-7xl">

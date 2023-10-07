@@ -10,8 +10,7 @@
       font-semibold leading-none
       after:inset-x-[-8px] after:inset-y-[-6px]
       after:rounded-lg
-      after:bg-black/10
-      dark:after:bg-white/10
+      after:bg-black-400/10
     "
   >
     <slot />
