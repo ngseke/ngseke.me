@@ -1,7 +1,7 @@
+import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
   future: {
     hoverOnlyWhenSupported: true,
@@ -27,4 +27,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+} satisfies Config

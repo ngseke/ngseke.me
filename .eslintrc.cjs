@@ -81,7 +81,7 @@ module.exports = {
       order: ['script', 'template', 'style'],
     }],
     'tailwindcss/no-custom-classname': ['warn', {
-      config: 'tailwind.config.cjs',
+      config: 'tailwind.config.ts',
       whitelist: ['neon', 'blink', 'link-effect'],
     }],
     'vue/no-template-shadow': 'off',
