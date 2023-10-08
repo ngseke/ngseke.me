@@ -8,6 +8,7 @@ specifiers:
   '@fortawesome/free-regular-svg-icons': ^6.2.0
   '@fortawesome/free-solid-svg-icons': ^6.2.0
   '@fortawesome/vue-fontawesome': ^3.0.1
+  '@types/fs-extra': ^11.0.2
   '@types/jest': ^29.5.1
   '@types/nprogress': ^0.2.0
   '@types/scroll-to-element': ^2.0.2
@@ -83,6 +84,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
+  '@types/fs-extra': 11.0.2
   '@types/jest': 29.5.1
   '@types/nprogress': 0.2.0
   '@types/scroll-to-element': 2.0.2
@@ -1283,6 +1285,13 @@ packages:
       '@types/node': 18.7.18
     dev: false
 
+  /@types/fs-extra/11.0.2:
+    resolution: {integrity: sha512-c0hrgAOVYr21EX8J0jBMXGLMgJqVf/v6yxi0dLaJboW9aQPh16Id+z6w2Tx1hm+piJOLv8xPfVKZCLfjPw/IMQ==}
+    dependencies:
+      '@types/jsonfile': 6.1.2
+      '@types/node': 18.7.18
+    dev: true
+
   /@types/graceful-fs/4.1.6:
     resolution: {integrity: sha512-Sig0SNORX9fdW+bQuTEovKj3uHcUL6LQKbCrrqb1X7J6/ReAbhCXRAhc+SMejhLELFj2QcyuxmUooZ4bt5ReSw==}
     dependencies:
@@ -1318,6 +1327,12 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.2:
+    resolution: {integrity: sha512-8t92P+oeW4d/CRQfJaSqEwXujrhH4OEeHRjGU3v1Q8mUS8GPF3yiX26sw4svv6faL2HfBtGTe2xWIoVgN3dy9w==}
+    dependencies:
+      '@types/node': 18.7.18
     dev: true
 
   /@types/linkify-it/3.0.2:
