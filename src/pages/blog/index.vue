@@ -4,11 +4,6 @@ name: "posts"
 
 <script setup lang="ts">
 import { usePosts } from '../../composables/usePosts'
-import { VITE_SITE_NAME } from '../../modules/constants'
-
-useHead({
-  title: `Blog | ${VITE_SITE_NAME}`,
-})
 
 const { postGroups } = usePosts()
 </script>

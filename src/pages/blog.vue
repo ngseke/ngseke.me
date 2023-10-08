@@ -10,7 +10,9 @@ import { getPostFormattedDate } from '../modules/date'
 const route = useRoute()
 
 const { frontmatter } = usePostFrontmatter()
-const title = computed(() => `${frontmatter.value?.title} | ${VITE_SITE_NAME}`)
+const title = computed(() =>
+  `${frontmatter.value?.title ?? 'Blog'} | ${VITE_SITE_NAME}`
+)
 
 useHead(computed(() => ({
   title: title.value,
