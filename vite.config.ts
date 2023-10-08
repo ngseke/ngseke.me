@@ -16,6 +16,7 @@ import Shiki from 'markdown-it-shiki'
 import generateSitemap from 'vite-ssg-sitemap'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import * as child from 'child_process'
+import { unheadVueComposablesImports } from '@unhead/vue'
 
 const commitHash = child
   .execSync('git rev-parse --short HEAD')
@@ -50,7 +51,7 @@ export default ({ mode }) => defineConfig({
       imports: [
         'vue',
         'vue-router',
-        '@vueuse/head',
+        unheadVueComposablesImports,
         {
           '@vueuse/core': [
             'isClient',
