@@ -34,7 +34,6 @@
     "nprogress": "^0.2.0",
     "scroll-to-element": "^2.0.3",
     "vite-plugin-md": "^0.20.4",
-    "vite-plugin-pages": "^0.26.0",
     "vue": "^3.2.37",
     "vue-router": "4"
   },
@@ -78,6 +77,7 @@
     "vite": ">=4.0.5",
     "vite-plugin-checker": "0.6.2",
     "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-pages": "0.31.0",
     "vite-ssg": "0.23.3",
     "vite-ssg-sitemap": "^0.4.3",
     "vue-tsc": "1.8.16"
