@@ -16,6 +16,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        sans: ['"Barlow Semi Condensed"', '"Noto Sans TC"', 'sans-serif'],
         pacifico: ['Pacifico', 'cursive'],
         mono: ['Fira Code', 'monospace'],
       },
