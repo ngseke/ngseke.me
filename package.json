@@ -13,8 +13,8 @@
     "dev": "vite",
     "build": "vite-ssg build",
     "preview": "vite preview",
-    "lint": "npx eslint . --ext .ts,.js,.cjs,.vue",
-    "lint:fix": "npx eslint --fix . --ext .ts,.js,.cjs,.vue",
+    "lint": "vue-tsc --noEmit && npx eslint . --ext .ts,.js,.cjs,.vue",
+    "lint:fix": "vue-tsc --noEmit && npx eslint --fix . --ext .ts,.js,.cjs,.vue",
     "prepare": "husky install",
     "test": "jest"
   },

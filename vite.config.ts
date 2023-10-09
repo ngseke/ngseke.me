@@ -5,8 +5,6 @@ import { resolve } from 'path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import vue from '@vitejs/plugin-vue'
-import eslint from 'vite-plugin-eslint'
-import checker from 'vite-plugin-checker'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -64,8 +62,6 @@ export default ({ mode }) => defineConfig({
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
-    eslint(),
-    checker({ typescript: true, vueTsc: true }),
     Pages({
       extensions: ['vue', 'md'],
       extendRoute (route) {
