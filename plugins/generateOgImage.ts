@@ -62,7 +62,9 @@ export async function generateOgImage ({
 
   for (const route of flattenedRoutes) {
     const name = String(route.name)
-    if (!name.startsWith('blog')) continue
+    if (
+      !/^(project|blog)-/.test(name)
+    ) continue
 
     const url = String(new URL(route.path, base))
 

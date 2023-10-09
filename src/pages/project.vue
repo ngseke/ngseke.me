@@ -4,14 +4,17 @@ name: "project"
 
 <script setup lang="ts">
 import { useProjectFrontmatter } from '../composables/useProjectFrontmatter'
-import { VITE_SITE_NAME, VITE_SITE_ORIGIN } from '../modules/constants'
+import { VITE_SITE_NAME } from '../modules/constants'
 import { getFormattedDate } from '../modules/date'
 import { useReadHistory } from '../composables/useReadHistory'
+import { useOgImage } from '../composables/useOgImage'
 
 const { frontmatter } = useProjectFrontmatter()
 
 const title = computed(() => `${frontmatter.value?.title} | ${VITE_SITE_NAME}`)
 const description = computed(() => frontmatter.value?.briefDescription)
+
+const { ogImageHeadMetaList, shouldShowOgImage } = useOgImage()
 
 useHead(computed(() => ({
   title: title.value,
@@ -20,17 +23,7 @@ useHead(computed(() => ({
     { property: 'og:title', content: title.value },
     { property: 'description', content: description.value },
     { property: 'og:description', content: description.value },
-    {
-      property: 'og:image',
-      content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
-    },
-    { property: 'og:image:width', content: 320 },
-    { property: 'og:image:height', content: 220 },
-    {
-      name: 'twitter:image',
-      content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
-    },
-    { name: 'twitter:card', content: 'summary_large_image' },
+    ...ogImageHeadMetaList.value,
   ],
 })))
 
@@ -55,6 +48,14 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
 </script>
 
 <template>
+  <OgImageTemplate
+    v-if="shouldShowOgImage"
+    :description=" description"
+    :img="frontmatter?.cover "
+    :tags="frontmatter?.tags"
+    :title="frontmatter?.title"
+  />
+
   <PostLayout>
     <template #header>
       <div class="space-y-3 ">

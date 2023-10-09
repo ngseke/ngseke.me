@@ -1,7 +1,11 @@
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   img?: string,
-}>()
+  sizeClassName?: string,
+}>(), {
+  img: undefined,
+  sizeClassName: 'h-[5.5rem] w-[8rem]',
+})
 
 const isShown = ref(false)
 async function handleLoad () {
@@ -12,14 +16,15 @@ async function handleLoad () {
 <template>
   <div
     class="
-      relative h-[5.5rem] w-[8rem]
+      relative
       before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:bg-black-100
       after:absolute after:left-0 after:top-0 after:-z-20 after:h-full after:w-full after:overflow-hidden after:rounded-xl after:bg-cover after:bg-center after:blur-lg after:transition-opacity after:duration-500 after:[background-image:var(--img)] after:[will-change:filter]
       dark:before:bg-black-800
     "
     :class="{
       'after:opacity-0': !isShown,
-      'after:opacity-40': isShown
+      'after:opacity-40': isShown,
+      [sizeClassName]: true,
     }"
     :style="{ '--img': `url(${img})` }"
   >

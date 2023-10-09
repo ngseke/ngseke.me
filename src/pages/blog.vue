@@ -15,7 +15,7 @@ const title = computed(() =>
   `${frontmatter.value?.title ?? 'Blog'} | ${VITE_SITE_NAME}`
 )
 
-const { ogImage, shouldShowOgImage } = useOgImage()
+const { ogImageHeadMetaList, shouldShowOgImage } = useOgImage()
 
 useHead(computed(() => ({
   title: title.value,
@@ -23,18 +23,9 @@ useHead(computed(() => ({
   meta: [
     { property: 'og:site_name', content: VITE_SITE_NAME },
     { property: 'og:title', content: title.value },
+    { property: 'description', content: title.value },
     { property: 'og:description', content: title.value },
-    ...(
-      ogImage.value
-        ? [
-            { property: 'og:image', content: ogImage.value },
-            { property: 'og:image:width', content: 1200 },
-            { property: 'og:image:height', content: 600 },
-            { name: 'twitter:image', content: ogImage.value },
-            { name: 'twitter:card', content: 'summary_large_image' },
-          ]
-        : [{}]
-    ),
+    ...ogImageHeadMetaList.value,
   ],
 })))
 
@@ -49,7 +40,6 @@ const author = VITE_AUTHOR
 <template>
   <OgImageTemplate
     v-if="shouldShowOgImage"
-    :author="author"
     :date="frontmatter?.date"
     :title="frontmatter?.title"
   />
