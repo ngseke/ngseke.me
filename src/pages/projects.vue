@@ -8,6 +8,9 @@ import { VITE_SITE_NAME } from '../modules/constants'
 
 useHead({
   title: `Projects | ${VITE_SITE_NAME}`,
+  meta: [
+    { property: 'og:site_name', content: VITE_SITE_NAME },
+  ],
 })
 
 const { projects } = useProjects()

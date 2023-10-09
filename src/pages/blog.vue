@@ -19,11 +19,19 @@ const { ogImage } = useOgImage()
 
 useHead(computed(() => ({
   title: title.value,
+  description: title.value,
   meta: [
+    { property: 'og:site_name', content: VITE_SITE_NAME },
     { property: 'og:title', content: title.value },
+    { property: 'og:description', content: title.value },
     ...(
       ogImage.value
-        ? [{ property: 'og:image', content: ogImage.value }]
+        ? [
+            { property: 'og:image', content: ogImage.value },
+            { property: 'og:image:width', content: 1200 },
+            { property: 'og:image:height', content: 600 },
+            { name: 'twitter:image', content: ogImage.value },
+          ]
         : [{}]
     ),
   ],

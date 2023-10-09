@@ -16,11 +16,18 @@ const description = computed(() => frontmatter.value?.briefDescription)
 useHead(computed(() => ({
   title: title.value,
   meta: [
+    { property: 'og:site_name', content: VITE_SITE_NAME },
     { property: 'og:title', content: title.value },
     { property: 'description', content: description.value },
     { property: 'og:description', content: description.value },
     {
       property: 'og:image',
+      content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
+    },
+    { property: 'og:image:width', content: 320 },
+    { property: 'og:image:height', content: 220 },
+    {
+      name: 'twitter:image',
       content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
     },
   ],

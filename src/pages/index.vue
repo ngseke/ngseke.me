@@ -16,6 +16,9 @@ onMounted(async () => {
 
 useHead({
   title: `${VITE_SITE_NAME}`,
+  meta: [
+    { property: 'og:site_name', content: VITE_SITE_NAME },
+  ],
 })
 </script>
 
