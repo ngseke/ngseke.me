@@ -47,7 +47,7 @@ export async function generateOgImage ({
   const base = `http://localhost:${port}/`
   await waitOn({
     resources: [base],
-    timeout: 10000,
+    timeout: 30000,
     headers: { accept: 'text/html' },
   })
   await new Promise(resolve => setTimeout(resolve, 5000))
