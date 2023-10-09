@@ -15,7 +15,7 @@ const title = computed(() =>
   `${frontmatter.value?.title ?? 'Blog'} | ${VITE_SITE_NAME}`
 )
 
-const { ogImage } = useOgImage()
+const { ogImage, shouldShowOgImage } = useOgImage()
 
 useHead(computed(() => ({
   title: title.value,
@@ -44,13 +44,11 @@ const dateText = computed(() => {
 })
 
 const author = VITE_AUTHOR
-
-const shouldShowDebugOgImage = computed(() => 'og-image' in route.query)
 </script>
 
 <template>
   <OgImageTemplate
-    v-if="shouldShowDebugOgImage"
+    v-if="shouldShowOgImage"
     :author="author"
     :date="frontmatter?.date"
     :title="frontmatter?.title"

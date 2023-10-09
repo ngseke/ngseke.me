@@ -1,6 +1,8 @@
 import { VITE_OG_IMAGE_OUTPUT_PATH, VITE_SITE_ORIGIN } from '../modules/constants'
 import urlJoin from 'url-join'
 
+export const ogImageQueryKey = 'og-image'
+
 export function useOgImage () {
   const route = useRoute()
 
@@ -16,7 +18,10 @@ export function useOgImage () {
     ).trim()
   })
 
+  const shouldShowOgImage = computed(() => ogImageQueryKey in route.query)
+
   return {
     ogImage,
+    shouldShowOgImage,
   }
 }
