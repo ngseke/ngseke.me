@@ -5,8 +5,6 @@ import { resolve } from 'path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import vue from '@vitejs/plugin-vue'
-import eslint from 'vite-plugin-eslint'
-import checker from 'vite-plugin-checker'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -17,6 +15,7 @@ import generateSitemap from 'vite-ssg-sitemap'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import * as child from 'child_process'
 import { unheadVueComposablesImports } from '@unhead/vue'
+import { OgImage } from './plugins/generateOgImage'
 
 const commitHash = child
   .execSync('git rev-parse --short HEAD')
@@ -63,8 +62,6 @@ export default ({ mode }) => defineConfig({
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
-    eslint(),
-    checker({ typescript: true, vueTsc: true }),
     Pages({
       extensions: ['vue', 'md'],
       extendRoute (route) {
@@ -106,5 +103,8 @@ export default ({ mode }) => defineConfig({
       },
     }),
     vueJsx({}),
+    OgImage({
+      path: loadEnv(mode, process.cwd()).VITE_OG_IMAGE_OUTPUT_PATH,
+    }),
   ],
 })

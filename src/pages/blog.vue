@@ -3,9 +3,10 @@ name: "post"
 </route>
 
 <script setup lang="ts">
-import { VITE_SITE_NAME } from '../modules/constants'
+import { VITE_AUTHOR, VITE_SITE_NAME } from '../modules/constants'
 import { usePostFrontmatter } from '../composables/usePostFrontmatter'
 import { getPostFormattedDate } from '../modules/date'
+import { useOgImage } from '../composables/useOgImage'
 
 const route = useRoute()
 
@@ -14,10 +15,17 @@ const title = computed(() =>
   `${frontmatter.value?.title ?? 'Blog'} | ${VITE_SITE_NAME}`
 )
 
+const { ogImage } = useOgImage()
+
 useHead(computed(() => ({
   title: title.value,
   meta: [
     { property: 'og:title', content: title.value },
+    ...(
+      ogImage.value
+        ? [{ property: 'og:image', content: ogImage.value }]
+        : [{}]
+    ),
   ],
 })))
 
@@ -26,10 +34,19 @@ const dateText = computed(() => {
   return date ? getPostFormattedDate(date) : null
 })
 
-const author = 'Sean Huang'
+const author = VITE_AUTHOR
+
+const shouldShowDebugOgImage = computed(() => 'og-image' in route.query)
 </script>
 
 <template>
+  <OgImageTemplate
+    v-if="shouldShowDebugOgImage"
+    :author="author"
+    :date="frontmatter?.date"
+    :title="frontmatter?.title"
+  />
+
   <RouterView v-if="route.name === 'posts'" />
 
   <PostLayout v-else>
