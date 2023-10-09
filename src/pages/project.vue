@@ -30,6 +30,7 @@ useHead(computed(() => ({
       name: 'twitter:image',
       content: String(new URL(frontmatter.value?.cover || '', VITE_SITE_ORIGIN)),
     },
+    { name: 'twitter:card', content: 'summary_large_image' },
   ],
 })))
 
