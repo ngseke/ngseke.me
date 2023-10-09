@@ -13,7 +13,7 @@ export function useOgImage () {
       VITE_OG_IMAGE_OUTPUT_PATH,
       `${name}.png`,
       `?v=${__COMMIT_HASH__}`
-    )
+    ).trim()
   })
 
   return {
