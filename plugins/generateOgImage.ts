@@ -110,7 +110,7 @@ export function OgImage ({ path }: { path: string }): Plugin {
       vitePluginPagesApi = plugin.api
     },
     async configResolved (resolvedConfig) {
-      shouldGenerate = !resolvedConfig.build.ssr
+      shouldGenerate = Boolean(resolvedConfig.build.ssr)
     },
     async buildEnd () {
       if (!shouldGenerate) return
