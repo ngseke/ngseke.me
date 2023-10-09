@@ -17,6 +17,7 @@ import generateSitemap from 'vite-ssg-sitemap'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import * as child from 'child_process'
 import { unheadVueComposablesImports } from '@unhead/vue'
+import { OgImage } from './plugins/generateOgImage'
 
 const commitHash = child
   .execSync('git rev-parse --short HEAD')
@@ -106,5 +107,8 @@ export default ({ mode }) => defineConfig({
       },
     }),
     vueJsx({}),
+    OgImage({
+      path: loadEnv(mode, process.cwd()).VITE_OG_IMAGE_OUTPUT_PATH,
+    }),
   ],
 })
