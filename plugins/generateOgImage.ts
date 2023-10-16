@@ -71,7 +71,7 @@ export async function generateOgImage ({
     page.setViewport({
       width: 1200,
       height: 600,
-      deviceScaleFactor: 2,
+      deviceScaleFactor: 3,
     })
 
     await page.goto(url + '?og-image')
