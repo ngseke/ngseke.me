@@ -7,6 +7,7 @@ import { VITE_AUTHOR, VITE_SITE_NAME } from '../modules/constants'
 import { usePostFrontmatter } from '../composables/usePostFrontmatter'
 import { getPostFormattedDate } from '../modules/date'
 import { useOgImage } from '../composables/useOgImage'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 const route = useRoute()
 
@@ -35,6 +36,8 @@ const dateText = computed(() => {
 })
 
 const author = VITE_AUTHOR
+
+const isList = computed(() => route.name === 'posts')
 </script>
 
 <template>
@@ -44,7 +47,7 @@ const author = VITE_AUTHOR
     :title="frontmatter?.title"
   />
 
-  <RouterView v-if="route.name === 'posts'" />
+  <RouterView v-if="isList" />
 
   <PostLayout v-else>
     <template #header>
@@ -61,4 +64,19 @@ const author = VITE_AUTHOR
 
     <RouterView />
   </PostLayout>
+
+  <div v-if="!isList" class="container px-4 pb-8">
+    <div class="mx-auto max-w-3xl">
+      <hr class="mb-8 border-dashed border-black-200 dark:border-black-800">
+      <div class="flex flex-wrap">
+        <RouterLink
+          class="inline-flex w-full justify-between rounded-lg bg-black-400/10 p-6 font-semibold leading-none tracking-wider hover:bg-black-400/20 md:w-1/2"
+          :to="{ name: 'posts' }"
+        >
+          閱讀更多文章
+          <Fa :icon="faCaretRight" />
+        </RouterLink>
+      </div>
+    </div>
+  </div>
 </template>
