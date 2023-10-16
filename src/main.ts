@@ -10,7 +10,11 @@ export const createApp = ViteSSG(
   App,
   {
     routes,
-    scrollBehavior (_to, _from, savedPosition) {
+    scrollBehavior (to, from, savedPosition) {
+      if (
+        [to.name, from.name].every(name => name === 'projects')
+      ) return
+
       return savedPosition || { top: 0 }
     },
   },

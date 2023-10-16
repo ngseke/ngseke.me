@@ -2,7 +2,7 @@
 import { Project } from '../types/Project'
 
 defineProps<{
-  list?: Project[],
+  list?: Project[] | readonly Project[],
 }>()
 
 </script>

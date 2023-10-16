@@ -1,8 +1,11 @@
 import { Project } from '../types/Project'
 import { ProjectFrontmatter } from '../types/ProjectFrontmatter'
+import { useDownplayProjects } from './useDownplayProjects'
 
 export function useProjects () {
   const router = useRouter()
+
+  const { isDownplayed } = useDownplayProjects()
 
   const projectMap = computed(() => {
     const routes = router.getRoutes()
@@ -23,7 +26,7 @@ export function useProjects () {
 
   const projects = computed(() => {
     const map = projectMap.value
-    return [
+    const groups = [
       {
         title: 'Browser Extension',
         list: [
@@ -70,11 +73,21 @@ export function useProjects () {
           map.shanlinliang,
         ],
       },
-    ]
+    ] as const
+
+    return groups
   })
+
+  const downplayedProjects = computed(() => (
+    projects.value.filter((group) => {
+      if (isDownplayed.value) return group.title !== 'Identity Design'
+      return true
+    })
+  ))
 
   return {
     projectMap,
     projects,
+    downplayedProjects,
   }
 }
