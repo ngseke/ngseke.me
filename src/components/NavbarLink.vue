@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <template>
@@ -15,6 +17,10 @@
     "
   >
     <slot />
-    <Fa v-if="isExternal" class="ml-2" :icon="['fas', 'up-right-from-square']" />
+    <FontAwesomeIcon
+      v-if="isExternal"
+      class="ml-2"
+      :icon="faUpRightFromSquare"
+    />
   </IsomorphicLink>
 </template>

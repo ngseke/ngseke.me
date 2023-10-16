@@ -89,11 +89,10 @@ export default ({ mode }) => defineConfig({
             dark: 'vitesse-dark',
           },
         })
+
         md.use(MarkdownItAnchor, {
           permalink: MarkdownItAnchor.permalink.linkInsideHeader({
-            symbol: `
-              <Fa :icon="['fas', 'link']" />
-            `,
+            symbol: '<IconLink />',
             placement: 'after',
           }),
         })

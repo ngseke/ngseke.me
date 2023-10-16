@@ -2,6 +2,8 @@
 import { Link } from '../types/Link'
 import { onClickOutside } from '@vueuse/core'
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const props = defineProps<{
   links: Link[],
@@ -53,7 +55,7 @@ onClickOutside(target, close)
               size="lg"
               @click="close"
             >
-              <Fa :icon="['fas', 'xmark']" />
+              <FontAwesomeIcon :icon="faXmark" />
             </ButtonRotateIcon>
           </div>
 

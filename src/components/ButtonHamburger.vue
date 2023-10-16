@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+
 defineProps<{
   active?: boolean,
 }>()
@@ -6,7 +9,7 @@ defineProps<{
 
 <template>
   <ButtonRotateIcon>
-    <Fa v-if="active" :icon="['fas', 'xmark']" />
-    <Fa v-else :icon="['fas', 'bars']" />
+    <FontAwesomeIcon v-if="active" :icon="faXmark" />
+    <FontAwesomeIcon v-else :icon="faBars" />
   </ButtonRotateIcon>
 </template>

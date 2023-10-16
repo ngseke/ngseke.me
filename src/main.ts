@@ -4,7 +4,6 @@ import './index.sass'
 
 import App from './App.vue'
 import routes from '~pages'
-import { FontAwesomeIcon } from './font-awesome'
 
 export const createApp = ViteSSG(
   App,
@@ -18,7 +17,4 @@ export const createApp = ViteSSG(
       return savedPosition || { top: 0 }
     },
   },
-  ({ app }) => {
-    app.component('Fa', FontAwesomeIcon)
-  }
 )

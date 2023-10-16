@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { LINKS } from '../modules/links'
 
 const links = [
@@ -19,7 +20,7 @@ const links = [
       >
         <Link :href="url">
           <span class="mr-1 inline-block min-w-[1.5rem] text-center">
-            <Fa :icon="icon" />
+            <FontAwesomeIcon :icon="icon" />
           </span>
           {{ title }}
         </Link>

@@ -2,6 +2,8 @@
 import { useToggle } from '@vueuse/core'
 import { useDark } from '../composables/useDark'
 import { useRootViewTransition } from '../composables/useRootViewTransition'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
@@ -17,7 +19,7 @@ const handleClick = (event: MouseEvent) => {
     :title="isDark ? '關閉深色模式' : '開啟深色模式'"
     @click="handleClick"
   >
-    <Fa v-if="isDark" :icon="['fas', 'sun']" />
-    <Fa v-else :icon="['fas', 'moon']" />
+    <FontAwesomeIcon v-if="isDark" :icon="faSun" />
+    <FontAwesomeIcon v-else :icon="faMoon" />
   </ButtonRotateIcon>
 </template>

@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 defineProps<{
-  icon: string | string[] | readonly string[],
+  icon: IconDefinition,
 }>()
 </script>
 
@@ -20,6 +22,6 @@ defineProps<{
       after:bg-black-400/10
     "
   >
-    <Fa :icon="icon" />
+    <FontAwesomeIcon :icon="icon" />
   </IsomorphicLink>
 </template>

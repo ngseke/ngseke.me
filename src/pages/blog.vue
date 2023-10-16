@@ -7,6 +7,7 @@ import { VITE_AUTHOR, VITE_SITE_NAME } from '../modules/constants'
 import { usePostFrontmatter } from '../composables/usePostFrontmatter'
 import { getPostFormattedDate } from '../modules/date'
 import { useOgImage } from '../composables/useOgImage'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 const route = useRoute()
@@ -74,7 +75,7 @@ const isList = computed(() => route.name === 'posts')
           :to="{ name: 'posts' }"
         >
           閱讀更多文章
-          <Fa :icon="faCaretRight" />
+          <FontAwesomeIcon :icon="faCaretRight" />
         </RouterLink>
       </div>
     </div>
