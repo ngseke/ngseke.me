@@ -1,5 +1,5 @@
 ---
-title: 建立全新 Vite + Vue + TypeScript + 配置 ESLint 可能會遇到的坑
+title: 建立 Vite + Vue + TypeScript + ESLint 專案可能會遇到的坑
 date: 2023/10/03
 tags:
   - Vite
@@ -158,7 +158,7 @@ module.exports = {
 
 再次重新載入 VSCode 視窗即可。
 
-## 😵‍💫 跳過檢查某些檔案
+## 😵 跳過檢查某些檔案
 
 ### `dist/`
 
@@ -291,3 +291,9 @@ pnpm run lint-fix
 順利的話「**可自動修正**（automatically fixable）」的那些規則都會被自動修正，也就是在 [Rule 列表](https://eslint.org/docs/latest/rules/)有 🔧 符號的那些項目。
 
 ![](../../assets/img/post/vite-vue-ts-eslint-setup/eslint-automatically-fixable.png)
+
+## ESLint 即將棄用「排版」規則
+
+ESLint 在 2023 年 10 月宣布將[棄用排版（Formatting）規則](https://eslint.org/blog/2023/10/deprecating-formatting-rules/)，也就是棄用那些跟**空格、縮排、換行、單/雙引號、分號等**相關規則。而其餘分類下的規則不受影響，例如強制使用嚴格等於 `===`（[eqeqeq](https://eslint.org/docs/latest/rules/eqeqeq)）、強制命名小駝峰（[camelcase](https://eslint.org/docs/latest/rules/camelcase)）等。
+
+未來若想繼續透過 ESLint 而非 Prettier 來排版程式碼，可以考慮搭配 [ESLint Stylistic](https://eslint.style/) 來達成一樣的效果。這個 plugin 將會繼續接棒，維護這些被棄用的規則。
