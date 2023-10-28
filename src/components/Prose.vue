@@ -65,7 +65,9 @@ const isDark = useDark()
   ul { @apply list-disc; }
   ol { @apply list-decimal; }
 
-  a { @apply underline; }
+  a {
+    @apply underline transition-colors hover:decoration-ngsek/50;
+  }
   s {
     &, > a {
       @apply line-through;
