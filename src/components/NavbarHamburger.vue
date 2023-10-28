@@ -43,7 +43,7 @@ onClickOutside(target, close)
 <template>
   <Teleport to="body">
     <div v-if="show" class="fixed inset-0 z-20 backdrop-blur-sm" />
-    <TransitionUniversal enter-from-class="opacity-0 -translate-4 scale-75">
+    <TransitionUniversal enterFromClass="opacity-0 -translate-4 scale-75">
       <div
         v-show="show"
         class="fixed inset-4 z-30 origin-top-left transition-all duration-200"
@@ -65,7 +65,7 @@ onClickOutside(target, close)
                 v-for="({ name, href, handler }, index) in linksWithHome"
                 :key="index"
               >
-                <TransitionUniversal enter-from-class="opacity-0 scale-90">
+                <TransitionUniversal enterFromClass="opacity-0 scale-90">
                   <NavbarLink
                     v-show="show"
                     class="transition-all"

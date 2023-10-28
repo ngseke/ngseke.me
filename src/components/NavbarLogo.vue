@@ -20,7 +20,7 @@ const handleClick = (e: Event) => {
 
 <template>
   <TransitionUniversal
-    enter-from-class="scale-95 sm:scale-100 sm:!w-0 opacity-0"
+    enterFromClass="scale-95 sm:scale-100 sm:!w-0 opacity-0"
   >
     <div
       v-show="show"

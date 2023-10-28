@@ -9,10 +9,10 @@ defineProps<{
 
 <template>
   <Transition
-    :enter-active-class="enterActiveClass"
-    :enter-from-class="enterFromClass"
-    :leave-active-class="enterActiveClass ?? leaveActiveClass"
-    :leave-to-class="enterFromClass ?? leaveToClass"
+    :enterActiveClass="enterActiveClass"
+    :enterFromClass="enterFromClass"
+    :leaveActiveClass="enterActiveClass ?? leaveActiveClass"
+    :leaveToClass="enterFromClass ?? leaveToClass"
   >
     <slot />
   </Transition>

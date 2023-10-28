@@ -41,7 +41,7 @@ const author = VITE_AUTHOR
           <div v-if="img" class="flex flex-1 justify-end">
             <CardProjectImageGlow
               :img="img"
-              size-class-name="h-[12.1rem] w-[17.6rem]"
+              sizeClassName="h-[12.1rem] w-[17.6rem]"
             />
           </div>
         </div>

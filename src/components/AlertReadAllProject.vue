@@ -5,8 +5,8 @@ const { isReadAll, clearReadHistory } = useReadHistory()
 
 <template>
   <Transition
-    leave-active-class="transition-all"
-    leave-to-class="scale-0"
+    leaveActiveClass="transition-all"
+    leaveToClass="scale-0"
   >
     <div
       v-if="isReadAll"

@@ -23,10 +23,10 @@ withDefaults(defineProps<{
     type="button"
   >
     <Transition
-      enter-active-class="transition-all duration-400"
-      enter-from-class="opacity-0 -rotate-45"
-      leave-active-class="transition-all duration-100"
-      leave-to-class="opacity-0 rotate-45"
+      enterActiveClass="transition-all duration-400"
+      enterFromClass="opacity-0 -rotate-45"
+      leaveActiveClass="transition-all duration-100"
+      leaveToClass="opacity-0 rotate-45"
       mode="out-in"
     >
       <slot />

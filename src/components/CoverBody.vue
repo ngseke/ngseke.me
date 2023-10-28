@@ -17,7 +17,7 @@ const isMounted = useMounted()
     "
   >
     <div class="flex justify-center md:flex-1">
-      <TransitionUniversal enter-from-class="opacity-0">
+      <TransitionUniversal enterFromClass="opacity-0">
         <div v-show="isMounted" class="transition-opacity delay-200 duration-700">
           <h1
             class="rotate-[-4deg] whitespace-nowrap font-pacifico text-8xl tracking-tight text-white"

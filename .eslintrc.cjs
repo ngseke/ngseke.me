@@ -109,5 +109,6 @@ module.exports = {
     'vue/space-in-parens': 'error',
     'vue/space-infix-ops': 'error',
     'vue/space-unary-ops': 'error',
+    'vue/attribute-hyphenation': ['error', 'never'],
   },
 }
