@@ -41,6 +41,11 @@ describe('external links', () => {
     '%s should be a valid link',
     async (url) => {
       const request = axios.get(url)
+        .catch(reason => {
+          if (reason?.response?.headers?.server !== 'cloudflare') {
+            throw reason
+          }
+        })
       await expect(request).resolves.not.toThrowError()
     })
 })
