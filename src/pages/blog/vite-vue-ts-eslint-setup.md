@@ -54,7 +54,7 @@ pnpm create @eslint/config
 
 ## 😵 處理 VSCode Output 的 ESLint 的問題
 
-雖然 ESLint 已初始化完成，但你會發現它並沒有正常運作。例如試著在任意 `.ts` 或 `.vue` 檔隨便加多餘的空格，卻看不到預期的 error 或 warning 的波浪底線。
+雖然 ESLint 已初始化完成，但你會發現它尚未正常運作。例如試著在任意 `.ts` 或 `.vue` 檔隨便加多餘的空格，卻看不到預期的 error 或 warning 的波浪底線。
 
 查看 Output 會看到以下錯誤訊息：
 
@@ -63,7 +63,7 @@ pnpm create @eslint/config
 > An unexpected error occurred:
 > Error: Error while loading rule '@typescript-eslint/dot-notation': You have used a rule which requires parserServices to be generated. You must therefore provide a value for the "parserOptions.project" property for @typescript-eslint/parser.
 
-根據錯誤訊息的描述，得知需要在 `.eslintrc.cjs` 補上 `parserOptions.project`，並且也要指明 `parserOptions.parser`。
+根據錯誤訊息的描述，得知需要在 `.eslintrc.cjs` 補上 `parserOptions.project` 並指明 `parserOptions.parser`。
 
 ```diff
 // .eslintrc.cjs
@@ -72,7 +72,7 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-+       project: './tsconfig.json',
++       project: ['./tsconfig.json', './tsconfig.node.json'],
 +       parser: '@typescript-eslint/parser',
     },
 }
@@ -100,24 +100,20 @@ module.exports = {
 > - Create a new TSConfig that includes this file and include it in your parserOptions.project
 > See the typescript-eslint docs for more info: https://typescript-eslint.io/linting/troubleshooting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-filee
 
-根據錯誤訊息可以得知，我們必須在 `tsconfig.json` 的 `includes` 中手動加入這些檔案：
+根據錯誤訊息得知，我們必須在 `tsconfig.node.json` 的 `includes` 中手動加入這些檔案：
 
 ```diff
-// tsconfig.json
+// tsconfig.node.json
 {
   // ...
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-+   "vite.config.ts",
+    "vite.config.ts",
 +   ".eslintrc.cjs"
   ],
 }
 ```
 
-> 日後若是在根目錄有新的 `.ts`, `.js`, `.cjs` 檔等，例如安裝 Tailwind CSS 會有的 `tailwind.config.ts`，也要記得手動加入進去。
+> 日後若是在根目錄有新增那些在 **Node 環境**執行的，而不會被實際打包進專案的設定檔，例如 Tailwind CSS 的設定檔 `tailwind.config.ts`，也要記得手動加入進去。
 
 接著重新載入 VSCode 視窗
 > 叫出指令視窗 `⌘ + shift + P`  → 輸入 `Developer: Reload Window`
@@ -140,7 +136,7 @@ module.exports = {
 > Parsing error: ESLint was configured to run on `<tsconfigRootDir>/src/App.vue` using `parserOptions.project`: /users/sean/my-vue-app/tsconfig.json
 > The extension for the file (`.vue`) is non-standard. **You should add `parserOptions.extraFileExtensions` to your config.**
 
-根據錯誤訊息的提示在 `.eslintrc.cjs` 加入 `parserOptions.extraFileExtensions` ：
+根據錯誤訊息的提示在 `.eslintrc.cjs` 加入 `parserOptions.extraFileExtensions` 後，再次重新載入 VSCode 視窗即可。
 
 ```diff
 // .eslintrc.cjs
@@ -149,14 +145,14 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        project: './tsconfig.json',
+        project: ['./tsconfig.json', './tsconfig.node.json'],
         parser: '@typescript-eslint/parser',
 +       extraFileExtensions: ['.vue']
     },
 }
 ```
 
-再次重新載入 VSCode 視窗即可。
+
 
 ## 😵 跳過檢查某些檔案
 
@@ -297,3 +293,8 @@ pnpm run lint-fix
 ESLint 在 2023 年 10 月宣布將[棄用排版（Formatting）規則](https://eslint.org/blog/2023/10/deprecating-formatting-rules/)，也就是棄用那些跟**空格、縮排、換行、單/雙引號、分號等**相關規則。而其餘分類下的規則不受影響，例如強制使用嚴格等於 `===`（[eqeqeq](https://eslint.org/docs/latest/rules/eqeqeq)）、強制命名小駝峰（[camelcase](https://eslint.org/docs/latest/rules/camelcase)）等。
 
 未來若想繼續透過 ESLint 而非 Prettier 來排版程式碼，可以考慮搭配 [ESLint Stylistic](https://eslint.style/) 來達成一樣的效果。這個 plugin 將會繼續接棒，維護這些被棄用的規則。
+
+## 參考資料
+
+https://github.com/vitejs/vite/issues/13739#issuecomment-1641380518
+https://juejin.cn/post/7126043888573218823
