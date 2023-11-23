@@ -9,6 +9,7 @@ const ignoredUrls = [
   'https://www.linkedin.com/in/ngseke/',
   'http://www.cc.ntut.edu.tw/~wkchen/game/',
   'https://myweb.ntut.edu.tw/~yschen/',
+  'https://sutian.moe.edu.tw/zh-hant/',
   /https:\/\/hackmd\.io\/@xq\/(.+)/,
 ]
 
