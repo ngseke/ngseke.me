@@ -30,6 +30,7 @@ export function useProjects () {
       {
         title: 'Browser Extension',
         list: [
+          map['versatile-npm'],
           map['leetcode-night'],
         ],
       },

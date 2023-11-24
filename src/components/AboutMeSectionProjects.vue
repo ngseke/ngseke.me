@@ -4,8 +4,8 @@ import { useProjects } from '../composables/useProjects'
 const { projectMap } = useProjects()
 
 const list = [
+  projectMap.value['versatile-npm'],
   projectMap.value['leetcode-night'],
-  projectMap.value.mcip,
 ]
 </script>
 
