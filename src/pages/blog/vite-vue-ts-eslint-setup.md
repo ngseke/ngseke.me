@@ -11,8 +11,9 @@ original: https://hackmd.io/@xq/vite-vue-ts-eslint-setup
 
 > 以下使用 pnpm 作為套件管理工具，與 npm 或 yarn 的指令會有些許差異，請查看隨附的官方文件
 
-完整配置範例：https://github.com/ngseke/vite-vue-ts-eslint-example
+## TL;DR
 
+完整配置範例：https://github.com/ngseke/vite-vue-ts-eslint-example
 
 ## 🏗️ 透過 Vite 官方的 Preset 新建專案
 
@@ -37,7 +38,7 @@ pnpm i
 pnpm create @eslint/config
 ```
 
-依序回答以下問題：
+依序回答以下問題後，便會在根目錄新建 `.eslintrc.cjs`：
 
 > ✔ How would you like to use ESLint? · **style**
 > ✔ What type of modules does your project use? · **esm**
@@ -49,8 +50,6 @@ pnpm create @eslint/config
 > ✔ What format do you want your config file to be in? · **JavaScript**
 > ✔ Would you like to install them now? · No / **Yes**
 > ✔ Which package manager do you want to use? · **pnpm**
-
-此時根目錄下便會新建 `.eslintrc.cjs`
 
 ## 😵 處理 VSCode Output 的 ESLint 的問題
 
@@ -262,7 +261,7 @@ pnpm run lint
 
 ### 用指令自動修復錯誤
 
-打開 `package.json`，在 `scripts` 中加入以下指令 `lint-fix`：
+打開 `package.json`，在 `scripts` 中加入以下指令 `lint:fix`：
 
 ```diff
 // package.json
@@ -273,7 +272,7 @@ pnpm run lint
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "npx eslint . --ext .ts,.js,.cjs,.vue",
-+   "lint-fix": "npx eslint --fix . --ext .ts,.js,.cjs,.vue"
++   "lint:fix": "npx eslint --fix . --ext .ts,.js,.cjs,.vue"
   },
 }
 ```
@@ -281,7 +280,7 @@ pnpm run lint
 接著在 terminal 測試執行效果
 
 ```shell
-pnpm run lint-fix
+pnpm run lint:fix
 ```
 
 順利的話「**可自動修正**（automatically fixable）」的那些規則都會被自動修正，也就是在 [Rule 列表](https://eslint.org/docs/latest/rules/)有 🔧 符號的那些項目。
