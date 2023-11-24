@@ -9,17 +9,22 @@ export function useDownplayProjects () {
   const route = useRoute()
   const isDownplayed = useLocalStorage<boolean>(storageKey, false)
 
+  function removeDownplayProjectsQueryKey () {
+    const newQuery = { ...route.query }
+    delete newQuery[downplayProjectsQueryKey]
+    router.push({ query: newQuery })
+  }
+
   watch(() => downplayProjectsQueryKey in route.query, (value) => {
     if (value) {
       isDownplayed.value = true
+      removeDownplayProjectsQueryKey()
     }
   }, { immediate: true })
 
   watch(isDownplayed, (value) => {
     if (!value) {
-      const newQuery = { ...route.query }
-      delete newQuery[downplayProjectsQueryKey]
-      router.push({ query: newQuery })
+      removeDownplayProjectsQueryKey()
     }
   })
 
