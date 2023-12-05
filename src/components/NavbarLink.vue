@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { useMounted } from '@vueuse/core'
+
+const isMounted = useMounted()
 </script>
 
 <template>
@@ -18,8 +21,10 @@ import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
   >
     <slot />
     <FontAwesomeIcon
+      v-cloak
       v-if="isExternal"
       class="ml-2"
+      :class="{ 'opacity-0': !isMounted }"
       :icon="faUpRightFromSquare"
     />
   </IsomorphicLink>
