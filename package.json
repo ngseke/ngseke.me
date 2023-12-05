@@ -54,7 +54,6 @@
     "@vue/runtime-core": "3.2.39",
     "autoprefixer": "^10.4.11",
     "axios": "^1.4.0",
-    "critters": "0.0.20",
     "eslint": "^8.23.1",
     "eslint-plugin-tailwindcss": "3.12.1",
     "eslint-plugin-vue": "^9.4.0",
