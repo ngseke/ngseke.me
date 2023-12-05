@@ -79,7 +79,7 @@ Object.prototype.hasOwnProperty.call(profile, '🍺') // false
 
 ## `Object.hasOwn()`
 
-[ES13](https://caniuse.com/mdn-javascript_builtins_object_hasown) 推出的新特性，旨在取代 `Object.prototype.hasOwnProperty()`，寫相比之下法更直觀和簡潔。並且和 `Object.prototype.hasOwnProperty.call()` 一樣，即使複寫了 `hasOwnProperty` 依然可以得到正確的結果。
+[ES13](https://caniuse.com/mdn-javascript_builtins_object_hasown) 推出的新特性，旨在取代 `Object.prototype.hasOwnProperty()`，寫法相較之下更直觀簡潔。並且和 `Object.prototype.hasOwnProperty.call()` 一樣，即使複寫了 `hasOwnProperty` 依然可以得到正確的結果。
 
 **不會**遍歷原型鏈。
 
