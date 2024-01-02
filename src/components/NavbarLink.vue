@@ -11,7 +11,7 @@ const isMounted = useMounted()
     v-slot="{ isExternal }"
     class="
       link-effect
-      inline-block
+      inline-flex items-center
       uppercase
       after:-inset-x-2
       after:-inset-y-1
