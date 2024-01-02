@@ -4,6 +4,7 @@ import './index.sass'
 
 import App from './App.vue'
 import routes from '~pages'
+import IconLink from './components/IconLink.vue'
 
 export const createApp = ViteSSG(
   App,
@@ -17,4 +18,7 @@ export const createApp = ViteSSG(
       return savedPosition || { top: 0 }
     },
   },
+  ({ app }) => {
+    app.component('IconLink', IconLink)
+  }
 )
