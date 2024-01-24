@@ -11,11 +11,13 @@ export const LINKS = {
     icon: faFileAlt,
     url: 'https://hackmd.io/@xq',
     title: 'HackMD Notes',
+    subtitle: '@xq',
   },
   github: {
     icon: faGithub,
     url: 'https://github.com/ngseke',
     title: 'GitHub',
+    subtitle: '@ngseke',
   },
   githubNgsekeMe: {
     icon: faGithub,
@@ -41,5 +43,6 @@ export const LINKS = {
     icon: faDiscord,
     url: 'https://discordapp.com/users/533670703874965520',
     title: 'Discord',
+    subtitle: '@ngseke',
   },
 } as const
