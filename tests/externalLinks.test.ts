@@ -10,6 +10,7 @@ const ignoredUrls = [
   'http://www.cc.ntut.edu.tw/~wkchen/game/',
   'https://myweb.ntut.edu.tw/~yschen/',
   'https://sutian.moe.edu.tw/zh-hant/',
+  'https://www.flaticon.com',
   /https:\/\/hackmd\.io\/@xq\/(.+)/,
 ]
 
