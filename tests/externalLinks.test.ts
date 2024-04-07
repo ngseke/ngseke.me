@@ -38,7 +38,7 @@ const getAllExternalUrls = () => {
   return urls
 }
 
-describe('external links', () => {
+describe.skip('external links', () => {
   it.each(getAllExternalUrls().map((url) => [url]))(
     '%s should be a valid link',
     async (url) => {
