@@ -58,7 +58,7 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
 
   <PostLayout>
     <template #header>
-      <div class="space-y-3 ">
+      <div class="space-y-3">
         <h1 class="text-4xl font-semibold dark:text-ngsek md:text-5xl">
           {{ frontmatter?.title }}
         </h1>
@@ -85,4 +85,15 @@ if (frontmatter.value?.name) pushReadHistory(frontmatter.value?.name)
 
     <RouterView />
   </PostLayout>
+
+  <div class="container px-4 pb-8">
+    <div class="mx-auto max-w-3xl">
+      <hr class="mb-8 border-dashed border-black-200 dark:border-black-800">
+      <div class="grid gap-2 md:grid-cols-2">
+        <LinkReadMore :to="{ name: 'projects' }">
+          查看更多作品
+        </LinkReadMore>
+      </div>
+    </div>
+  </div>
 </template>
