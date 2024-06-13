@@ -9,6 +9,8 @@ tags:
 
 https://gist.github.com/ngseke/8b30050e05703f35c753cd0ac6330028
 
+> 點擊 **Raw** 按鈕即可快速安裝這個腳本（需要先安裝 [Tampermonkey](https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo)）
+
 ## 說明
 
 <img src='../../assets/img/post/customize-youtube-caption-font/youtube-cc-menu.png' class='mx-auto max-w-[250px] w-full' />
