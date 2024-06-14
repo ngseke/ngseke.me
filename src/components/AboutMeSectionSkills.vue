@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const skills = [
   'React',
+  'Next.js ',
   'Vue 3',
   'Tailwind CSS',
   'Nuxt',
   'TypeScript',
-  'Node.js',
 ]
 </script>
 

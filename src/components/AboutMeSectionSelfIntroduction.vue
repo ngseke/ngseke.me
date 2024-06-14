@@ -20,11 +20,11 @@
 
     <p>
       現職前端軟體工程師，專注於
-      <Emphasis>TypeScript</Emphasis>、<Emphasis>Vue</Emphasis>
+      <Emphasis>React</Emphasis>、<Emphasis>Next.js</Emphasis>
       和
-      <Emphasis>React</Emphasis>。
+      <Emphasis>Vue</Emphasis>。
       <br>
-      追求撰寫無瑕程式碼是我的開發格言，並致力於優化開發者體驗。
+      追求撰寫無瑕程式碼是我的開發格言，致力於優化開發者體驗。
       <br>
       熱衷探究前端領域的新鮮事，期待藉由知識分享為社群創造影響力。
     </p>
