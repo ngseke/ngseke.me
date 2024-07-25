@@ -2,7 +2,6 @@
 title: EM Optimization Lab
 briefDescription: 《電磁最佳化實驗室》網站
 githubLink: https://github.com/ngseke/emo
-demoLink: https://myweb.ntut.edu.tw/~yschen/
 period:
   - 2018/03
   - 2018/10
@@ -13,7 +12,6 @@ tags:
   - gulp.js
   - UI/UX
 ---
-
 
 這是台北科技大學之電磁最佳化實驗室 (EM Optimization Lab) 的網站，包含 RWD 來增進不同裝置上的瀏覽體驗。
 
@@ -35,6 +33,6 @@ tags:
 
 ## Demo
 
-[https://myweb.ntut.edu.tw/~yschen/](https://myweb.ntut.edu.tw/~yschen/)
+~~[https://myweb.ntut.edu.tw/~yschen/](https://myweb.ntut.edu.tw/~yschen/)~~ 已下線
 
 <iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=emo&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
