@@ -4,8 +4,10 @@ import { useProjects } from '../composables/useProjects'
 const { projectMap } = useProjects()
 
 const list = [
+  projectMap.value['gomoku-next'],
   projectMap.value['versatile-npm'],
   projectMap.value['leetcode-night'],
+  projectMap.value['iphone-price'],
 ]
 </script>
 

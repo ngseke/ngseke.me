@@ -19,7 +19,7 @@ const isDark = useDark()
 
 <style lang="scss" scoped>
 @mixin media {
-  max-width: min(30rem, 100%);
+  max-width: min(40rem, 100%);
 }
 
 @mixin block-margin {
@@ -49,7 +49,7 @@ const isDark = useDark()
     & > img {
       @include block-margin;
       @include media;
-      @apply mx-auto w-auto;
+      @apply mx-auto w-auto rounded-md;
     }
   }
 

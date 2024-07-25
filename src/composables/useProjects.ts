@@ -46,14 +46,9 @@ export function useProjects () {
         ],
       },
       {
-        title: 'System Design',
-        list: [
-          map.boss,
-        ],
-      },
-      {
         title: 'Game',
         list: [
+          map['gomoku-next'],
           {
             title: 'Flip Card',
             briefDescription: 'Emoji 翻牌配對遊戲',
@@ -61,10 +56,15 @@ export function useProjects () {
             demoLink: 'https://ngseke.github.io/vue-flip-card/',
             cover: '/img/project-cover/flip-card.png',
           },
-          map.gomoku,
           map['tic-tac-toe'],
           map['raise-your-red-flag'],
           map['typing-typing'],
+        ],
+      },
+      {
+        title: 'System Design',
+        list: [
+          map.boss,
         ],
       },
       {
