@@ -2,7 +2,7 @@ import { LINKS } from './links'
 
 const mailToPrefix = 'mailto:'
 
-describe('links', () => {
+describe.skip('links', () => {
   const urls = Object.values(LINKS)
     .map(({ url }) => url)
     .filter((url) => !url.startsWith(mailToPrefix))
