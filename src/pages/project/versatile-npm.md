@@ -2,7 +2,7 @@
 title: Versatile Npm
 briefDescription: 自訂 Npm 安裝指令瀏覽器擴充功能
 githubLink: https://github.com/ngseke/versatile-npm
-demoLink: https://chromewebstore.google.com/detail/versatile-npm/jahejogdoffpehfhkhbpjblnlhghjnje?hl=zh-TW
+demoLink: http://versatile-npm.ngseke.me/
 period: ['2023/11', '2023/11']
 cover: /img/project-cover/versatile-npm.png
 tags:
@@ -31,17 +31,24 @@ tags:
 
 ## Logo
 
-這款 App 的 Logo 是透過 DALL·E 3 產生的，輸入 prompt 基本上包含 `穿著帽 T 的水豚`、`包裹`、`紅色`、`badge style`、`sport mascot style`，最後透過 macOS 內建的「移除背景」功能去背。這過程幾乎不費吹灰之力，完全無需任何專業繪圖軟體。
+這款 App 的 Logo 是透過 DALL·E 3 產生的，輸入 prompt 包含 `穿著帽 T 的水豚`、`包裹`、`紅色`、`badge style`、`sport mascot style`，最後透過 macOS 內建的「移除背景」功能去背。這過程不費吹灰之力，無需任何專業繪圖軟體。
 
 其他候選 Logo 如下：
 ![Logo Candidates](../../assets/img/project/versatile-npm/logo-candidates.png)
 
 ## Demo
 
-<a href="https://chromewebstore.google.com/detail/versatile-npm/jahejogdoffpehfhkhbpjblnlhghjnje?hl=zh-TW" target="_blank">
-  <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" />
+<a href="http://versatile-npm.ngseke.me/" target="_blank">
+Homepage
 </a>
 
+<br/>
+
+<a href="https://chromewebstore.google.com/detail/versatile-npm/jahejogdoffpehfhkhbpjblnlhghjnje?hl=zh-TW" target="_blank">
+  Chrome Web Store
+</a>
+
+<br/>
 <br/>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=ngseke&repo=versatile-npm&type=star&count=false" frameborder="0" scrolling="0" width="150" height="20"></iframe>
