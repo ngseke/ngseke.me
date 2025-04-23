@@ -30,6 +30,13 @@ export function useProjects () {
       {
         title: 'Browser Extension',
         list: [
+          {
+            title: 'Taiwan Company Blocker',
+            briefDescription: '台灣求職網封鎖神器',
+            githubLink: 'https://github.com/ngseke/taiwan-company-blocker',
+            demoLink: 'https://taiwan-company-blocker.ngseke.me/',
+            cover: '/img/project-cover/taiwan-company-blocker.png',
+          },
           map['versatile-npm'],
           map['leetcode-night'],
         ],
