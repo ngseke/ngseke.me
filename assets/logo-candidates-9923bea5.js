@@ -1,0 +1,1 @@
+const s="/assets/1400x560-02b6cc6e.png",t="/assets/demo-222ae85f.gif",o="/assets/screenshot-2-9726f1a7.png",a="/assets/screenshot-1-81b8fb35.png",e="/assets/logo-candidates-4f73c7bd.png";export{s as _,t as a,o as b,a as c,e as d};
