@@ -1,0 +1,1 @@
+import{d as t,g as a,B as s,C as r,o as c,a as u,m as e}from"./app-9749d15e.js";const p=t({__name:"fe",setup(l){const{isDownplayed:o}=a();o.value=!0;const n=s();return r(()=>{n.replace({name:"index"})}),(f,i)=>(c(),u("div"))}});typeof e=="function"&&e(p);export{p as default};

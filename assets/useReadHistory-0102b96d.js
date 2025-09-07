@@ -1,0 +1,1 @@
+import{z as r,f as c,q as i}from"./app-9749d15e.js";const u="readHistory";function y(){const e=r(u,{}),t=s=>{s in e||(e.value[s]=+new Date)},{projectMap:o}=c(),a=i(()=>Object.keys(o.value).every(s=>s in e.value));return{readHistory:e,pushReadHistory:t,isReadAll:a,clearReadHistory:()=>{e.value={}}}}export{y as u};
