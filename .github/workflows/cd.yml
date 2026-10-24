@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'master'
+  pull_request:
 
 jobs:
   build-and-deploy:
@@ -33,9 +34,11 @@ jobs:
         run: pnpm run lint
 
       - name: Copy `CNAME` file
+        if: github.event_name == 'push'
         run: cp CNAME dist/CNAME
 
       - name: Deploy 🚀
+        if: github.event_name == 'push'
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: page
