@@ -1,8 +1,8 @@
-FROM node:16-alpine as builder
-RUN npm i -g pnpm
+FROM node:24-alpine AS builder
+RUN corepack enable
 WORKDIR /app
-COPY *.json pnpm-lock.yaml .npmrc /app/
-RUN pnpm i
+COPY *.json pnpm-lock.yaml pnpm-workspace.yaml /app/
+RUN pnpm i --frozen-lockfile
 COPY . /app
 RUN pnpm run build
 
