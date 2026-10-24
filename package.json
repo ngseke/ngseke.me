@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@12.10.1",
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=8",
+    "node": ">=20",
+    "pnpm": ">=12",
     "npm": "please-use-pnpm",
     "yarn": "please-use-pnpm"
   },
@@ -77,7 +78,7 @@
     "typescript": "5.2.2",
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.7",
-    "vite": ">=4.0.5",
+    "vite": "^4.4.11",
     "vite-plugin-checker": "0.6.2",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-pages": "0.31.0",
